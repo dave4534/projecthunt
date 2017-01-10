@@ -10,7 +10,7 @@ var CompanySchema = new Schema ({
   compName: Mixed,
   compBio:  Mixed,
   compLogo: String,
-  compProj: [{ type: mongoose.Schema.Types.ObjectId, ref: "Projects" }]
+  compLocation: String 
 });
 
 var Company = mongoose.model("Company", CompanySchema);
