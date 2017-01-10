@@ -21,16 +21,17 @@
     </div>
   </div>
 
-  <!-- Companies and Projects -->
+  <!-- Companies and Projects Header-->
   <div class="row companiesProjects" >
     <div class="row companyAndProjectTitles">
       <div class="col-sm-3 companyTitle">Company</div>
       <div class="col-sm-9 projectTitle">Projects</div>
     </div>
 
-    <!-- Ng-Repeat -->
+    <!-- Ng-Repeat of Companies & Projects Rows-->
     <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
 
+    <!-- Company -->
       <div class="col-sm-3 companyDetails">
         <div class="col-sm-3">
          {{company.logo}}
@@ -41,6 +42,7 @@
       </div>
     </div>
 
+    <!-- Projects -->
     <div class="col-sm-9 projectDetails">
     <div class="col-sm-4">{{company.title}}</div>
       <div class="col-sm-4">{{company.desc}}</div>
