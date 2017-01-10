@@ -33,10 +33,14 @@
 
     <!-- Company -->
       <div class="col-sm-3 companyDetails">
+      <!-- Logo -->
         <div class="col-sm-3">
-         {{company.logo}}
+        <div class="logo">
+         <img ng-src="http://placekitten.com/g/60/60"/>
+         </div>
        </div>
-       <div class="col-sm-9">
+       <div class="col-sm-1 spacer1"></div>
+       <div class="col-sm-8 companyNameAndLocation">
         <div class="row">{{company.companyName}}</div>
         <div class="row">{{company.location}}</div>
       </div>
