@@ -8,17 +8,55 @@
 
 <body ng-app="projectHunt" ng-controller="mainController">
 
+  <div class="container-fluid">
 
-<div>
-  <button class="btn btn-primary">Our Button</button>
+   <!--  Search Bar -->
+   <div class="row ourBar">
+    <div class="col-sm-3">
+      <p>Row1 Col1</p>
+    </div>
+    <div class="col-sm-9">
+      <p>Row1 Col2</p>
+      <input type="text" placeholder="Discover some great companies..." class="form-control searchBar">
+    </div>
+  </div>
+
+  <!-- Companies and Projects -->
+  <div class="row companiesProjects" >
+    <div class="row companyAndProjectTitles">
+      <div class="col-sm-3 companyTitle">Company</div>
+      <div class="col-sm-9 projectTitle">Projects</div>
+    </div>
+
+    <!-- Ng-Repeat -->
+    <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
+
+      <div class="col-sm-3 companyDetails">
+        <div class="col-sm-3">
+         {{company.logo}}
+       </div>
+       <div class="col-sm-9">
+        <div class="row">{{company.companyName}}</div>
+        <div class="row">{{company.location}}</div>
+      </div>
+    </div>
+
+    <div class="col-sm-9 projectDetails">
+    <div class="col-sm-4">{{company.title}}</div>
+      <div class="col-sm-4">{{company.desc}}</div>
+      <div class="col-sm-4">{{company.dueDate}}</div>
+
+    </div>
+  </div>
 </div>
 
-  <!-- Scripts -->
-  <script src="../node_modules/angular/angular.min.js"></script>
-  <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
-  <script src="js/module.js"></script>
-  <script src="js/services/mainService.js"></script>
-  <script src="js/controllers/mainCtrl.js"></script>
+</div>
+<!-- Scripts -->
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="js/module.js"></script>
+<script src="js/services/mainService.js"></script>
+<script src="js/controllers/mainCtrl.js"></script>
 
 </body>
 </html>

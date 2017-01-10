@@ -1,3 +1,30 @@
-.mainContainer {
-  /*color: red;*/
+.ourBar {
+  color: blue;
+  background-color: yellow;
+  height: 60px;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.searchBar {
+  width: 70%;
+  margin-bottom: 50px;
+}
+
+.companiesProjects {
+  color: blue;
+  background-color: yellow;
+  height: 400px;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.companyAndProjectTitles {
+  background-color: gray;
+  height: 40px;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid black;
 }
