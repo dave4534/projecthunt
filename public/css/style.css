@@ -1,15 +1,42 @@
-.ourBar {
-  color: blue;
-  background-color: yellow;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  margin: 0px;
+}
+
+.navBar {
   height: 60px;
   width: 100%;
-  display: inline-block;
-  border: 1px solid black;
+/*  border: 1px solid black;
+*/}
+
+.Elevlogo {
+  width: 40px;
+  margin: 10px;
 }
 
 .searchBar {
-  width: 70%;
-  margin-bottom: 50px;
+  width: 90%;
+  margin: 12px 0px 12px 0px;
+}
+.navBarMiddleColumn {
+  height: 60px;
+}
+
+.profilePic {
+  width: 50px;
+  margin: 7px 7px 7px 0px;
+  float: right;
+}
+
+.tagBar {
+  height: 40px;
+  background-color: #f7f8f8;
 }
 
 .companiesProjects {
@@ -28,3 +55,41 @@
   display: inline-block;
   border: 1px solid black;
 }
+
+.companyAndProjectRepeat {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.companyAndProjectContainer {
+  border: 1px solid green;
+}
+
+.companyAndProjectRepeat:hover {
+background-color: #d1cfcf;
+cursor: pointer;
+}
+
+.companyNameAndLocation {
+  border: 1px solid red;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: black;
+  display: inline-block;
+
+}
+.logo {
+  border: 1px solid red;
+  width: 70px;
+  display: inline-block;
+  }
+
+.leftColumn {
+  border: 1px solid green;
+}
+
+.projectDetails {
+  border: 1px solid blue;
+}
+
