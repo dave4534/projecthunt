@@ -6,18 +6,81 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body ng-app="projectHunt" ng-controller="mainController">
+<body class="container-fluid" ng-app="projectHunt" ng-controller="mainController">
 
-<div>
-  <button class="btn btn-primary">Our Button</button>
+<!--  Nav Bar -->
+ <div class="row navBar">
+  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+    <img src="images/logo.png" alt="elevation_logo" class="Elevlogo">
+  </div>
+
+  <div class="navBarMiddleColumn col-xs-8 col-sm-8 col-md-8 col-lg-8">
+    <input type="text" placeholder="Discover some great companies..." class="form-control searchBar">
+  </div>
+
+<div class="navBarRightColumn col-xs-2 col-sm-2 col-md-2 col-lg-2"><img src="images/profilePic.png" class="profilePic"></div>
 </div>
 
-  <!-- Scripts -->
-  <script src="../node_modules/angular/angular.min.js"></script>
-  <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
-  <script src="js/module.js"></script>
-  <script src="js/services/mainService.js"></script>
-  <script src="js/controllers/mainCtrl.js"></script>
+<div class="tagBar">
+  
+</div>
+
+<!-- Companies and Projects Header-->
+
+<div class="companiesProjects" >
+  <div class="row companyAndProjectTitles">
+
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 companyTitle">Company</div>
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 projectTitle">Projects</div>
+  </div>
+
+  <!-- Ng-Repeat of Companies & Projects Rows-->
+  <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
+
+    <!-- Company -->
+    <div class="companyDetails">
+
+      <!-- Logo -->
+      <!-- Left Column -->
+      <div class="leftColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="logo">
+         <img ng-src="http://placekitten.com/g/60/60"/>
+       </div>
+
+       <!-- Company Name & Location -->
+       <!-- Same column as logo -->
+       <div class="companyNameAndLocation">
+        <div>{{company.companyName}}</div>
+        <div>{{company.location}}</div>
+      </div>
+
+    </div>
+
+
+    <!-- Projects -->
+    <!-- Right Column -->
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 projectDetails">
+      <div>{{company.title}}</div>
+          <!-- <div>{{company.desc}}</div>
+          <div>{{company.dueDate}}</div> -->
+        </div>
+      </div>
+    </div>
+    <!--  End of Row -->
+
+
+  </div>
+
+
+
+
+</div>
+<!-- Scripts -->
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="js/module.js"></script>
+<script src="js/services/mainService.js"></script>
+<script src="js/controllers/mainCtrl.js"></script>
 
 </body>
 </html>

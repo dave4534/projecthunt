@@ -1,6 +1,20 @@
 app.factory('mainService', ['$http', function($http){
-  var a = {};
-  return a;
+  var serviceData = {
+    companies: [
+    
+      {
+        logo: "logo",
+        companyName: "Jolt",
+        location: "Tel Aviv",
+        title: "project1",
+        desc: "project1 desc",
+        dueDate: "Jan 1 2017"
+      }
+      
+    ]
+  };
+
+  return serviceData;
 
 
 }]);
