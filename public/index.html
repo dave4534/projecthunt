@@ -6,55 +6,73 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body ng-app="projectHunt" ng-controller="mainController">
+<body class="container-fluid" ng-app="projectHunt" ng-controller="mainController">
 
-  <div class="container-fluid">
-
-   <!--  Search Bar -->
-   <div class="row ourBar">
-    <div class="col-sm-3">
-      <p>Row1 Col1</p>
-    </div>
-    <div class="col-sm-9">
-      <p>Row1 Col2</p>
-      <input type="text" placeholder="Discover some great companies..." class="form-control searchBar">
-    </div>
+<!--  Nav Bar -->
+ <div class="row navBar">
+  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+    <img src="images/logo.png" alt="elevation_logo" class="Elevlogo">
   </div>
 
-  <!-- Companies and Projects Header-->
-  <div class="row companiesProjects" >
-    <div class="row companyAndProjectTitles">
-      <div class="col-sm-3 companyTitle">Company</div>
-      <div class="col-sm-9 projectTitle">Projects</div>
-    </div>
+  <div class="navBarMiddleColumn col-xs-8 col-sm-8 col-md-8 col-lg-8">
+    <input type="text" placeholder="Discover some great companies..." class="form-control searchBar">
+  </div>
 
-    <!-- Ng-Repeat of Companies & Projects Rows-->
-    <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
+<div class="navBarRightColumn col-xs-2 col-sm-2 col-md-2 col-lg-2"><img src="images/profilePic.png" class="profilePic"></div>
+</div>
+
+<div class="tagBar">
+  
+</div>
+
+<!-- Companies and Projects Header-->
+
+<div class="companiesProjects" >
+  <div class="row companyAndProjectTitles">
+
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 companyTitle">Company</div>
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 projectTitle">Projects</div>
+  </div>
+
+  <!-- Ng-Repeat of Companies & Projects Rows-->
+  <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
 
     <!-- Company -->
-      <div class="col-sm-3 companyDetails">
+    <div class="companyDetails">
+
       <!-- Logo -->
-        <div class="col-sm-3">
+      <!-- Left Column -->
+      <div class="leftColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="logo">
          <img ng-src="http://placekitten.com/g/60/60"/>
-         </div>
        </div>
-       <div class="col-sm-1 spacer1"></div>
-       <div class="col-sm-8 companyNameAndLocation">
-        <div class="row">{{company.companyName}}</div>
-        <div class="row">{{company.location}}</div>
+
+       <!-- Company Name & Location -->
+       <!-- Same column as logo -->
+       <div class="companyNameAndLocation">
+        <div>{{company.companyName}}</div>
+        <div>{{company.location}}</div>
       </div>
+
     </div>
+
 
     <!-- Projects -->
-    <div class="col-sm-9 projectDetails">
-    <div class="col-sm-4">{{company.title}}</div>
-      <div class="col-sm-4">{{company.desc}}</div>
-      <div class="col-sm-4">{{company.dueDate}}</div>
-
+    <!-- Right Column -->
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 projectDetails">
+      <div>{{company.title}}</div>
+          <!-- <div>{{company.desc}}</div>
+          <div>{{company.dueDate}}</div> -->
+        </div>
+      </div>
     </div>
+    <!--  End of Row -->
+
+
   </div>
-</div>
+
+
+
 
 </div>
 <!-- Scripts -->
