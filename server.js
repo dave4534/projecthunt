@@ -7,6 +7,9 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/projects');
 
 var uploadProj = require('./routes/uploadProj');
+var homeProj = require('./routes/home');
+var login = require('./routes/login');
+var register = require('./routes/register');
 
 //////////////////////////////   APP USE   /////////////////////////////////////s
 
@@ -18,15 +21,16 @@ app.use(express.static('node_modules'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/placeholder', uploadProj);
+// app.use('/placeholder', uploadProj);
+app.use('/placeholder', homeProj);
 
 app.get('/', function(req, res, next){
   res.sendFile('index.html');
 });
 
-app.post('/register', function(req, res, next){
-  next("helloooooo handsome");
-});
+// app.post('/register', function(req, res, next){
+//   next("helloooooo handsome");
+// });
 
 
 

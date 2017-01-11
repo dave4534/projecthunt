@@ -3,11 +3,11 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-// var auth = jwt({secret: 'myLittleSecret'});
 var Project = require('../models/ProjModel');
+// var auth = jwt({secret: 'myLittleSecret'});
 
 ////////////////////////////////    ROUTER POST   //////////////////////////////
-console.log("in routes");
+console.log("in upload route");
 router.post('/placeholder',function(req, res, next) {
   console.log(req.body);
   var project = new Project(req.body);
