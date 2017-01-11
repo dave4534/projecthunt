@@ -21,20 +21,47 @@
 <div class="navBarRightColumn col-xs-2 col-sm-2 col-md-2 col-lg-2"><img src="images/profilePic.png" class="profilePic"></div>
 </div>
 
+<hr>
+
 <div class="tagBar">
-  
+<p class="tagBarTag">Javascript</p>
+  <p class="tagBarTag">MongoDB</p>
+  <p class="tagBarTag">Express</p>
+   <p class="tagBarTag">Angular</p>
+  <p class="tagBarTag">Node</p>
+  <p class="tagBarTag">Python</p>
+   <p class="tagBarTag">APIs</p>
+  <p class="tagBarTag">React</p>
+   <p class="tagBarTag">TDD</p>
+  <p class="tagBarTag">JQuery</p>
+  <p class="tagBarTag">Ruby</p>
+  <p class="tagBarTag">Java</p>
+  <p class="tagBarTag">Android</p>
+  <p class="tagBarTag">Sql</p>
+   <p class="tagBarTag">Swift</p>
+  <p class="tagBarTag">iphone</p>
+  <p class="tagBarTag">linux</p>
+   <p class="tagBarTag">django</p>
+  <p class="tagBarTag">c sharp</p>
+   <p class="tagBarTag">.net</p>
+  <p class="tagBarTag">objective c</p>
+  <p class="tagBarTag">data analysis</p>
 </div>
+
+<hr>
 
 <!-- Companies and Projects Header-->
 
-<div class="companiesProjects" >
-  <div class="row companyAndProjectTitles">
+<div class="background" >
 
+  <div class="row companyAndProjectTitlesContainer">
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 companyTitle">Company</div>
     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 projectTitle">Projects</div>
   </div>
 
   <!-- Ng-Repeat of Companies & Projects Rows-->
+  <div class="companyAndProjectRepeatContainer">
+
   <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
 
     <!-- Company -->
@@ -49,7 +76,7 @@
 
        <!-- Company Name & Location -->
        <!-- Same column as logo -->
-       <div class="companyNameAndLocation">
+       <div class="companyNameAndLocationContainer">
         <div>{{company.companyName}}</div>
         <div>{{company.location}}</div>
       </div>
@@ -72,7 +99,7 @@
   </div>
 
 
-
+</div>
 
 </div>
 <!-- Scripts -->
