@@ -4,66 +4,10 @@ app.factory('mainService', ['$http', function($http){
     
       {
         logo: "logo",
-        companyName: "Jolt",
+        companyName: "Shai Baam",
         location: "Tel Aviv",
-        title: "project1",
-        desc: "project1 desc",
-        dueDate: "Jan 1 2017"
-      },
-       {
-        logo: "logo",
-        companyName: "Jolt",
-        location: "Tel Aviv",
-        title: "project1",
-        desc: "project1 desc",
-        dueDate: "Jan 1 2017"
-      },
-      {
-        logo: "logo",
-        companyName: "Jolt",
-        location: "Tel Aviv",
-        title: "project1",
-        desc: "project1 desc",
-        dueDate: "Jan 1 2017"
-      },
-       {
-        logo: "logo",
-        companyName: "Jolt",
-        location: "Tel Aviv",
-        title: "project1",
-        desc: "project1 desc",
-        dueDate: "Jan 1 2017"
-      },
-      {
-        logo: "logo",
-        companyName: "Jolt",
-        location: "Tel Aviv",
-        title: "project1",
-        desc: "project1 desc",
-        dueDate: "Jan 1 2017"
-      },
-       {
-        logo: "logo",
-        companyName: "Jolt",
-        location: "Tel Aviv",
-        title: "project1",
-        desc: "project1 desc",
-        dueDate: "Jan 1 2017"
-      },
-      {
-        logo: "logo",
-        companyName: "Jolt",
-        location: "Tel Aviv",
-        title: "project1",
-        desc: "project1 desc",
-        dueDate: "Jan 1 2017"
-      },
-       {
-        logo: "logo",
-        companyName: "Jolt",
-        location: "Tel Aviv",
-        title: "project1",
-        desc: "project1 desc",
+        title: "Responsive Budget Monitor",
+        desc: "Build a web app works well on mobile for monitoring budgets.",
         dueDate: "Jan 1 2017"
       }
       

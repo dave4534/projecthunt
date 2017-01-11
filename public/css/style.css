@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-body {
+.container-fluid {
   padding: 0;
   margin: 0;
 }
@@ -70,20 +70,6 @@ hr {
   display: inline-block;
 }
 
-.companyAndProjectTitlesContainer {
-  background-color: #f1f1f1;
-  height: 60px;
-  width: 100%;
-  display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  color: #77787b;
-  letter-spacing: .03em;
-  padding-top: 30px;
-  padding-left: 10px;
-  font-size: 1.15em;
-}
-
 .companyAndProjectContainer {
   border: 1px solid #e2e2e2;
 }
@@ -93,14 +79,13 @@ hr {
   height: 400px;
   background-color: #f1f1f1;
   border: 1px solid #e2e2e2;
-  margin: 0 23px 10px 23px;
+  margin: 30px 23px 10px 23px;
   border-radius: 10px;
 }
 
 .companyAndProjectRepeat {
   background-color: white;
   border: 1px solid #e2e2e2;
-  height: 85px;
 }
 
 .companyAndProjectRepeat:hover {
@@ -108,22 +93,24 @@ border: 1px solid #9c9c9c;
 cursor: pointer;
 }
 
-.companyNameAndLocationContainer {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  color: black;
-  display: inline-block;
-  border: 1px solid red;
-}
 .logo {
-  margin-right: 10px;
   width: 60px;
+  margin: 10px;
+  float: left;
   display: inline-block;
   }
 
 .logo img {
-  margin-top: 7px;
   border-radius: 5px;
+  display: inline-block;
 }
+
+.info {
+  color: red;
+  display: inline-block;
+  border: 1px solid red;
+  margin: 11px 0 0 10px;
+}
+
+
 
