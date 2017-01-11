@@ -12,6 +12,7 @@ var DevSchema = new Schema ({
   devTitle: String,
   devBio:  Mixed,
   devPic: String,
+  devProj: [{ type: mongoose.Schema.Types.ObjectId, ref: "Project" }]
 });
 
 var Developer = mongoose.model("Developer", DevSchema);
