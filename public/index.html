@@ -3,7 +3,10 @@
 <head>
 	<title></title>
   <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="angular/angular.min.js"></script>
+<script src="angular-ui-router/release/angular-ui-router.min.js"></script>
 </head>
 
 <body class="container-fluid" ng-app="projectHunt" ng-controller="mainController">
@@ -14,78 +17,10 @@
       <img src="images/logo.png" alt="elevation_logo" class="Elevlogo">
     </div>
 
-    <div class="navBarMiddleColumn col-xs-8 col-sm-8 col-md-8 col-lg-8">
-      <input type="text" placeholder="Discover some great companies..." class="form-control searchBar">
-    </div>
-
-    <div class="navBarRightColumn col-xs-2 col-sm-2 col-md-2 col-lg-2"><img src="images/profilePic.png" class="profilePic"></div>
-  </div>
-
-  <hr>
-
-  <div class="tagBar">
-    <p class="tagBarTag">Javascript</p>
-    <p class="tagBarTag">MongoDB</p>
-    <p class="tagBarTag">Express</p>
-    <p class="tagBarTag">Angular</p>
-    <p class="tagBarTag">Node</p>
-    <p class="tagBarTag">Python</p>
-    <p class="tagBarTag">APIs</p>
-    <p class="tagBarTag">React</p>
-    <p class="tagBarTag">TDD</p>
-    <p class="tagBarTag">JQuery</p>
-    <p class="tagBarTag">Ruby</p>
-    <p class="tagBarTag">Java</p>
-    <p class="tagBarTag">Android</p>
-    <p class="tagBarTag">Sql</p>
-    <p class="tagBarTag">Swift</p>
-    <p class="tagBarTag">iphone</p>
-    <p class="tagBarTag">linux</p>
-    <p class="tagBarTag">django</p>
-    <p class="tagBarTag">c sharp</p>
-    <p class="tagBarTag">.net</p>
-    <p class="tagBarTag">objective c</p>
-    <p class="tagBarTag">data analysis</p>
-  </div>
-
-  <hr>
-
-  <!-- Companies and Projects Header-->
-
-  <div class="background" >
-
-
-    <!-- Ng-Repeat of Companies & Projects Rows-->
-    <div class="companyAndProjectRepeatContainer">
-
-      <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
-          <!-- Logo -->
-          
-          <div class="logo">
-           <img ng-src="http://placekitten.com/g/60/60"/>
-          </div>
-          
-       
-       <!-- Company Name & Location -->
-       <!-- Same column as logo -->
-      
-        <div class="info">
-          <div>{{company.companyName}}</div>
-          <div>{{company.title}}</div>
-          <div>{{company.desc}}</div>
-        </div>
-        
-
-      </div>
-      <!--  End of Row -->
-
-  </div>
-</div>
-</div>
+    <div ui-view></div>
 
 <!-- Scripts -->
-<script src="angular/angular.min.js"></script>
-<script src="angular-ui-router/release/angular-ui-router.min.js"></script>
+
 <script src="js/module.js"></script>
 <script src="js/services/mainService.js"></script>
 <script src="js/controllers/mainCtrl.js"></script>
