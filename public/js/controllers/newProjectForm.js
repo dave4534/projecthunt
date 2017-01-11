@@ -1,7 +1,14 @@
 var app = angular.module('projectForm', []);
 
 app.controller('MainCtrl', function ($scope) {
-  $scope.projects = [];
+  $scope.projects = [
+    {
+      name: $scope.name,
+      description: $scope.description,
+      date: $scope.date,
+      image_url: $scope.image_url
+    }
+  ];
 
   $scope.addProject = function (e) {
     if ($scope.name === '') { return; }
