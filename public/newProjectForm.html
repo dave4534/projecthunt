@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
+  <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+  <title></title>
+</head>
+<body ng-app="projectForm" ng-controller="MainCtrl" >
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1 class="text-center">projects</h1>
+
+      <div ng-repeat="project in projects">
+        <div class="projectList">
+          <div class="logo-container">
+            <img ng-src="{{project.companyLogo}}"/>
+          </div>
+
+          <div class="content-container">
+            <p class="project-name" >
+            <img src="{{project.image_url}}">
+            <h3>Project name: </h3> {{project.name}}</p>
+            <p><h3>Project description: </h3>{{project.description}}</p>
+            <p><h3>Due date: </h3>{{project.date}}</p>
+          </div>
+
+          <i ng-click="removeProject($index)" class="fa fa-times remove"></i>
+        </div>
+      </div>
+
+      <form ng-submit="addProject()">
+        <h3>Add a new project</h3>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Project Name" ng-model="name"/>
+        </div>
+
+        <div class="form-group">
+          <input type="date" class="form-control" placeholder="Due date" ng-model="date"/>
+        </div>
+
+        <div class="form-group">
+          <textarea type="text" class="form-control" rows="10" placeholder="project description" ng-model="description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <input type="file" class="form-control" placeholder="Upload a file" ng-model="image_url" id="files"/>
+          <img id="image" style="max-width: 200px;" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="projCtrl.js"></script>
+</body>
+</html>
