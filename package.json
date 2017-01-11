@@ -19,6 +19,9 @@
   "dependencies": {
     "angular": "^1.6.1",
     "angular-ui-router": "^0.3.2",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "mongoose": "^4.7.6",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
   }
 }
