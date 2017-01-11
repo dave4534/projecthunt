@@ -34,62 +34,96 @@ body {
   float: right;
 }
 
+hr {
+  border-top: 1px solid #e2e2e2;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+
+}
+
 .tagBar {
   height: 40px;
-  background-color: #f7f8f8;
+  background-color: #f1f1f1;
 }
 
-.companiesProjects {
-  color: blue;
-  background-color: yellow;
+.tagBarTag {
+  margin-left: 25px;
+  padding: 11px 0px 40px 0px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: .94em;
+  display: inline-block;
+  letter-spacing: .05em;
+  color: #77787b;
+}
+
+.tagBarTag:hover {
+  color: #58595b;
+  cursor: pointer;
+}
+
+.background {
+  background-color: #f1f1f1;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+.companyAndProjectTitlesContainer {
+  background-color: #f1f1f1;
+  height: 60px;
+  width: 100%;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #77787b;
+  letter-spacing: .03em;
+  padding-top: 30px;
+  padding-left: 10px;
+  font-size: 1.15em;
+}
+
+.companyAndProjectContainer {
+  border: 1px solid #e2e2e2;
+}
+
+/*Contains all of the ng-repeats that display eac company & project*/
+.companyAndProjectRepeatContainer {
   height: 400px;
-  width: 100%;
-  display: inline-block;
-  border: 1px solid black;
-}
-
-.companyAndProjectTitles {
-  background-color: gray;
-  height: 40px;
-  width: 100%;
-  display: inline-block;
-  border: 1px solid black;
+  background-color: #f1f1f1;
+  border: 1px solid #e2e2e2;
+  margin: 0 23px 10px 23px;
+  border-radius: 10px;
 }
 
 .companyAndProjectRepeat {
   background-color: white;
-  border: 1px solid black;
-}
-
-.companyAndProjectContainer {
-  border: 1px solid green;
+  border: 1px solid #e2e2e2;
+  height: 85px;
 }
 
 .companyAndProjectRepeat:hover {
-background-color: #d1cfcf;
+border: 1px solid #9c9c9c;
 cursor: pointer;
 }
 
-.companyNameAndLocation {
-  border: 1px solid red;
+.companyNameAndLocationContainer {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2em;
   text-transform: uppercase;
   color: black;
   display: inline-block;
-
+  border: 1px solid red;
 }
 .logo {
-  border: 1px solid red;
-  width: 70px;
+  margin-right: 10px;
+  width: 60px;
   display: inline-block;
   }
 
-.leftColumn {
-  border: 1px solid green;
-}
-
-.projectDetails {
-  border: 1px solid blue;
+.logo img {
+  margin-top: 7px;
+  border-radius: 5px;
 }
 
