@@ -6,15 +6,19 @@ var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/projects');
 
-//////////////////////////////////    APP USE   ////////////////////////////////
+var uploadProj = require('./routes/uploadProj');
+
+//////////////////////////////   APP USE   /////////////////////////////////////s
 
 var app = express();
 
 app.use(express.static('public'));
 app.use(express.static('node_modules'));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use('/placeholder', uploadProj);
 
 app.get('/', function(req, res, next){
   res.sendFile('index.html');
