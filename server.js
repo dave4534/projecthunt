@@ -21,8 +21,8 @@ app.use(express.static('node_modules'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// app.use('/placeholder', uploadProj);
-app.use('/placeholder', homeProj);
+app.use('/dashboard', uploadProj);
+app.use('/home', homeProj);
 
 app.get('/', function(req, res, next){
   res.sendFile('index.html');
