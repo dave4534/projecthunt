@@ -8,89 +8,99 @@
 
 <body class="container-fluid" ng-app="projectHunt" ng-controller="mainController">
 
-<!--  Nav Bar -->
- <div class="row navBar">
-  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-    <img src="images/logo.png" alt="elevation_logo" class="Elevlogo">
+  <!--  Nav Bar -->
+  <div class="row navBar">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <img src="images/logo.png" alt="elevation_logo" class="Elevlogo">
+    </div>
+
+    <div class="navBarMiddleColumn col-xs-8 col-sm-8 col-md-8 col-lg-8">
+      <input type="text" placeholder="Discover some great companies..." class="form-control searchBar">
+    </div>
+
+    <div class="navBarRightColumn col-xs-2 col-sm-2 col-md-2 col-lg-2"><img src="images/profilePic.png" class="profilePic"></div>
   </div>
 
-  <div class="navBarMiddleColumn col-xs-8 col-sm-8 col-md-8 col-lg-8">
-    <input type="text" placeholder="Discover some great companies..." class="form-control searchBar">
+  <hr>
+
+  <div class="tagBar">
+    <p class="tagBarTag">Javascript</p>
+    <p class="tagBarTag">MongoDB</p>
+    <p class="tagBarTag">Express</p>
+    <p class="tagBarTag">Angular</p>
+    <p class="tagBarTag">Node</p>
+    <p class="tagBarTag">Python</p>
+    <p class="tagBarTag">APIs</p>
+    <p class="tagBarTag">React</p>
+    <p class="tagBarTag">TDD</p>
+    <p class="tagBarTag">JQuery</p>
+    <p class="tagBarTag">Ruby</p>
+    <p class="tagBarTag">Java</p>
+    <p class="tagBarTag">Android</p>
+    <p class="tagBarTag">Sql</p>
+    <p class="tagBarTag">Swift</p>
+    <p class="tagBarTag">iphone</p>
+    <p class="tagBarTag">linux</p>
+    <p class="tagBarTag">django</p>
+    <p class="tagBarTag">c sharp</p>
+    <p class="tagBarTag">.net</p>
+    <p class="tagBarTag">objective c</p>
+    <p class="tagBarTag">data analysis</p>
   </div>
 
-<div class="navBarRightColumn col-xs-2 col-sm-2 col-md-2 col-lg-2"><img src="images/profilePic.png" class="profilePic"></div>
-</div>
+  <hr>
 
-<hr>
+  <!-- Companies and Projects Header-->
 
-<div class="tagBar">
-<p class="tagBarTag">Javascript</p>
-  <p class="tagBarTag">MongoDB</p>
-  <p class="tagBarTag">Express</p>
-   <p class="tagBarTag">Angular</p>
-  <p class="tagBarTag">Node</p>
-  <p class="tagBarTag">Python</p>
-   <p class="tagBarTag">APIs</p>
-  <p class="tagBarTag">React</p>
-   <p class="tagBarTag">TDD</p>
-  <p class="tagBarTag">JQuery</p>
-  <p class="tagBarTag">Ruby</p>
-  <p class="tagBarTag">Java</p>
-  <p class="tagBarTag">Android</p>
-  <p class="tagBarTag">Sql</p>
-   <p class="tagBarTag">Swift</p>
-  <p class="tagBarTag">iphone</p>
-  <p class="tagBarTag">linux</p>
-   <p class="tagBarTag">django</p>
-  <p class="tagBarTag">c sharp</p>
-   <p class="tagBarTag">.net</p>
-  <p class="tagBarTag">objective c</p>
-  <p class="tagBarTag">data analysis</p>
-</div>
+  <div class="background" >
 
-<hr>
-
-<!-- Companies and Projects Header-->
-
-<div class="background" >
-
-  <div class="row companyAndProjectTitlesContainer">
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 companyTitle">Company</div>
-    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 projectTitle">Projects</div>
-  </div>
-
-  <!-- Ng-Repeat of Companies & Projects Rows-->
-  <div class="companyAndProjectRepeatContainer">
-
-  <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
-
-    <!-- Company -->
-    <div class="companyDetails">
-
-      <!-- Logo -->
-      <!-- Left Column -->
-      <div class="leftColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <div class="logo">
-         <img ng-src="http://placekitten.com/g/60/60"/>
-       </div>
-
-       <!-- Company Name & Location -->
-       <!-- Same column as logo -->
-       <div class="companyNameAndLocationContainer">
-        <div>{{company.companyName}}</div>
-        <div>{{company.location}}</div>
-      </div>
+    <div class="row companyAndProjectTitlesContainer">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 companyTitle">Company</div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 projectTitle">Project</div>
+      <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 projectTitle">Description</div>
 
     </div>
 
+    <!-- Ng-Repeat of Companies & Projects Rows-->
+    <div class="companyAndProjectRepeatContainer">
 
-    <!-- Projects -->
-    <!-- Right Column -->
-    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 projectDetails">
-      <div>{{company.title}}</div>
+      <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
+
+        <!-- Company -->
+        <div class="companyDetails">
+
+          <!-- Logo -->
+          <!-- Left Column -->
+          <div class="leftColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="logo">
+             <img ng-src="http://placekitten.com/g/60/60"/>
+           </div>
+
+           <!-- Company Name & Location -->
+           <!-- Same column as logo -->
+           <div class="companyNameAndLocationContainer">
+            <div>{{company.companyName}}</div>
+            <div>{{company.location}}</div>
+          </div>
+
+        </div>
+
+
+        <!-- Project -->
+        <!-- Middle Column -->
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 project">
+          <div>{{company.title}}</div>
           <!-- <div>{{company.desc}}</div>
           <div>{{company.dueDate}}</div> -->
         </div>
+
+        <!-- Summary -->
+        <!-- Right Column -->
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 projectSummary">
+          <div>{{company.desc}}</div>
+        </div>
+
+
       </div>
     </div>
     <!--  End of Row -->
