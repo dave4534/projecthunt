@@ -21,18 +21,49 @@ router.post('/',function(req, res, next) {
   });
 });
 
+////////////////////////////////    ROUTER GET   ///////////////////////////////
 
 router.get('/', function(req, res, next){
-
-  // var query = Project.findOne({projCompany:})
-  Project.findOne(function(err, project){
+  var query = [];
+  var result = [];
+  Project.find(function(err, project){
     if (err) { return next(err); }
     if (!project) { return next(new Error("can't find project!")); }
-    console.log(project);
-    res.json(project);
-  });
-});
 
+
+    for (var i = 0; i < project.length; i++) {
+      query.push(project[i]._doc);
+    }
+
+  }).exec(function(){
+      for(var i = 0; i < query.length; i++) {
+
+
+        if (query[i].projCompany === 'elevation') {
+
+          result.push(query[i]);
+
+        }
+      };
+      res.send(result);
+    }
+  );
+
+});
 module.exports = router;
 
+
+
+
+
+
 //  auth,
+
+//
+// var query = Project.findOne({projCompany:})
+// Project.findOne(function(err, project){
+//   if (err) { return next(err); }
+//   if (!project) { return next(new Error("can't find project!")); }
+//   console.log(project);
+//   res.json(project);
+// });
