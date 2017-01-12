@@ -1,6 +1,6 @@
-var app = angular.module('projectForm', []);
+// var app = angular.module('projectForm', []);
 
-app.controller('MainCtrl', function ($scope) {
+app.controller('projControl', function ($scope) {
   $scope.projects = [
     {
       name: $scope.name,
@@ -33,16 +33,14 @@ app.controller('MainCtrl', function ($scope) {
   };
 });
 
-//image preview -- TODO: manage size of the pic
+// document.getElementById("files").onchange = function () {
+//     var reader = new FileReader();
 
-document.getElementById("files").onchange = function () {
-    var reader = new FileReader();
+//     reader.onload = function (e) {
+//         // get loaded data and render thumbnail.
+//         document.getElementById("image").src = e.target.result;
+//     };
 
-    reader.onload = function (e) {
-        // get loaded data and render thumbnail.
-        document.getElementById("image").src = e.target.result;
-    };
-
-    // read the image file as a data URL.
-    reader.readAsDataURL(this.files[0]);
-};
+//     // read the image file as a data URL.
+//     reader.readAsDataURL(this.files[0]);
+// };

@@ -14,16 +14,27 @@
   <!--  Nav Bar -->
   <div class="row navBar">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-      <img src="images/logo.png" alt="elevation_logo" class="Elevlogo">
+     <a href="#/home.html"> <img src="images/logo.png" alt="elevation_logo" class="Elevlogo"></a>
     </div>
 
+    <div class="navBarMiddleColumn col-xs-8 col-sm-8 col-md-8 col-lg-8">
+      <input type="text" placeholder="Discover some great companies..." class="form-control searchBar">
+    </div>
+
+    <div class="navBarRightColumn col-xs-2 col-sm-2 col-md-2 col-lg-2"><img src="images/profilePic.png" class="profilePic"></div>
+  </div>
+
+  <hr>
+
     <div ui-view></div>
+
 
 <!-- Scripts -->
 
 <script src="js/module.js"></script>
 <script src="js/services/mainService.js"></script>
 <script src="js/controllers/mainCtrl.js"></script>
+<script src="js/controllers/newProjectForm.js"></script>
 
 </body>
 </html>

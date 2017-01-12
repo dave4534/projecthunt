@@ -20,6 +20,10 @@
   margin: 10px;
 }
 
+.Elevlogo:hover {
+  cursor: pointer;
+}
+
 .searchBar {
   width: 90%;
   margin: 12px 0px 12px 0px;

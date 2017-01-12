@@ -6,25 +6,25 @@ $stateProvider
     .state('home', {
     url: '/home',
     controller: 'mainController',
-    templateUrl: '../home.html'
+    templateUrl: './Templates/home.html'
     })
-    .state('home.dashboard', {
-    url: '/spotify',
-    controller: 'mainController',
+    .state('dashboard', {
+    url: '/dashboard',
+    controller: 'projControl',
     templateUrl:'./Templates/dashboard.html'
     })
-    .state('home.register', {
+    .state('register', {
     url: '/register',
     controller: 'mainController',
     templateUrl:'./Templates/register.html'
     })
-     .state('home.login', {
+     .state('login', {
     url: '/login',
     controller: 'mainController',
     templateUrl:'./Templates/login.html'
     });
 
-    $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/home');
 
 }]);
 
