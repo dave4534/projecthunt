@@ -1,0 +1,61 @@
+
+
+  <div class="tagBar">
+    <p class="tagBarTag">Javascript</p>
+    <p class="tagBarTag">MongoDB</p>
+    <p class="tagBarTag">Express</p>
+    <p class="tagBarTag">Angular</p>
+    <p class="tagBarTag">Node</p>
+    <p class="tagBarTag">Python</p>
+    <p class="tagBarTag">APIs</p>
+    <p class="tagBarTag">React</p>
+    <p class="tagBarTag">TDD</p>
+    <p class="tagBarTag">JQuery</p>
+    <p class="tagBarTag">Ruby</p>
+    <p class="tagBarTag">Java</p>
+    <p class="tagBarTag">Android</p>
+    <p class="tagBarTag">Sql</p>
+    <p class="tagBarTag">Swift</p>
+    <p class="tagBarTag">iphone</p>
+    <p class="tagBarTag">linux</p>
+    <p class="tagBarTag">django</p>
+    <p class="tagBarTag">c sharp</p>
+    <p class="tagBarTag">.net</p>
+    <p class="tagBarTag">objective c</p>
+    <p class="tagBarTag">data analysis</p>
+  </div>
+
+  <hr>
+
+  <!-- Companies and Projects Header-->
+
+  <div class="background" >
+
+
+    <!-- Ng-Repeat of Companies & Projects Rows-->
+    <div class="companyAndProjectRepeatContainer">
+
+      <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
+          <!-- Logo -->
+          
+          <div class="logo">
+           <img ng-src="http://placekitten.com/g/60/60"/>
+          </div>
+          
+       
+       <!-- Company Name & Location -->
+       <!-- Same column as logo -->
+      
+        <div class="info">
+          <div class="projCompany">{{company.projCompany}}</div>
+          <div class="projTitle">{{company.projTitle}}</div>
+          <div class="projDescription">{{company.projDescription.desc}}</div>
+        </div>
+        
+
+      </div>
+      <!--  End of Row -->
+
+  </div>
+</div>
+</div>
