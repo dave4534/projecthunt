@@ -20,6 +20,10 @@
   margin: 10px;
 }
 
+.Elevlogo:hover {
+  cursor: pointer;
+}
+
 .searchBar {
   width: 90%;
   margin: 12px 0px 12px 0px;
@@ -89,8 +93,8 @@ hr {
 }
 
 .companyAndProjectRepeat:hover {
-border: 1px solid #9c9c9c;
-cursor: pointer;
+  border: 1px solid #9c9c9c;
+  cursor: pointer;
 }
 
 .logo {
@@ -98,7 +102,7 @@ cursor: pointer;
   margin: 10px;
   float: left;
   display: inline-block;
-  }
+}
 
 .logo img {
   border-radius: 5px;
@@ -106,11 +110,53 @@ cursor: pointer;
 }
 
 .info {
-  color: red;
+  color: #444444;
   display: inline-block;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   margin: 11px 0 0 10px;
 }
 
+.projCompany {
+   font-family: 'Montserrat', sans-serif;
+   letter-spacing: .04em;
+   font-size: 1.2em;
+   color: #8cb300;
+   text-transform: uppercase;
+}
+
+.projTitle {
+  font-family: helvetica;
+  font-size: 1.05em;
+  letter-spacing: .04em;
+}
+
+.projDescription {
+  font-family: helvetica;
+  color: #868686;
+  letter-spacing: .05em;
+}
+
+
+/*Register Form*/
+.form-style {
+margin: 0 auto;
+width:250px;
+}
+
+.submit-button{
+background-color: #AFCB2D ;
+color: white;
+}
+
+button{
+color:;
+height:50px;
+width:100px;
+margin: -20px -50px;
+position:relative;
+top:50%;
+left:50%;
+}
+/*Register Form (above)*/
 
 

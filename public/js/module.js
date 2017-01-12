@@ -27,3 +27,4 @@ $stateProvider
     $urlRouterProvider.otherwise('/home');
 
 }]);
+
