@@ -1,6 +1,6 @@
-// var app = angular.module('projectForm', []);
+app.controller('projControl', ['$scope', 'mainService', function($scope, mainService){
+// app.controller('projControl', function ($scope) {
 
-app.controller('projControl', function ($scope) {
   $scope.projects = [
     {
       name: $scope.name,
@@ -31,7 +31,13 @@ app.controller('projControl', function ($scope) {
   $scope.removeProject = function (index) {
     $scope.projects.splice(index, 1);
   };
-});
+  
+}]);
+
+
+
+//getAll invoked upon /dashboard load, that loads all of the user's projects
+
 
 // document.getElementById("files").onchange = function () {
 //     var reader = new FileReader();
