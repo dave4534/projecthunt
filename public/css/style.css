@@ -160,7 +160,7 @@ hr {
    font-family: 'Montserrat', sans-serif;
    letter-spacing: .04em;
    font-size: 1.2em;
-   color: #8cb300;
+   color: #f16763;
    text-transform: uppercase;
 }
 
@@ -193,8 +193,8 @@ hr {
 }
 
 .tag>div:hover {
-  border: 1px solid #f16763;
-  color: #f16763;
+  background-color: #301a3e; 
+  color: white;
 }
 
 /*Register Form*/
