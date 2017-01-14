@@ -9,9 +9,15 @@ $stateProvider
     templateUrl: './Templates/home.html'
     })
     .state('dashboard', {
-    url: '/dashboard',
+    url: '/dashboard/:comp',
     controller: 'projControl',
-    templateUrl:'newProjectForm.html'
+    templateUrl:'newProjectForm.html',
+    resolve: {
+          getToDash: ['mainService', '$stateParams' , function(mainService, $stateParams) {
+            console.log($stateParams.comp);
+            return mainService.getAllDash($stateParams.comp);
+          }]
+        }
     })
     .state('register', {
     url: '/register',

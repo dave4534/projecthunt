@@ -8,7 +8,8 @@ var Project = require('../models/ProjModel');
 
 ////////////////////////////////    ROUTER POST   //////////////////////////////
 console.log("in upload route");
-router.post('/',function(req, res, next) {
+router.post('/:comp',function(req, res, next) {
+  console.log(req.body);
   console.log(req.body.projCompany);
   var project = new Project(req.body);
 
@@ -34,6 +35,8 @@ router.get('/:comp', function(req, res, next){
 
 
     for (var i = 0; i < project.length; i++) {
+      console.log(project[i]);
+      console.log(project[i]._doc);
       query.push(project[i]._doc);
       
     }
