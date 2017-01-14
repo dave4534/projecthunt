@@ -25,7 +25,20 @@ app.controller('projControl', ['$scope', 'mainService', '$state', function($scop
     $scope.date = '';
     $scope.image_url = '';
 
-    $scope.projects.push(project);
+    // $scope.projects.push(project);
+        // mainService.postToDash(project).then(function() {
+        //   mainService.getAllDash()
+        // });
+
+        mainService.getAll().then(function(){
+          console.log('controller getAll invoked');
+          // $scope.companies = mainService.companies;
+          console.log($scope.companies);
+        }).catch(function(err){
+          console.log(err);
+        });
+
+
   };
 
   $scope.removeProject = function (index) {
@@ -41,14 +54,17 @@ app.controller('projControl', ['$scope', 'mainService', '$state', function($scop
   };
 
 //getAll invoked upon /dashboard load, that loads all of the user's projects
-mainService.getAllDash().then(function(){
-  console.log('dash controller getAll invoked');
-  // $scope.companies = mainService.companies;
-  console.log('here is $scope.companies');
-  console.log($scope.companies);
-}).catch(function(err){
-  console.log(err);
-});
+// mainService.getAllDash().then(function(){
+//   console.log('dash controller getAll invoked');
+//   // debugger;
+//   $scope.companies = mainService.companies;
+//   console.log('here is $scope.companies');
+  
+//   console.log($scope.companies);
+//   debugger;
+// }).catch(function(err){
+//   console.log(err);
+// });
   
 }]);
 
