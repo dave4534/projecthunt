@@ -23,29 +23,33 @@ router.post('/',function(req, res, next) {
 
 ////////////////////////////////    ROUTER GET   ///////////////////////////////
 
-router.get('/', function(req, res, next){
+router.get('/:comp', function(req, res, next){
+  console.log(req.param("comp"));
   var query = [];
   var result = [];
   Project.find(function(err, project){
+    console.log(project);
     if (err) { return next(err); }
     if (!project) { return next(new Error("can't find project!")); }
 
 
     for (var i = 0; i < project.length; i++) {
       query.push(project[i]._doc);
+      
     }
 
   }).exec(function(){
       for(var i = 0; i < query.length; i++) {
 
 
-        if (query[i].projCompany === 'elevation') {
-
+        if (query[i].projCompany === req.param("comp")) {
+          console.log(query);
           result.push(query[i]);
 
         }
       };
-      res.send(result);
+      console.log(query);
+      res.json(result);
     }
   );
 
