@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
 
 .container-fluid {
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 .row {
@@ -17,7 +20,7 @@
 
 .Elevlogo {
   width: 40px;
-  margin: 10px;
+  margin: 13px 0 0 10px;
 }
 
 .Elevlogo:hover {
@@ -26,7 +29,7 @@
 
 .searchBar {
   width: 90%;
-  margin: 12px 0px 12px 0px;
+  margin: 15px 0px 12px 0px;
 }
 .navBarMiddleColumn {
   height: 60px;
@@ -48,7 +51,8 @@ hr {
 
 .tagBar {
   height: 40px;
-  background-color: #f1f1f1;
+  /*background-color: #fbfbfb;*/
+  overflow: hidden;
 }
 
 .tagBarTag {
@@ -59,16 +63,27 @@ hr {
   font-size: .94em;
   display: inline-block;
   letter-spacing: .05em;
-  color: #77787b;
+  color: #301a3e;
 }
 
 .tagBarTag:hover {
-  color: #58595b;
+  color: #f16763;
   cursor: pointer;
 }
 
+.header {
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  color: #f16763;
+  font-size: 3em;
+  margin-top: 20px;
+  font-weight: bold;
+  letter-spacing: -.01em;
+
+}
+
 .background {
-  background-color: #f1f1f1;
+  /*background-color: #fbfbfb;*/
   height: 100%;
   width: 100%;
   display: inline-block;
@@ -81,10 +96,12 @@ hr {
 /*Contains all of the ng-repeats that display eac company & project*/
 .companyAndProjectRepeatContainer {
   height: 400px;
-  background-color: #f1f1f1;
-  border: 1px solid #e2e2e2;
-  margin: 30px 23px 10px 23px;
-  border-radius: 10px;
+  background-color: #fbfbfb;
+  margin: 18px 30px 50px 30px;
+  /*border-radius: 10px;*/
+  /*overflow: hidden;*/
+  box-shadow: 0px 2px 3px 2px rgba(45, 45, 45, 0.13);
+  height: 100%;
 }
 
 .companyAndProjectRepeat {
@@ -93,8 +110,8 @@ hr {
 }
 
 .companyAndProjectRepeat:hover {
-  border: 1px solid #9c9c9c;
   cursor: pointer;
+  background-color: #fbfbfb;
 }
 
 .logo {
@@ -159,4 +176,52 @@ left:50%;
 }
 /*Register Form (above)*/
 
+/*Elisha's forwarding/navbar css*/
+.signup{
+      font-style: oblique;
+      font-size: 16px;
+  }
 
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+  
+    .inner {
+        padding-left: 1em;
+        overflow: hidden;
+        display: none;
+      
+        &.show {
+          /*display: block;*/
+        }
+    }
+  
+    li {
+        margin: .5em 0;
+      
+        a.toggle {
+            width: 100%;
+            display: block;
+            background: rgba(0,0,0,0.78);
+            color: #fefefe;
+            padding: .75em;
+            border-radius: 0.15em;
+            transition: background .3s ease;
+          
+            &:hover {
+                background: rgba(0, 0, 0, 0.9);
+            }
+        }
+    }
+}

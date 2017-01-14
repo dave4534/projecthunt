@@ -1,4 +1,4 @@
-app.controller('projControl', ['$scope', 'mainService', function($scope, mainService){
+app.controller('projControl', ['$scope', 'mainService', '$state', function($scope, mainService, $state){
 // app.controller('projControl', function ($scope) {
 
   $scope.projects = [
@@ -31,12 +31,28 @@ app.controller('projControl', ['$scope', 'mainService', function($scope, mainSer
   $scope.removeProject = function (index) {
     $scope.projects.splice(index, 1);
   };
+
+  $scope.readmore = function(){
+    $state.go('proj1');
+  };
+
+   $scope.gohome = function(){
+    $state.go('home');
+  };
+
+//getAll invoked upon /dashboard load, that loads all of the user's projects
+mainService.getAllDash().then(function(){
+  console.log('dash controller getAll invoked');
+  // $scope.companies = mainService.companies;
+  console.log('here is $scope.companies');
+  console.log($scope.companies);
+}).catch(function(err){
+  console.log(err);
+});
   
 }]);
 
 
-
-//getAll invoked upon /dashboard load, that loads all of the user's projects
 
 
 // document.getElementById("files").onchange = function () {
