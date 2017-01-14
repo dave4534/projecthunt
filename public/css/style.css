@@ -28,7 +28,7 @@
 }
 
 .searchBar {
-  width: 90%;
+  width: 100%;
   margin: 15px 0px 12px 0px;
 }
 .navBarMiddleColumn {
@@ -39,6 +39,30 @@
   width: 50px;
   margin: 7px 7px 7px 0px;
   float: right;
+}
+
+.signupButton {
+    background-color: #f16763;
+    margin: 0 auto;
+    margin: 14px 5px 0px 0px;
+    padding: 10px;
+    font-size: .9em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    letter-spacing: .06em;
+    float: right;
+}
+
+.signupButton:hover {
+  background-color: #f77975;
+}
+
+.navBarRightColumn {
+  /*border: 1px solid red;*/
 }
 
 hr {
