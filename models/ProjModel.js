@@ -11,10 +11,10 @@ var ProjSchema = new Schema ({
   projCompany: String,
   projDescription: {
     desc: String,
-    langTags: String
+    langTags: []
   },
   projDueDate: Date,
-  companyRef: [{ type: mongoose.Schema.Types.ObjectId, ref: "Company" }]
+  // companyRef: [{ type: mongoose.Schema.Types.ObjectId, ref: "Company" }]
 });
 
 var Project = mongoose.model("Project", ProjSchema);
