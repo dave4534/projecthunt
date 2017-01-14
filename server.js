@@ -10,6 +10,7 @@ var uploadProj = require('./routes/uploadProj');
 var homeProj = require('./routes/home');
 var login = require('./routes/login');
 var register = require('./routes/register');
+var gitlog = require('./routes/gitlog');
 
 //////////////////////////////   APP USE   /////////////////////////////////////s
 
@@ -23,6 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/dashboard', uploadProj);
 app.use('/home', homeProj);
+app.use('/gitlog', gitlog);
 
 app.get('/', function(req, res, next){
   res.sendFile('index.html');

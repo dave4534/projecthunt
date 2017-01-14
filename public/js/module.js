@@ -22,9 +22,13 @@ $stateProvider
     url: '/login',
     controller: 'mainController',
     templateUrl:'./Templates/login.html'
+    })
+    .state('callback', {
+      url: '/callback',
+      controller: 'loginController',
+      templateUrl: './Templates/callback.html'
     });
 
     $urlRouterProvider.otherwise('/home');
 
 }]);
-

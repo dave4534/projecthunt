@@ -21,9 +21,11 @@ router.post('/',function(req, res, next) {
   });
 });
 
-////////////////////////////////    ROUTER GET   ///////////////////////////////
+////////////////////////////////    ROUTER param   ///////////////////////////////
 
-router.get('/', function(req, res, next){
+
+router.param('company', function(req, res, next) {
+  console.log("kasjgfijsgfkjsakfjjhsskfh");
   var query = [];
   var result = [];
   Project.find(function(err, project){
@@ -34,18 +36,57 @@ router.get('/', function(req, res, next){
     for (var i = 0; i < project.length; i++) {
       query.push(project[i]._doc);
     }
-
-  }).exec(function(){
+    debugger;
+  }).exec(function(err, company){
       for(var i = 0; i < query.length; i++) {
 
-
-        if (query[i].projCompany === 'elevation') {
+        console.log(req.company);
+        if (query[i].projCompany === req.company) {
 
           result.push(query[i]);
 
         }
+        req.company = company;
+        return next();
       };
-      res.send(result);
+
+  //
+  // var query = Post.findById(id);
+  //
+  // query.exec(function (err, post){
+  //   if (err) { return next(err); }
+  //   if (!post) { return next(new Error('can\'t find post')); }
+  //
+  //   req.company = company;
+  //   return next();
+  // });
+});
+
+////////////////////////////////    ROUTER GET   ///////////////////////////////
+
+router.get('/:company', function(req, res, next){
+  // var query = [];
+  // var result = [];
+  // Project.find(function(err, project){
+  //   if (err) { return next(err); }
+  //   if (!project) { return next(new Error("can't find project!")); }
+  //
+  //
+  //   for (var i = 0; i < project.length; i++) {
+  //     query.push(project[i]._doc);
+  //   }
+  //
+  // }).exec(function(){
+  //     for(var i = 0; i < query.length; i++) {
+  //
+  //       console.log(req.company);
+  //       if (query[i].projCompany === req.company) {
+  //
+  //         result.push(query[i]);
+  //
+  //       }
+  //     };
+      res.send(req.company);
     }
   );
 
