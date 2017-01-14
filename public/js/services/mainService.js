@@ -3,12 +3,12 @@ app.factory('mainService', ['$http', function($http){
     companies: [
     
       // {
-      //   logo: "logo",
-      //   companyName: "Shai Baam",
-      //   location: "Tel Aviv",
-      //   title: "Responsive Budget Monitor",
-      //   desc: "Build a web app works well on mobile for monitoring budgets.",
-      //   dueDate: "Jan 1 2017"
+      //   projTitle: "daves proj",
+      //   projCompany: "daves comp",
+      //   projDescription: {
+      //     desc: "daves desc",
+      //     langTags: ['angular']
+      //   }
       // }
       
     ],
