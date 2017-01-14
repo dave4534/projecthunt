@@ -102,7 +102,6 @@ hr {
   font-size: 3em;
   margin-top: 20px;
   font-weight: bold;
-  letter-spacing: -.01em;
 
 }
 
@@ -195,6 +194,21 @@ hr {
 .tag>div:hover {
   background-color: #301a3e; 
   color: white;
+}
+
+.readmore {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8em;
+  letter-spacing: .07em;
+  height: 20px;
+  background-color: white;
+  display: inline-block;
+  padding: 5px 10px 0px 10px;
+  padding-bottom: 17px;
+  border-radius: 4px;
+  margin: 10px 11px 12px 1px;
+  text-decoration: none;
 }
 
 /*Register Form*/

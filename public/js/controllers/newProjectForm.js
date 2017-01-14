@@ -45,9 +45,9 @@ app.controller('projControl', ['$scope', 'mainService', '$state', function($scop
     $scope.projects.splice(index, 1);
   };
 
-  $scope.readmore = function(){
-    $state.go('proj1');
-  };
+  // $scope.readmore = function(){
+  //   $state.go('proj1');
+  // };
 
    $scope.gohome = function(){
     $state.go('home');
