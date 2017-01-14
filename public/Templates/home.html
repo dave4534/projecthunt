@@ -39,7 +39,7 @@
     <!-- Ng-Repeat of Companies & Projects Rows-->
     <div class="companyAndProjectRepeatContainer">
 
-      <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
+      <div class="row companyAndProjectRepeat" ng-repeat="company in companies | filter: {projTitle:searchBar} track by $index">
           <!-- Logo -->
           
           <div class="logo">
