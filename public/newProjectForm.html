@@ -1,39 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <!-- <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css"> -->
-  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
-  <!-- <script type="text/javascript" src="node_modules/angular/angular.js"></script> -->
-  <script type="text/javascript" src="angular/angular.js"></script>
-  <title></title>
-</head>
-<body ng-app="projectForm" ng-controller="MainCtrl" >
+
+<div>
 
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <h1 class="text-center">projects</h1>
 
-      <div ng-repeat="project in projects">
-        <div class="projectList">
-          <div class="logo-container">
-            <img ng-src="{{project.companyLogo}}"/>
+      <div class="companyAndProjectRepeatContainer">
+
+      <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
+         <!-- Logo -->
+          
+          <div class="logo">
+           <img ng-src="http://placekitten.com/g/60/60"/>
           </div>
+          
+       
+       <!-- Company Name & Location -->
+       <!-- Same column as logo -->
+      
+        <div class="info">
+          <div class="projCompany">{{company.projCompany}}</div>
+          <div class="projTitle">{{company.projTitle}}</div>
+          <div class="projDescription">{{company.projDescription.desc}}</div>
+           <a ng-click="readmore()">Read More</a>
+        </div>
+        
+
+      </div>
+      <!--  End of Row -->
+
+  </div>
+
+        <div class="projectList">
+  
 
           <div class="content-container">
             <p class="project-name" >
-            <img src="{{project.image_url}}">
-            <h3>Project name: </h3> {{project.name}}</p>
-            <p><h3>Project description: </h3>{{project.description}}</p>
-            <p><h3>Due date: </h3>{{project.date}}</p>
           </div>
-
-          <i ng-click="removeProject($index)" class="fa fa-times remove"></i>
+         <!--  <i ng-click="removeProject($index)" class="fa fa-times remove"></i> -->
         </div>
-      </div>
-
-      <form ng-submit="addProject()">
+     
+<hr>
+      <form>
         <h3>Add a new project</h3>
 
         <div class="form-group">
@@ -58,6 +66,6 @@
     </div>
   </div>
 
-  <script src="js/controllers/newProjectForm.js"></script>
-</body>
-</html>
+
+</div>
+

@@ -11,12 +11,17 @@ $stateProvider
     .state('dashboard', {
     url: '/dashboard',
     controller: 'projControl',
-    templateUrl:'./Templates/dashboard.html'
+    templateUrl:'newProjectForm.html'
     })
     .state('register', {
     url: '/register',
     controller: 'mainController',
     templateUrl:'./Templates/register.html'
+    })
+     .state('proj1', {
+    url: '/dashboard/proj1',
+    controller: 'mainController',
+    templateUrl:'./Templates/proj1.html'
     })
      .state('login', {
     url: '/login',
