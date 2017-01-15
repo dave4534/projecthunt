@@ -39,7 +39,7 @@
     <!-- Ng-Repeat of Companies & Projects Rows-->
     <div class="companyAndProjectRepeatContainer">
 
-      <div class="row companyAndProjectRepeat" ng-repeat="company in companies | filter: {projTitle:searchBar} track by $index">
+      <div class="row companyAndProjectRepeat" ng-repeat="company in companies | filter: {projCompany:searchBar,projTitle:searchBar} track by $index">
           <!-- Logo -->
           
           <div class="logo">
@@ -59,7 +59,8 @@
             <div>bootstrap</div>
             <div>node</div>
             <div>express</div>
-            <a ng-click="readmore()" class="readmore" href="#/proj1.html">Read More</a> 
+            <a class="readmore" href="#/{{company.projTitle}}">Read More</a> 
+            <!-- comment -->
           </div>
 
         </div>
