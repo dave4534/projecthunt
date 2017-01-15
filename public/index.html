@@ -8,9 +8,10 @@
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- <script src="angular/angular.min.js"></script> -->
-<!-- <script src="angular-ui-router/release/angular-ui-router.min.js"></script> -->
+  <link rel="stylesheet" href="css/tags.css">
 
+  <!-- NG-Tags CDN -->
+ <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.1.1/ng-tags-input.min.css"> -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
   <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -26,8 +27,10 @@
      <a href="#/home.html"> <img src="images/pj.png" alt="elevation_logo" class="Elevlogo"></a>
     </div>
 
-    <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="text" placeholder="Discover some great companies..." class="form-control searchBar" ng-model="searchBar">
+    <!-- Search Bar -->
+    <div ng-controller="tagController" class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <tags-input type="text" ng-model="langTags" class="searchBar"></tags-input>
+      
     </div>
 
     <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -47,10 +50,11 @@
 
 <script src="js/module.js"></script>
 <script src="js/services/mainService.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.1.1/ng-tags-input.min.js"></script>
 <!-- Controllers -->
 <script src="js/controllers/mainCtrl.js"></script>
 <script src="js/controllers/newProjectForm.js"></script>
-
+<script src="js/controllers/tagCtrl.js"></script>
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>

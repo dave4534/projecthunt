@@ -43,8 +43,7 @@ app.factory('mainService', ['$http', function($http){
         console.log(project);
         serviceData.companies.push(project);
         console.log(data);
-
-      })
+      });
     }
   };
 
