@@ -44,7 +44,7 @@ app.factory('mainService', ['$http', function($http){
         serviceData.companies.push(project);
         console.log(data);
 
-      })
+      });
     },
 
     getAllDetails: function(id, array) {
@@ -59,9 +59,9 @@ app.factory('mainService', ['$http', function($http){
           var arr = array[i];
           return arr;
         }
-      }
+      
 
-      });
+      }
 
     }
   };
