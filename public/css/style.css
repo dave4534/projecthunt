@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+html {
+  height: 100%;
+}
 
 .container-fluid {
   padding: 0;
@@ -41,10 +44,10 @@
   float: right;
 }
 
-.signupButton {
+.anyButton {
     background-color: #f16763;
     margin: 0 auto;
-    margin: 14px 5px 0px 0px;
+    
     padding: 10px;
     font-size: .9em;
     text-align: center;
@@ -54,11 +57,19 @@
     color: white;
     width: 100px;
     letter-spacing: .06em;
-    float: right;
 }
 
-.signupButton:hover {
+.anyButton:hover {
   background-color: #f77975;
+}
+
+.navSignupButton {
+  float: right;
+  margin: 14px 5px 0px 0px;
+}
+
+.registerSaveButton {
+
 }
 
 .navBarRightColumn {
@@ -102,7 +113,6 @@ hr {
   font-size: 3em;
   margin-top: 20px;
   font-weight: bold;
-
 }
 
 .background {

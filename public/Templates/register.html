@@ -1,58 +1,41 @@
-<body>
 
-<!-- Companies and Projects Header-->
+  <div class="companyTitle">
+  <div class="header">Register As Employer<div>
+    
+  </div>    
 
-<div class="row">
-  <div class="col-md-12" >
- 
+  <div ng-submit="addProject()">
+    <div class="form-group">
+
+   <div class="form-group">
+       <input type="text" class="form-control" placeholder="Your Company"></input>
+     </div>
+
+     <div class="form-group">
+       <input type="text" class="form-control" placeholder="Your Name"></input>
+     </div>
+
+
+     <div class="form-group">
+       <input type="text" class="form-control" placeholder="Logo URL"></input>
+     </div>
+
+     <div class="form-group">
+      <textarea type="text" class="form-control" placeholder="Company Description" ></textarea>
     </div>
-    </div>
 
-<div class="background" >
-
-  <div class="row companyAndProjectTitlesContainer">
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 companyTitle"><h2>Register<h2></div>
-    <hr>
-         
-
-          <!-- render projects here -->
-
-          <form ng-submit="addProject()">
-            <div class="form-style">
-            <br>
-            <br>
-           <h4 align="center">Company Info</h4>
-            <br>
-           <div class="form-group">
-             <input type="text" class="form-control" placeholder="Company Name" ng-model="image"></input>
-           </div>
+   
+ </div>
 
 
-           <div class="form-group">
-             <input type="text" class="form-control" placeholder="Logo URL"></input>
-           </div>
+     <a href="#/dashboard"><div class="registerSaveButton">Save</div></a>
+  
 
-          <div class="form-group">
-            <textarea type="text" class="form-control" placeholder="Company Description" ></textarea>
-          </div>
-
-              <br>
-
-              <div text-align"center">
-           <a href="#/dashboard"><button type="submit" class="submit-button" >Save</button></a>
-                </div>
-
-                <br>
-                <br>
-          </form>
-        </div>
-            <br>
-
-        </div>
-      </div>
-  </div>
-
+</div>
+</div>
 </div>
 
 
-</body>
+
+
+
