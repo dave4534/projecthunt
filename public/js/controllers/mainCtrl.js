@@ -15,9 +15,5 @@ mainService.getAll().then(function(){
   console.log(err);
 });
 
-// $scope.readmore = function(){
-//     $state.go('proj1');
-//   };
-
 
 }]);

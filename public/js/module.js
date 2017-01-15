@@ -33,6 +33,11 @@ $stateProvider
     url: '/login',
     controller: 'mainController',
     templateUrl:'./Templates/login.html'
+    })
+      .state('project', {
+    url: '/project',
+    controller: 'mainController',
+    templateUrl:'./Templates/proj1.html'
     });
 
     $urlRouterProvider.otherwise('/home');
