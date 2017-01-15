@@ -4,23 +4,23 @@ app.controller('mainController', ['$scope', 'mainService','$http','$window', "$h
 
 
   $scope.githubLogin = function(){
-    $.ajax({
-      url:   "https://github.com/login/oauth/authorize",
-      data:{  client_id: "eea27bdfce0e49527b31",
-              redirect_url: "http://localhost:4000/home",
-              scope: "user"
-          },
-      async: false
-  });
-    // var baseUrl = "https://github.com/login/oauth/authorize";
-    // var params = {
-    //   client_id: "eea27bdfce0e49527b31",
-    //   redirect_url: "http://localhost:4000/home",
-    //   scope: "user"
-    // };
-    // var qs = $httpParamSerializer(params);
-    // url = baseUrl + "?" + qs
-    // $window.open(url);
+  //   $.ajax({
+  //     url:   "https://github.com/login/oauth/authorize",
+  //     data:{  client_id: "eea27bdfce0e49527b31",
+  //             redirect_url: "http://localhost:4000/home",
+  //             scope: "user"
+  //         },
+  //     async: false
+  // });
+    var baseUrl = "https://github.com/login/oauth/authorize";
+    var params = {
+      client_id: "eea27bdfce0e49527b31",
+      redirect_url: "http://localhost:4000/callback",
+      scope: "user repo"
+    };
+    var qs = $httpParamSerializer(params);
+    url = baseUrl + "?" + qs
+    $window.open(url);
   }
 
   $window.addEventListener('message', function (event) {
