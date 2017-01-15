@@ -39,17 +39,17 @@
     <!-- Ng-Repeat of Companies & Projects Rows-->
     <div class="companyAndProjectRepeatContainer">
 
-      <div class="row companyAndProjectRepeat" ng-repeat="company in companies | filter: {projCompany:searchBar,projTitle:searchBar} track by $index">
+      <div class="row companyAndProjectRepeat" ng-repeat="company in companies | filter: {projCompany:searchBar} track by $index">
           <!-- Logo -->
-          
+
           <div class="logo">
            <img ng-src="http://placekitten.com/g/60/60"/>
           </div>
-          
-       
+
+
        <!-- Company Name & Location -->
        <!-- Same column as logo -->
-      
+
         <div class="info">
           <div class="projCompany">{{company.projCompany}}</div>
           <div class="projTitle">{{company.projTitle}}</div>
@@ -60,7 +60,9 @@
             <div>bootstrap</div>
             <div>node</div>
             <div>express</div>
+
             <a class="readmore" href="#/home/{{company._id}}">Read More</a> 
+
             <!-- comment -->
           </div>
 

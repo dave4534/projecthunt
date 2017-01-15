@@ -24,6 +24,8 @@
     "express": "^4.14.0",
     "font-awesome": "^4.7.0",
     "mongoose": "^4.7.6",
-    "rapidapi-connect": "0.0.2"
+    "rapidapi-connect": "0.0.2",
+    "request": "^2.79.0",
+    "superagent": "^3.3.2"
   }
 }

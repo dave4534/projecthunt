@@ -38,7 +38,7 @@ router.get('/:comp', function(req, res, next){
       console.log(project[i]);
       console.log(project[i]._doc);
       query.push(project[i]._doc);
-      
+
     }
 
   }).exec(function(){

@@ -60,7 +60,9 @@ app.factory('mainService', ['$http', function($http){
           return arr;
         }
       }
-      
+
+      });
+
     }
   };
 

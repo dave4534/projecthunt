@@ -25,6 +25,10 @@ app.controller('projControl', ['$scope', 'mainService', '$state', function($scop
       image_url: $scope.image_url
     };
 
+     //console.log tags somehow
+      console.log('here are the updated langTags');
+      console.log(project);
+
     $scope.name = '';
     $scope.description = '';
     $scope.date = '';
