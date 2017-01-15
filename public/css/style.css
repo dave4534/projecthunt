@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+html {
+  height: 100%;
+}
 
 .container-fluid {
   padding: 0;
@@ -28,7 +31,7 @@
 }
 
 .searchBar {
-  width: 90%;
+  width: 100%;
   margin: 15px 0px 12px 0px;
 }
 .navBarMiddleColumn {
@@ -39,6 +42,38 @@
   width: 50px;
   margin: 7px 7px 7px 0px;
   float: right;
+}
+
+.anyButton {
+    background-color: #f16763;
+    margin: 0 auto;
+    
+    padding: 10px;
+    font-size: .9em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    letter-spacing: .06em;
+}
+
+.anyButton:hover {
+  background-color: #f77975;
+}
+
+.navSignupButton {
+  float: right;
+  margin: 14px 5px 0px 0px;
+}
+
+.registerSaveButton {
+
+}
+
+.navBarRightColumn {
+  /*border: 1px solid red;*/
 }
 
 hr {
@@ -78,8 +113,6 @@ hr {
   font-size: 3em;
   margin-top: 20px;
   font-weight: bold;
-  letter-spacing: -.01em;
-
 }
 
 .background {
@@ -129,7 +162,6 @@ hr {
 .info {
   color: #444444;
   display: inline-block;
-  /*border: 1px solid red;*/
   margin: 11px 0 0 10px;
 }
 
@@ -137,7 +169,7 @@ hr {
    font-family: 'Montserrat', sans-serif;
    letter-spacing: .04em;
    font-size: 1.2em;
-   color: #8cb300;
+   color: #f16763;
    text-transform: uppercase;
 }
 
@@ -145,6 +177,7 @@ hr {
   font-family: helvetica;
   font-size: 1.05em;
   letter-spacing: .04em;
+  margin-top: 4px;
 }
 
 .projDescription {
@@ -153,6 +186,40 @@ hr {
   letter-spacing: .05em;
 }
 
+.tag>div {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .7em;
+  letter-spacing: .07em;
+  height: 20px;
+  background-color: white;
+  border: 1px solid #301a3e;
+  display: inline-block;
+  padding: 5px 10px 0px 10px;
+  padding-bottom: 17px;
+  border-radius: 4px;
+  margin: 10px 11px 12px 1px;
+}
+
+.tag>div:hover {
+  background-color: #301a3e; 
+  color: white;
+}
+
+.readmore {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8em;
+  letter-spacing: .07em;
+  height: 20px;
+  background-color: white;
+  display: inline-block;
+  padding: 5px 10px 0px 10px;
+  padding-bottom: 17px;
+  border-radius: 4px;
+  margin: 10px 11px 12px 1px;
+  text-decoration: none;
+}
 
 /*Register Form*/
 .form-style {

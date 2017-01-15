@@ -9,13 +9,19 @@ $stateProvider
     templateUrl: './Templates/home.html'
     })
     .state('dashboard', {
-    url: '/dashboard',
+    url: '/dashboard/:comp',
     controller: 'projControl',
-    templateUrl:'newProjectForm.html'
+    templateUrl:'./Templates/newProjectForm.html',
+    resolve: {
+          getToDash: ['mainService', '$stateParams' , function(mainService, $stateParams) {
+            console.log($stateParams.comp);
+            return mainService.getAllDash($stateParams.comp);
+          }]
+        }
     })
     .state('register', {
     url: '/register',
-    controller: 'mainController',
+    controller: 'registerController',
     templateUrl:'./Templates/register.html'
     })
      .state('proj1', {
@@ -27,6 +33,11 @@ $stateProvider
     url: '/login',
     controller: 'mainController',
     templateUrl:'./Templates/login.html'
+    })
+      .state('project', {
+    url: '/project',
+    controller: 'mainController',
+    templateUrl:'./Templates/proj1.html'
     });
 
     $urlRouterProvider.otherwise('/home');

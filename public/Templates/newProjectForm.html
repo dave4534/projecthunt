@@ -3,7 +3,7 @@
 
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <h1 class="text-center">projects</h1>
+      <div class="header">Projects</div>
 
       <div class="companyAndProjectRepeatContainer">
 
@@ -41,7 +41,7 @@
         </div>
      
 <hr>
-      <form>
+      <form ng-submit="addProject(e)">
         <h3>Add a new project</h3>
 
         <div class="form-group">
@@ -50,6 +50,10 @@
 
         <div class="form-group">
           <input type="date" class="form-control" placeholder="Due date" ng-model="date"/>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Enter languages & technologies" ng-model="langTags"/>
         </div>
 
         <div class="form-group">
