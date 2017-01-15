@@ -31,16 +31,20 @@ $stateProvider
     })
      .state('login', {
     url: '/login',
-    controller: 'mainController',
+    // controller: 'mainController',
     templateUrl:'./Templates/login.html'
     })
       .state('project', {
     url: '/project',
     controller: 'mainController',
     templateUrl:'./Templates/proj1.html'
+    })
+      .state('callback', {
+    url: '/callback',
+    controller: 'loginController',
+    templateUrl: './Templates/callback.html'
     });
 
-    $urlRouterProvider.otherwise('/home');
+    // $urlRouterProvider.otherwise('/home');
 
 }]);
-
