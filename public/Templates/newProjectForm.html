@@ -2,7 +2,7 @@
 <div>
 
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div>
       <div class="header">Projects</div>
 
       <div class="companyAndProjectRepeatContainer">
@@ -41,8 +41,8 @@
         </div>
      
 <hr>
-      <form ng-submit="addProject(e)">
-        <h3>Add a new project</h3>
+      <form ng-submit="addProject(e)" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="header">Add a new project</div>
 
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Project Name" ng-model="name"/>
@@ -51,9 +51,10 @@
         <div class="form-group">
           <input type="date" class="form-control" placeholder="Due date" ng-model="date"/>
         </div>
-
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Enter languages & technologies" ng-model="langTags"/>
+        
+        <!-- Lang Tags -->
+        <div class="form-group" ng-controller="tagController">
+          <tags-input type="text" placeholder="Press tab to add tag" ng-model="langTags"></tags-input>
         </div>
 
         <div class="form-group">

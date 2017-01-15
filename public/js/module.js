@@ -1,4 +1,4 @@
-var app = angular.module('projectHunt', ['ui.router']);
+var app = angular.module('projectHunt', ['ui.router', 'ngTagsInput']);
 
 app.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
