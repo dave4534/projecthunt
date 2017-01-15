@@ -24,27 +24,35 @@ $stateProvider
     // controller: 'registerController',
     templateUrl:'./Templates/register.html'
     })
-     .state('proj1', {
-    url: '/dashboard/proj1',
-    controller: 'mainController',
-    templateUrl:'./Templates/proj1.html'
-    })
+    //  .state('proj1', {
+    // url: '/dashboard/proj1',
+    // controller: 'mainController',
+    // templateUrl:'./Templates/proj1.html'
+    // })
      .state('login', {
     url: '/login',
     // controller: 'mainController',
     templateUrl:'./Templates/login.html'
     })
-      .state('project', {
-    url: '/project',
-    controller: 'mainController',
-    templateUrl:'./Templates/proj1.html'
+    .state('project', {
+      url: '/home/:id',
+      controller: 'detailController',
+      templateUrl:'./Templates/proj1.html',
+      resolve: {
+          getDetails: ['mainService', '$stateParams' , function(mainService, $stateParams) {
+              console.log($stateParams.id);
+              console.log(mainService.companies)
+              return mainService.getAllDetails($stateParams.id, mainService.companies);
+            }]
+        }
     })
       .state('callback', {
     url: '/callback',
     controller: 'loginController',
     templateUrl: './Templates/callback.html'
+
     });
 
-    // $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/home');
 
 }]);

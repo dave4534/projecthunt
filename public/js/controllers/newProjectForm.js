@@ -12,7 +12,7 @@ app.controller('projControl', ['$scope', 'mainService', '$state', function($scop
   ];
 
   $scope.addProject = function (e) {
-    // console.log($state.params.comp);
+    console.log($state.params);
     console.log('add proj!');
     if ($scope.name === '') { return; }
 

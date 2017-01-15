@@ -43,7 +43,26 @@ app.factory('mainService', ['$http', function($http){
         console.log(project);
         serviceData.companies.push(project);
         console.log(data);
+
+      })
+    },
+
+    getAllDetails: function(id, array) {
+
+      console.log(id);
+      // debugger;
+      console.log(array);
+      for(var i = 0; i<array.length; i++) {
+        if(array[i]._id == id) {
+          // debugger;
+          console.log(array[i]);
+          var arr = array[i];
+          return arr;
+        }
+      }
+
       });
+
     }
   };
 
