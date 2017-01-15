@@ -38,8 +38,9 @@ app.factory('mainService', ['$http', function($http){
     },
 
     postToDash: function(project) {
-      console.log('posting');
-      return $http.post('/dashboard/', project).then(function(data) {
+      console.log(project.projCompany);
+      return $http.post('/dashboard/' + project.projCompany, project).then(function(data) {
+        console.log(project);
         serviceData.companies.push(project);
         console.log(data);
 

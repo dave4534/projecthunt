@@ -9,10 +9,8 @@ var Schema = mongoose.Schema;
 var ProjSchema = new Schema ({
   projTitle: String,
   projCompany: String,
-  projDescription: {
-    desc: String,
-    langTags: []
-  },
+  projDescription: String, 
+  langTags: [],
   projDueDate: Date,
   // companyRef: [{ type: mongoose.Schema.Types.ObjectId, ref: "Company" }]
 });
