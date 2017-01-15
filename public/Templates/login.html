@@ -1,16 +1,6 @@
 
-
-
-
-
-
-
-
-          <!-- render projects here -->
-
-          <form ng-submit="addProject()">
+          <div ng-submit="addProject()">
             <div class="form-style">
-            <br>
             <br>
            <h4 align="center"></h4>
             <br>
@@ -23,17 +13,10 @@
              <input type="text" class="form-control" placeholder="Password"></input>
            </div>
 
-              <br>
               <label>code <input type="text" id="code" ng-model="codeInput"></input></label>
               <div text-align"center">
-                <button class="btn btn-primary" ng-click="githubLogin()">Login with GitHub</button>
-
-
                 </div>
 
-                <br>
+<div class="anyButton" ng-click="githubLogin()">Login</div>
 
-                <br>
-
-                <p><a href="register.html">Not Registered Yet? Sign Up Today.</a></p>
-          </form>
+          </div>
