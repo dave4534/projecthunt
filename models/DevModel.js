@@ -12,6 +12,7 @@ var UserSchema = new Schema ({
   devTitle: String,
   devBio:  String,
   devPic: String,
+  devToken: Schema.Types.Mixed,
   devProj: []
   // devProj: [{ type: mongoose.Schema.Types.ObjectId, ref: "Project" }]
 });
