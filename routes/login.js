@@ -25,7 +25,7 @@ console.log("in user post");
 router.post('/',function(req, res, next) {
   console.log(req.body);
   var user = new User(req.body);
-
+  console.log(user);
   console.log("hello handsome ;) ");
 
   user.save(function(err, user){

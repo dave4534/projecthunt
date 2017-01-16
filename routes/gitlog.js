@@ -5,11 +5,11 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var sa = require('superagent');
 var request = require('request');
+var User = require('../models/DevModel');
+mongoose.Promise = require('bluebird');
 
 console.log("in gitlog route");
 var a;
-var op;
-var data1;
 //////////////////////////////    ROUTER POST   /////////////////////////////////
 
 router.post('/', function(req, res1, next){
@@ -22,19 +22,29 @@ console.log("in gitload post request");
   })
   .end(function(err, res) {
     console.log(res.body.access_token);
-    a = res.body.access_token
+    a = {devToken:res.body.access_token};
+    var user = new User(a);
+    var id = user._id;
+    console.log(id.id);
+    user.save(function(err, user){
+      console.log('user saved!')
+      if(err){ return next(err); }
+      // debugger;
+      console.log(user._id.id);
+      
+    });
     // debugger;
-    op = {
-      url: 'https://api.github.com/user?access_token=' + res.body.access_token,
-      headers: {'User-Agent': 'ProjectHunt'}
-    }
-    request(op, function(err, response, body){
-          if (!err && response.statusCode == 200) {
-            data = JSON.parse(body);
-            console.log(data);
-            res1.send(data);
-          }
-        })
+    // op = {
+    //   url: 'https://api.github.com/user?access_token=' + res.body.access_token,
+    //   headers: {'User-Agent': 'ProjectHunt'}
+    // }
+    // request(op, function(err, response, body){
+    //       if (!err && response.statusCode == 200) {
+    //         data = JSON.parse(body);
+    //         console.log(data);
+    //         res1.send(data);
+    //       }
+    //     })
       });
   })
 
