@@ -57,9 +57,13 @@ $stateProvider
             return mainService.getUserProjects($stateParams.id, mainService.companies);
           }]
     }
-    });
+    })
+    .state('callback', {
+      url: '/callback',
+      controller: 'loginController',
+      templateUrl: './Templates/callback.html'
+        });
 
     $urlRouterProvider.otherwise('/home');
 
 }]);
-
