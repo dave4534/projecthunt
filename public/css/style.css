@@ -148,16 +148,30 @@ hr {
   background-color: #fbfbfb;
 }
 
-.logo {
-  
-  margin: 10px;
-  display: inline-block;
+.topProjectRow {
+  width: 100%;
+  height: 65px;
 }
 
-.logo img {
-  width: 35px;
-  border-radius: 3px;
+.logo {
   display: inline-block;
+  width: 35px;
+  border-radius: 4px;
+  /*vertical-align: text-bottom;*/
+  margin: 15px 15px 44px 28px;
+}
+
+.leftProjColumn {
+  /*border: 1px solid red;*/
+  display: inline-block;
+
+}
+
+.rightProjColumn {
+  /*border: 1px solid red;*/
+  display: inline-block;
+  margin-left: 4px;
+
 }
 
 .info {
@@ -169,7 +183,7 @@ hr {
 .projCompany {
    font-family: 'Montserrat', sans-serif;
    letter-spacing: .04em;
-   font-size: 1.2em;
+   font-size: 1.6em;
    color: #f16763;
    margin-top: 15px;
    text-transform: uppercase;
@@ -179,7 +193,7 @@ hr {
   font-family: helvetica;
   font-size: 1.05em;
   letter-spacing: .04em;
-  margin-top: 4px;
+  /*margin-top: 4px;*/
 }
 
 .projDescription {
