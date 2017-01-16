@@ -68,10 +68,15 @@ app.factory('mainService', ['$http', function($http){
         // serviceData.companies.push(project);
         console.log(data);
 
+
       });
     }
 
   }
+
+
+    }
+
 
   return serviceData;
 
