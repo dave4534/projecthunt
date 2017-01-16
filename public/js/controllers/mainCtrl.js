@@ -1,5 +1,7 @@
 app.controller('mainController', ['$scope', 'mainService','$http','$window', "$httpParamSerializer", function($scope, mainService, $http, $window, $httpParamSerializer){
 
+  console.log("hell yeah biatches");
+
   $scope.companies = mainService.companies;
 
 
@@ -40,7 +42,6 @@ app.controller('mainController', ['$scope', 'mainService','$http','$window', "$h
     console.log("hi");
     console.log(reaponse.data)
   });
-  //console.log(hadash);
 }
 
 
