@@ -1,75 +1,76 @@
 
 
-  <div class="tagBar">
-    <p class="tagBarTag">Javascript</p>
-    <p class="tagBarTag">MongoDB</p>
-    <p class="tagBarTag">Express</p>
-    <p class="tagBarTag">Angular</p>
-    <p class="tagBarTag">Node</p>
-    <p class="tagBarTag">Python</p>
-    <p class="tagBarTag">APIs</p>
-    <p class="tagBarTag">React</p>
-    <p class="tagBarTag">TDD</p>
-    <p class="tagBarTag">JQuery</p>
-    <p class="tagBarTag">Ruby</p>
-    <p class="tagBarTag">Java</p>
-    <p class="tagBarTag">Android</p>
-    <p class="tagBarTag">Sql</p>
-    <p class="tagBarTag">Swift</p>
-    <p class="tagBarTag">iphone</p>
-    <p class="tagBarTag">linux</p>
-    <p class="tagBarTag">django</p>
-    <p class="tagBarTag">c sharp</p>
-    <p class="tagBarTag">.net</p>
-    <p class="tagBarTag">objective c</p>
-    <p class="tagBarTag">data analysis</p>
-  </div>
+<div class="tagBar">
+  <p class="tagBarTag">Javascript</p>
+  <p class="tagBarTag">MongoDB</p>
+  <p class="tagBarTag">Express</p>
+  <p class="tagBarTag">Angular</p>
+  <p class="tagBarTag">Node</p>
+  <p class="tagBarTag">Python</p>
+  <p class="tagBarTag">APIs</p>
+  <p class="tagBarTag">React</p>
+  <p class="tagBarTag">TDD</p>
+  <p class="tagBarTag">JQuery</p>
+  <p class="tagBarTag">Ruby</p>
+  <p class="tagBarTag">Java</p>
+  <p class="tagBarTag">Android</p>
+  <p class="tagBarTag">Sql</p>
+  <p class="tagBarTag">Swift</p>
+  <p class="tagBarTag">iphone</p>
+  <p class="tagBarTag">linux</p>
+  <p class="tagBarTag">django</p>
+  <p class="tagBarTag">c sharp</p>
+  <p class="tagBarTag">.net</p>
+  <p class="tagBarTag">objective c</p>
+  <p class="tagBarTag">data analysis</p>
+</div>
 
-  <hr>
+<hr>
 
-  <!-- Header -->
-  <div class="header">Join A Project</div>
-
-
-  <!-- Companies and Projects Header-->
-
-  <div class="background" >
+<!-- Header -->
+<div class="header">Join A Project</div>
 
 
-    <!-- Ng-Repeat of Companies & Projects Rows-->
-    <div class="companyAndProjectRepeatContainer">
+<!-- Companies and Projects Header-->
 
-      <div class="row companyAndProjectRepeat" ng-repeat="company in companies | filter: {projCompany:searchBar} track by $index">
-          <!-- Logo -->
+<div class="background" >
 
-          <div class="logo">
-           <img ng-src="http://placekitten.com/g/60/60"/>
+
+  <!-- Ng-Repeat of Companies & Projects Rows-->
+  <div class="companyAndProjectRepeatContainer">
+
+    <div class="row companyAndProjectRepeat" ng-repeat="company in companies | filter: {projCompany, projTitle:searchBar} track by $index">
+
+      <!-- Logo and Company Name + Project Name Row -->
+      <div class="topProjectRow">
+      <!-- Logo -->
+          <div class="leftProjColumn">
+              
+               <img class="logo" ng-src="http://placekitten.com/g/60/60"/>
+             
+           </div>
+          
+          <div class="rightProjColumn">
+             <div class="projCompany">{{company.projCompany}}</div>
+            <div class="projTitle">{{company.projTitle}}</div>
           </div>
-
-
-       <!-- Company Name & Location -->
-       <!-- Same column as logo -->
-
-        <div class="info">
-          <div class="projCompany">{{company.projCompany}}</div>
-          <div class="projTitle">{{company.projTitle}}</div>
-          <!-- <div>{{company._id}}</div> -->
-          <!-- <div class="projDescription">{{company.projDescription}}</div> -->
-          <div class="tag">
-            <div>Angular</div>
-            <div>bootstrap</div>
-            <div>node</div>
-            <div>express</div>
-
-            <a class="readmore" href="#/home/{{company._id}}">Read More</a> 
-
-            <!-- comment -->
-          </div>
-
-        </div>
-
+       </div>
+      
+      <!-- Project Info Row -->
+      <div class="rightProjRow">
+     <!-- Company Name & Location -->
+     <div class="info">
+      
+      <div >{{company.projDescription}}</div>
+      <!-- <div>{{company._id}}</div> -->
+      <!-- <div class="projDescription">{{company.projDescription}}</div> -->
+      <div class="tagRepeat" ng-repeat="tag in company.langTags">
+        <div class="tag">{{tag}}</div> 
+        <!-- <a class="readmore" href="#/home/{{company._id}}">Read More</a> --> 
       </div>
-      <!--  End of Row -->
+    </div>
+    </div>
+    <!--  End of Row -->
 
   </div>
 </div>

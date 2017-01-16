@@ -3,7 +3,7 @@
 
   <div class="row">
     <div>
-      <div class="header">Projects</div>
+      <div class="header">Your current projects</div>
 
       <div class="companyAndProjectRepeatContainer">
 
@@ -45,34 +45,6 @@
         </div>
      
 <hr>
-      <form ng-submit="addProject(e)" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="header">Add a new project</div>
-
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Project Name" ng-model="name"/>
-        </div>
-
-        <div class="form-group">
-          <input type="date" class="form-control" placeholder="Due date" ng-model="date"/>
-        </div>
-        
-        <!-- Lang Tags -->
-        <!-- <div class="form-group" ng-controller="tagController"> -->
-        <div class="form-group">
-          <tags-input type="text" placeholder="Press tab to add tag" ng-model="langTags"></tags-input>
-        </div>
-
-        <div class="form-group">
-          <textarea type="text" class="form-control" rows="10" placeholder="project description" ng-model="description"></textarea>
-        </div>
-
-        <div class="form-group">
-          <input type="file" class="form-control" placeholder="Upload a file" ng-model="image_url" id="files"/>
-          <img id="image" style="max-width: 200px;" />
-        </div>
-
-        <button type="submit" class="btn btn-primary">Add</button>
-      </form>
     </div>
   </div>
 

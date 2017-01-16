@@ -21,7 +21,7 @@ $stateProvider
     })
     .state('register', {
     url: '/register',
-    // controller: 'registerController',
+    controller: 'registerController',
     templateUrl:'./Templates/register.html'
     })
     //  .state('proj1', {
@@ -31,28 +31,35 @@ $stateProvider
     // })
      .state('login', {
     url: '/login',
-    // controller: 'mainController',
+    controller: 'mainController',
     templateUrl:'./Templates/login.html'
     })
-    .state('project', {
-      url: '/home/:id',
-      controller: 'detailController',
-      templateUrl:'./Templates/proj1.html',
-      resolve: {
-          getDetails: ['mainService', '$stateParams' , function(mainService, $stateParams) {
-              console.log($stateParams.id);
-              console.log(mainService.companies)
-              return mainService.getAllDetails($stateParams.id, mainService.companies);
-            }]
-        }
+      .state('project', {
+    url: '/home/:id',
+    // controller: 'detailController',
+    templateUrl:'./Templates/proj1.html',
+    resolve: {
+        getDetails: ['mainService', '$stateParams' , function(mainService, $stateParams) {
+            console.log($stateParams.id);
+            console.log(mainService.companies)
+            return mainService.getAllDetails($stateParams.id, mainService.companies);
+          }]
+    }
     })
-      .state('callback', {
-    url: '/callback',
-    controller: 'loginController',
-    templateUrl: './Templates/callback.html'
-
+    .state('user', {
+    url: '/user',
+    controller: 'detailController',
+    templateUrl:'./Templates/user.html',
+    resolve: {
+        getUserProj: ['mainService', '$stateParams' , function(mainService, $stateParams) {
+            console.log($stateParams.id);
+            console.log(mainService.companies)
+            return mainService.getUserProjects($stateParams.id, mainService.companies);
+          }]
+    }
     });
 
     $urlRouterProvider.otherwise('/home');
 
 }]);
+

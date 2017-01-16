@@ -55,13 +55,20 @@ app.factory('mainService', ['$http', function($http){
       for(var i = 0; i<array.length; i++) {
         if(array[i]._id == id) {
           // debugger;
-          console.log(array[i]);
-          var arr = array[i];
-          return arr;
+          console.log(array[i]);  
+          return array[i];
         }
 
 
+
       }
+
+      }
+      
+    },
+
+    getUserProjects: function() {
+
 
     }
   };
