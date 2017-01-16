@@ -40,7 +40,8 @@ app.controller('mainController', ['$scope', 'mainService','$http','$window', "$h
     }
   }).then(function succeasCallback (reaponse){
     console.log("hi");
-    console.log(reaponse.data)
+    console.log(reaponse.data);
+    mainService.addUserToDB(reaponse.data);
   });
 }
 
