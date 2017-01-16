@@ -60,6 +60,10 @@ app.factory('mainService', ['$http', function($http){
         }
       }
       
+    },
+
+    getUserProjects: function() {
+
     }
   };
 
