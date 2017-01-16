@@ -10,10 +10,12 @@ app.controller('projControl', ['$scope', 'mainService', '$state', function($scop
     //   image_url: $scope.image_url
     // }
   ];
+  $scope.tags = [];
+  
 
   $scope.addProject = function (e) {
-    console.log($state.params);
-    console.log('add proj!');
+    // console.log($state.params);
+    // console.log('add proj!');
     if ($scope.name === '') { return; }
 
     var project = { 
@@ -24,7 +26,13 @@ app.controller('projControl', ['$scope', 'mainService', '$state', function($scop
       langTags:$scope.langTags,
       image_url: $scope.image_url
     };
-
+    console.log($scope.langTags);
+    $scope.langTags.forEach(function(a) {
+      $scope.tags.push(a.text);
+      console.log(a);
+    });
+    console.log($scope.tags);
+    project.langTags = $scope.tags;
      //console.log tags somehow
       console.log('here are the updated langTags');
       console.log(project);
