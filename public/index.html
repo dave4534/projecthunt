@@ -28,12 +28,14 @@
     </div>
 
     <!-- Search Bar -->
-    <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <tags-input type="text" ng-model="searchBar" class="searchBar"></tags-input>
-      
+   <!--   <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+     <input type="text" ng-model="searchBar">
+      <tags-input type="text" ng-model="langTags" class="searchBar"></tags-input>  
+    </div> {{searchBar}} -->
+
+     <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="text" placeholder="Discover some great companies..." class="form-control searchBar" ng-model="searchBar">
     </div>
-
-
 
     <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
     <!-- <img src="images/jolt.png" class="profilePic"> -->
@@ -54,7 +56,8 @@
 
 <script src="js/module.js"></script>
 <script src="js/services/mainService.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.1.1/ng-tags-input.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.1.1/ng-tags-input.min.js"></script> -->
+<script src="js/tagModule.js"></script>
 <!-- Controllers -->
 <script src="js/controllers/mainCtrl.js"></script>
 <script src="js/controllers/newProjectForm.js"></script>
