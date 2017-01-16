@@ -36,13 +36,25 @@ $stateProvider
     })
       .state('project', {
     url: '/home/:id',
-    controller: 'detailController',
+    // controller: 'detailController',
     templateUrl:'./Templates/proj1.html',
     resolve: {
         getDetails: ['mainService', '$stateParams' , function(mainService, $stateParams) {
             console.log($stateParams.id);
             console.log(mainService.companies)
             return mainService.getAllDetails($stateParams.id, mainService.companies);
+          }]
+    }
+    })
+    .state('user', {
+    url: '/user',
+    controller: 'detailController',
+    templateUrl:'./Templates/user.html',
+    resolve: {
+        getUserProj: ['mainService', '$stateParams' , function(mainService, $stateParams) {
+            console.log($stateParams.id);
+            console.log(mainService.companies)
+            return mainService.getUserProjects($stateParams.id, mainService.companies);
           }]
     }
     });

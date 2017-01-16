@@ -1,0 +1,53 @@
+
+<div>
+
+  <div class="row">
+    <div>
+      <div class="header">Your current projects</div>
+
+      <div class="companyAndProjectRepeatContainer">
+
+      <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
+         <!-- Logo -->
+          
+          <div class="logo col-xs-2 col-sm-2 col-md-2 col-lg-2">
+           <img ng-src="http://placekitten.com/g/60/60"/>
+          </div>
+          
+       
+        <div class="info col-xs-10 col-sm-10 col-md-10 col-lg-10">
+          <div class="projCompany">{{company.projCompany}}</div>
+          <div class="projTitle">{{company.projTitle}}</div>
+          <div >{{company.projDescription}}</div>
+          <!-- <div>{{company._id}}</div> -->
+          <!-- <div class="projDescription">{{company.projDescription}}</div> -->
+          <div class="tagRepeat" ng-repeat="tag in company.langTags">
+          <div class="tag">{{tag}}</div> 
+            <!-- <a class="readmore" href="#/home/{{company._id}}">Read More</a> --> 
+
+            <!-- comment -->
+          </div>
+        </div>
+        
+
+      </div>
+      <!--  End of Row -->
+
+  </div>
+
+        <div class="projectList">
+  
+
+          <div class="content-container">
+            <p class="project-name" >
+          </div>
+         <!--  <i ng-click="removeProject($index)" class="fa fa-times remove"></i> -->
+        </div>
+     
+<hr>
+    </div>
+  </div>
+
+
+</div>
+
