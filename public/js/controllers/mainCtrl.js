@@ -7,7 +7,7 @@ app.controller('mainController', ['$scope', 'mainService','$http','$window', "$h
     var baseUrl = "https://github.com/login/oauth/authorize";
     var params = {
       client_id: "eea27bdfce0e49527b31",
-      redirect_url: "http://localhost:4008/?#/callback",
+      redirect_url: "http://localhost:4008/?#/home",
       scope: "user repo"
     };
     var qs = $httpParamSerializer(params);
@@ -30,14 +30,19 @@ app.controller('mainController', ['$scope', 'mainService','$http','$window', "$h
   //
   var getAccToken = function(code){
     console.log("in acc token");
-    $http({
+     $http({
     method: 'POST',
     url: '/gitlog',
     data: {
       code: code
     }
-  })
+  }).then(function succeasCallback (reaponse){
+    console.log("hi");
+    console.log(reaponse.data)
+  });
+  //console.log(hadash);
 }
+
 
 mainService.getAll().then(function(){
   console.log('controller getAll invoked');

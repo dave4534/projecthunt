@@ -9,9 +9,10 @@ var request = require('request');
 console.log("in gitlog route");
 var a;
 var op;
+var data1;
 //////////////////////////////    ROUTER POST   /////////////////////////////////
 
-router.post('/', function(req, res, next){
+router.post('/', function(req, res1, next){
 console.log("in gitload post request");
   sa.post('https://github.com/login/oauth/access_token')
   .send({
@@ -27,15 +28,14 @@ console.log("in gitload post request");
       url: 'https://api.github.com/user?access_token=' + res.body.access_token,
       headers: {'User-Agent': 'ProjectHunt'}
     }
-    res.send(request(op, function(err, response, body){
+    request(op, function(err, response, body){
           if (!err && response.statusCode == 200) {
             data = JSON.parse(body);
             console.log(data);
-            return data;
+            res1.send(data);
           }
         })
-      );
-  });
+      });
   })
 
   // router.get('/', function(req, res, next){
