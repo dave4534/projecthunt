@@ -50,13 +50,13 @@ $stateProvider
     url: '/user',
     controller: 'detailController',
     templateUrl:'./Templates/user.html',
-    resolve: {
-        getUserProj: ['mainService', '$stateParams' , function(mainService, $stateParams) {
-            console.log($stateParams.id);
-            console.log(mainService.companies)
-            return mainService.getUserProjects($stateParams.id, mainService.companies);
-          }]
-    }
+    // resolve: {
+    //     getUserProj: ['mainService', '$stateParams' , function(mainService, $stateParams) {
+    //         console.log($stateParams.id);
+    //         console.log(mainService.companies)
+    //         return mainService.getUserProjects($stateParams.id, mainService.companies);
+    //       }]
+    // }
     })
     .state('callback', {
       url: '/callback',
