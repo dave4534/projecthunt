@@ -14,7 +14,7 @@ var homeProj = require('./routes/home');
 var login = require('./routes/login');
 var register = require('./routes/register');
 var gitlog = require('./routes/gitlog');
-var user = require('./routes/user');
+var user = require('./routes/login');
 
 
 //////////////////////////////   APP USE   /////////////////////////////////////s
@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/dashboard', uploadProj);
 app.use('/home', homeProj);
 app.use('/gitlog', gitlog);
-app.use('/user', user);
+app.use('/login', user);
 
 app.get('/', function(req, res, next){
   res.sendFile('index.html');

@@ -6,15 +6,16 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-var DevSchema = new Schema ({
-  devName: String,
-  devLastName: String,
+var UserSchema = new Schema ({
+  devFname: String,
+  devLname: String,
   devTitle: String,
-  devBio:  Mixed,
+  devBio:  String,
   devPic: String,
-  devProj: [{ type: mongoose.Schema.Types.ObjectId, ref: "Project" }]
+  devProj: []
+  // devProj: [{ type: mongoose.Schema.Types.ObjectId, ref: "Project" }]
 });
 
-var Developer = mongoose.model("Developer", DevSchema);
+var User = mongoose.model("User", UserSchema);
 
-module.exports = Developer;
+module.exports = User;
