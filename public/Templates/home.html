@@ -42,21 +42,24 @@
     <div class="row companyAndProjectRepeat" ng-repeat="company in companies | filter: {projCompany, projTitle:searchBar} track by $index">
 
       <!-- Logo and Company Name + Project Name Row -->
-      <div class="row">
+      <div class="topProjectRow">
       <!-- Logo -->
-        <div class="logo col-xs-1 col-sm-1 col-md-1 col-lg-1">
-         <img ng-src="http://placekitten.com/g/60/60"/>
+          <div class="leftProjColumn">
+              
+               <img class="logo" ng-src="http://placekitten.com/g/60/60"/>
+             
+           </div>
+          
+          <div class="rightProjColumn">
+             <div class="projCompany">{{company.projCompany}}</div>
+            <div class="projTitle">{{company.projTitle}}</div>
+          </div>
        </div>
-
-       <div class="projCompany">{{company.projCompany}}</div>
-      <div class="projTitle">{{company.projTitle}}</div>
-
-     </div>
       
       <!-- Project Info Row -->
-      <div class="row">
+      <div class="rightProjRow">
      <!-- Company Name & Location -->
-     <div class="info col-xs-11 col-sm-11 col-md-11 col-lg-11">
+     <div class="info">
       
       <div >{{company.projDescription}}</div>
       <!-- <div>{{company._id}}</div> -->
