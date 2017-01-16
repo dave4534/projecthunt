@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One');
 
 html {
   height: 100%;
@@ -67,14 +68,6 @@ html {
 .navSignupButton {
   float: right;
   margin: 14px 5px 0px 0px;
-}
-
-.registerSaveButton {
-
-}
-
-.navBarRightColumn {
-  /*border: 1px solid red;*/
 }
 
 hr {
@@ -347,3 +340,82 @@ ul {
         }
     }
 }
+
+/*Splash*/
+.davesRow {
+  background-image: url("../images/splash2.jpg");
+  /*max-width: 100%;*/
+  height: 1000px;
+}
+
+.splashHeader {
+    color: #ffffff;
+    font-size: 2.3em;
+    text-align: center;
+    display: inherit;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.2em;
+    padding-top: 50px;
+}
+
+.splashSubheader {
+    color: #ffffff;
+    font-size: 1.15em;
+    text-align: center;
+    display: inherit;
+    font-family: nunito;
+    font-weight: 100;
+    line-height: 1.4em;
+    letter-spacing: .06em;
+    padding: 2px 35px;
+}
+
+.splashHeader2 {
+  font-family: 'Fugaz One', cursive;
+  letter-spacing: .04em;
+}
+
+.splashButton {
+    background-color: #f16763;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: .9em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: white;
+    width: 14em;
+    letter-spacing: .07em;
+    margin-top: 2em;
+    text-decoration: none;
+}
+
+.splashButton:hover {
+  cursor: pointer;
+  background-color: #f77975;
+  text-decoration: none;
+}
+
+.iconRow {
+  width: 100%;
+}
+
+.iconContainer {
+  display: inline-block;
+  margin: 35px 0 0 0;
+}
+
+.splashIconHeader {
+    color: white;
+    font-family: nunito;
+    font-size: 1.3em;
+    margin: 1em 2em 0 2em;
+    text-align: center;
+    letter-spacing: .05em;
+}
+
+
+
+
+
