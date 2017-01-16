@@ -3,9 +3,7 @@ app.controller('tagController', ['$scope', 'mainService', function($scope, mainS
 
   $scope.langTags = [];
   $scope.tagArray = [];
-    // { text: 'Angular' },
-    // { text: 'JavaScript' }
-  // ];
+
   // $scope.langTags.push('jdhf');
   // for(var i = 0; i<)
 	// $scope.pushToArr = function(){

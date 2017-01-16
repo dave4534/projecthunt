@@ -149,14 +149,14 @@ hr {
 }
 
 .logo {
-  width: 60px;
+  
   margin: 10px;
-  float: left;
   display: inline-block;
 }
 
 .logo img {
-  border-radius: 5px;
+  width: 35px;
+  border-radius: 3px;
   display: inline-block;
 }
 
@@ -171,6 +171,7 @@ hr {
    letter-spacing: .04em;
    font-size: 1.2em;
    color: #f16763;
+   margin-top: 15px;
    text-transform: uppercase;
 }
 
@@ -187,7 +188,11 @@ hr {
   letter-spacing: .05em;
 }
 
-.tag>div {
+.tagRepeat {
+  display: inline-block;
+}
+
+.tag {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-size: .7em;
@@ -202,7 +207,7 @@ hr {
   margin: 10px 11px 12px 1px;
 }
 
-.tag>div:hover {
+.tag:hover {
   background-color: #301a3e; 
   color: white;
 }
