@@ -23,10 +23,12 @@ app.controller('mainController', ['$scope', 'mainService','$http','$window', "$h
   	$scope.codeInput = code
     code = code.substring(0, 20);
     getAccToken(code);
-    })
+    console.log(code);
+  })
+
 
   //
-  getAccToken = function(code){
+  var getAccToken = function(code){
     console.log("in acc token");
     $http({
     method: 'POST',
@@ -34,7 +36,7 @@ app.controller('mainController', ['$scope', 'mainService','$http','$window', "$h
     data: {
       code: code
     }
-  });
+  })
 }
 
 mainService.getAll().then(function(){

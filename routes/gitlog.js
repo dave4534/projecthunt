@@ -7,7 +7,8 @@ var sa = require('superagent');
 var request = require('request');
 
 console.log("in gitlog route");
-
+var a;
+var op;
 //////////////////////////////    ROUTER POST   /////////////////////////////////
 
 router.post('/', function(req, res, next){
@@ -20,31 +21,39 @@ console.log("in gitload post request");
   })
   .end(function(err, res) {
     console.log(res.body.access_token);
-    var op = {
+    a = res.body.access_token
+    // debugger;
+    op = {
       url: 'https://api.github.com/user?access_token=' + res.body.access_token,
       headers: {'User-Agent': 'ProjectHunt'}
     }
-    request(op, function (error, response, body) {
-      if (!error && response.statusCode == 200) {
-        console.log(body);
-      }else{
-        console.log("in else" + response.body);
-      }
-    })
+    res.send(request(op, function(err, response, body){
+          if (!err && response.statusCode == 200) {
+            data = JSON.parse(body);
+            console.log(data);
+            return data;
+          }
+        })
+      );
   });
-  res.json();
   })
-//   router.get('/', function(req, res, next){
-//     debugger;
-//     request('https://api.github.com/user?access_token=' + res.body.access_token, function (error, response, body) {
-//       if (!error && response.statusCode == 200) {
-//         console.log(res);
-//       }
-//     })
+
+  // router.get('/', function(req, res, next){
+
 // })
 
 
 
 
-
 module.exports = router;
+
+// request(op, function (error, response, body) {
+//   if (!error && response.statusCode == 200) {
+//     console.log(body);
+//     a = JSON.parse(body);
+//     console.log(response);
+//     // debugger;
+//   }else{
+//     console.log("in else" + response.body);
+//   }
+// })
