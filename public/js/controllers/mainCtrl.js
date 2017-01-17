@@ -1,5 +1,4 @@
-app.controller('mainController', ['$scope', 'mainService','$http','$window', "$httpParamSerializer", function($scope, mainService, $http, $window, $httpParamSerializer){
-
+app.controller('mainController', ['$scope', 'mainService', 'userService', '$http', '$window', "$httpParamSerializer", function($scope, mainService,userService, $http, $window, $httpParamSerializer){
 
   var gitData;
 
@@ -41,13 +40,15 @@ app.controller('mainController', ['$scope', 'mainService','$http','$window', "$h
     }
   }).then(function successCallback (response){
     console.log("hi");
-
-
-    
     console.log(response.data);
     // mainService.addUserToDB(response.data);
-
+    findUser(response.data.gitID);
   });
+}
+
+var findUser = function(userId){
+  console.log(userId);
+  userService.idCheck(userId);
 }
 
 

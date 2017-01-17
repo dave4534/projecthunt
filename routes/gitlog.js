@@ -46,7 +46,7 @@ console.log("in gitload post request");
     //     })
 
 
-    //hashin the token 
+    //hashin the token
     hash.update(res.body.access_token, 'utf8');
     var hexHash = hash.digest("hex");
     console.log(hexHash);
@@ -102,8 +102,9 @@ console.log("in gitload post request");
               'gitID':data.id
             };
             console.log(secretUser);
+            a = secretUser;
             res1.send(secretUser);
-            
+
           })
       };
   })
@@ -111,9 +112,22 @@ console.log("in gitload post request");
       });
   })
 
-  // router.get('/', function(req, res, next){
+router.param('id', function(req, res, next, id){
+  console.log('2');
+var hello =  User.findOne({gitID: id})
+req.hello = hello
+  console.log(id);
+  return next();
+})
 
-// })
+
+  router.get('/:id', function(req, res, next){
+    // debugger;
+    console.log(req.hello)
+    // res.json(res);
+    console.log('3');
+    res.end();
+})
 
 
 
