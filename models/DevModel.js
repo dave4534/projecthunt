@@ -8,6 +8,7 @@ var Schema = mongoose.Schema;
 
 var UserSchema = new Schema ({
   devID: Schema.Types.Mixed,
+  gitID: Schema.Types.Mixed,
   devFname: String,
   devLname: String,
   devTitle: String,
