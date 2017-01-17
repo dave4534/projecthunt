@@ -65,7 +65,7 @@
     </div>
 
     <div class="projectRow tagRow"> 
-    <div class="tagRepeat tagContainer" ng-repeat="tag in company.langTags">
+    <div class="tagRepeat tagContainer" ng-repeat="tag in company.langTags track by $index">
         <div class="tag">{{tag}}</div> 
       </div>
       </div>
