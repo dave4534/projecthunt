@@ -19,22 +19,22 @@ router.get('/', function(req, res, next){
 
 
 
-////////////////////////////////    ROUTER POST   //////////////////////////////
-console.log("in user post");
-// debugger;
-router.post('/',function(req, res, next) {
-  console.log(req.body);
-  var user = new User(req.body);
-  console.log(user);
-  console.log("hello handsome ;) ");
+// ////////////////////////////////    ROUTER POST   //////////////////////////////
+// console.log("in user post");
+// // debugger;
+// router.post('/',function(req, res, next) {
+//   console.log(req.body);
+//   var user = new User(req.body);
+//   console.log(user);
+//   console.log("hello handsome ;) ");
 
-  user.save(function(err, user){
-  	console.log('user saved!')
-    if(err){ return next(err); }
-    console.log(user);
-    res.json(user);
-  });
-});
+//   user.save(function(err, user){
+//   	console.log('user saved!')
+//     if(err){ return next(err); }
+//     console.log(user);
+//     res.json(user);
+//   });
+// });
 
 
 

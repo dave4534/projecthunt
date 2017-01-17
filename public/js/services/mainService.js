@@ -50,17 +50,17 @@ app.factory('mainService', ['$http', function($http){
         }
       }
 
-    },
-    addUserToDB: function(user) {
-      console.log(user);
-      return $http.post('/login').then(function(data) {
-        console.log(user.login);
-        // serviceData.companies.push(project);
-        console.log(data);
-
-
-      });
     }
+    // addUserToDB: function(user) {
+    //   console.log(user);
+    //   return $http.post('/login').then(function(data) {
+    //     console.log(user.login);
+    //     // serviceData.companies.push(project);
+    //     console.log(data);
+
+
+    //   });
+    // }
   }
 
 
