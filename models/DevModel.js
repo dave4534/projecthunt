@@ -7,6 +7,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema ({
+  devID: Schema.Types.Mixed,
   devFname: String,
   devLname: String,
   devTitle: String,

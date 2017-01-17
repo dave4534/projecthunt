@@ -36,7 +36,7 @@ $stateProvider
     // })
      .state('login', {
     url: '/login',
-    controller: 'mainController',
+    // controller: 'mainController',
     templateUrl:'./Templates/login.html'
     })
       .state('project', {
