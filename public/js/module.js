@@ -39,6 +39,11 @@ $stateProvider
     controller: 'mainController',
     templateUrl:'./Templates/login.html'
     })
+      .state('createproject', {
+    url: '/createproject',
+    controller: 'projControl',
+    templateUrl:'./Templates/createproject.html'
+    })
       .state('project', {
     url: '/home/:id',
     // controller: 'detailController',

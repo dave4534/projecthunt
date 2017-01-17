@@ -1,0 +1,39 @@
+<div class="header" style="background-color: white;">Add a new project</div>
+
+<div class="subheader">
+  We have had wonderful experience working with companies on the matter (IBM, 6over6 to name a few who have also hired students from the bootcamp) who have given our students a short project to complete. 
+
+The project needs to take them about 3 days to complete the mvp, and a few more days to complete other features. It should be challenging but a chance to demonstrate quality code. 
+</div>
+
+<div class="formContainer">
+
+<form ng-submit="addProject(e)" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+        
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Project Name" ng-model="name"/>
+        </div>
+
+        <div class="form-group">
+          <input type="date" class="form-control" placeholder="Due date" ng-model="date"/>
+        </div>
+        
+        <!-- Lang Tags -->
+        <!-- <div class="form-group" ng-controller="tagController"> -->
+        <div class="form-group">
+          <tags-input type="text" placeholder="Press tab to add tag" ng-model="langTags"></tags-input>
+        </div>
+
+        <div class="form-group">
+          <textarea type="text" class="form-control" rows="10" placeholder="project description" ng-model="description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <input type="file" class="form-control" placeholder="Upload a file" ng-model="image_url" id="files"/>
+          <img id="image" style="max-width: 200px;" />
+        </div>
+
+        <a href="#/dashboard/elevation"><button type="submit" class="btn btn-primary">Add</button></a> 
+      </form>
+      </div>

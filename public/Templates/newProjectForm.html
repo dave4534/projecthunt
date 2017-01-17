@@ -5,35 +5,53 @@
     <div>
       <div class="header">Projects</div>
 
-      <div class="companyAndProjectRepeatContainer">
+<div class="background" >
 
-      <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
-         <!-- Logo -->
+
+  <!-- Ng-Repeat of Companies & Projects Rows-->
+  <div class="companyAndProjectRepeatContainer">
+
+    <div class="row companyAndProjectRepeat" ng-repeat="company in companies | filter: {projCompany, projTitle:searchBar} track by $index">
+
+      <!-- Logo and Company Name + Project Name Row -->
+      <div class="projectRow">
+      <!-- Logo -->
+          <div class="leftProjColumn">
+               <img class="logo" ng-src="http://placekitten.com/g/60/60"/>
+           </div>
           
-          <div class="logo col-xs-2 col-sm-2 col-md-2 col-lg-2">
-           <img ng-src="http://placekitten.com/g/60/60"/>
+          <div class="rightProjColumn">
+             <div class="projCompany">{{company.projCompany}}</div>
+            <div class="projTitle">{{company.projTitle}}</div>
           </div>
-          
-       
-        <div class="info col-xs-10 col-sm-10 col-md-10 col-lg-10">
-          <div class="projCompany">{{company.projCompany}}</div>
-          <div class="projTitle">{{company.projTitle}}</div>
-          <div >{{company.projDescription}}</div>
-          <!-- <div>{{company._id}}</div> -->
-          <!-- <div class="projDescription">{{company.projDescription}}</div> -->
-          <div class="tagRepeat" ng-repeat="tag in company.langTags">
-          <div class="tag">{{tag}}</div> 
-            <!-- <a class="readmore" href="#/home/{{company._id}}">Read More</a> --> 
+       </div>
+      
+      <!-- Project Info Row -->
+      <div class="projectRow">
+     <!-- Company Name & Location -->
+     <div class="info">
+      
+      <div class="projDescription" >{{company.projDescription}}</div>
+      
+    </div>
+    </div>
 
-            <!-- comment -->
-          </div>
-        </div>
-        
-
+    <div class="projectRow tagRow"> 
+    <div class="tagRepeat tagContainer" ng-repeat="tag in company.langTags track by $index">
+        <div class="tag">{{tag}}</div> 
       </div>
-      <!--  End of Row -->
+      </div>
+
+    <div class="projectRow"> 
+      <div class="startButton">Start</div>
+    </div>
+    
 
   </div>
+</div>
+<!--  End of Row -->
+
+
 
         <div class="projectList">
   
@@ -43,39 +61,10 @@
           </div>
          <!--  <i ng-click="removeProject($index)" class="fa fa-times remove"></i> -->
         </div>
-     
-<hr>
-      <form ng-submit="addProject(e)" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="header">Add a new project</div>
-
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Project Name" ng-model="name"/>
-        </div>
-
-        <div class="form-group">
-          <input type="date" class="form-control" placeholder="Due date" ng-model="date"/>
-        </div>
-        
-        <!-- Lang Tags -->
-        <!-- <div class="form-group" ng-controller="tagController"> -->
-        <div class="form-group">
-          <tags-input type="text" placeholder="Press tab to add tag" ng-model="langTags"></tags-input>
-        </div>
-
-        <div class="form-group">
-          <textarea type="text" class="form-control" rows="10" placeholder="project description" ng-model="description"></textarea>
-        </div>
-
-        <div class="form-group">
-          <input type="file" class="form-control" placeholder="Upload a file" ng-model="image_url" id="files"/>
-          <img id="image" style="max-width: 200px;" />
-        </div>
-
-        <button type="submit" class="btn btn-primary">Add</button>
-      </form>
+      
     </div>
   </div>
 
 
 </div>
-
+</div>
