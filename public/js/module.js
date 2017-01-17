@@ -38,11 +38,11 @@ $stateProvider
     url: '/login',
     // controller: 'mainController',
     templateUrl:'./Templates/login.html',
-    resolve: {
-      setId: ['userService', '$stateParams', function(userService, stateParams){
-        return userService.idCheck($stateParams.id);
-      }]
-    }
+    // resolve: {
+    //   setId: ['userService', '$stateParams', function(userService, stateParams){
+    //     return userService.idCheck($stateParams.id);
+    //   }]
+    // }
     })
       .state('createproject', {
     url: '/createproject',
