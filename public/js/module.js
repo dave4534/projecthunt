@@ -46,8 +46,18 @@ $stateProvider
     })
       .state('createproject', {
     url: '/createproject',
-    controller: 'projControl',
+    // controller: 'projControl',
     templateUrl:'./Templates/createproject.html'
+    })
+     .state('chooseteam', {
+    url: '/chooseteam',
+    // controller: 'projControl',
+    templateUrl:'./Templates/chooseteam.html'
+    })
+     .state('submitproject', {
+    url: '/submitproject',
+    // controller: 'projControl',
+    templateUrl:'./Templates/submitproject.html'
     })
       .state('project', {
     url: '/home/:id',
