@@ -37,7 +37,9 @@ $stateProvider
      .state('login', {
     url: '/welcome',
     // controller: 'mainController',
+
     templateUrl:'./Templates/welcome.html',
+
     // resolve: {
     //   setId: ['userService', '$stateParams', function(userService, stateParams){
     //     return userService.idCheck($stateParams.id);
