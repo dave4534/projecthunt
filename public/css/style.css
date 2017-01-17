@@ -6,6 +6,10 @@ html {
   height: 100%;
 }
 
+body {
+  width: 100%;
+}
+
 .container-fluid {
   padding: 0;
   margin: 0;
@@ -23,8 +27,8 @@ html {
 */}
 
 .Elevlogo {
-  width: 40px;
-  margin: 13px 0 0 10px;
+  width: 100%;
+  margin: 16px 0 0 10px;
 }
 
 .Elevlogo:hover {
@@ -105,9 +109,21 @@ hr {
     font-family: 'Nunito', sans-serif;
     color: #f16763;
     font-size: 3em;
-    padding-top: 20px;
+    padding: 30px 0 30px 0;
     font-weight: bold;
     background-color: #edeff0;
+}
+
+.subheader {
+    color: #333;
+    /* width: 100%; */
+    text-align: center;
+    margin: 0 auto;
+    font-family: nunito;
+    font-size: 1.35em;
+    letter-spacing: .03em;
+    max-width: 600px;
+    padding-bottom: 40px;
 }
 
 .background {
@@ -125,11 +141,13 @@ hr {
 .companyAndProjectRepeatContainer {
     height: 400px;
     background-color: #edeff0;
-    margin: 18px 30px 50px 30px;
+    /* margin: 18px 30px 50px 30px; */
     /* border-radius: 10px; */
     /* overflow: hidden; */
     /* box-shadow: 0px 2px 3px 2px rgba(45, 45, 45, 0.13); */
     height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .companyAndProjectRepeat {
@@ -345,10 +363,10 @@ ul {
 
 
 /*Splash*/
-.davesRow {
+.splashContainer {
   background-image: url("../images/splash2.jpg");
   /*max-width: 100%;*/
-  height: 1000px;
+  height: 2000px;
 }
 
 .splashHeader {
@@ -408,6 +426,24 @@ ul {
   width: 100%;
 }
 
+.poweredByHeader {
+    font-size: 1.1em;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    padding-top: 100px;
+    font-weight: 100;
+}
+
+.poweredByHeader>img {
+    vertical-align: middle;
+    margin-right: 23px;
+    margin-bottom: 7px;
+    height: 2.5em;
+}
+
 .iconContainer {
   display: inline-block;
   margin: 35px 0 0 0;
@@ -423,7 +459,112 @@ ul {
 }
 
 
+.formContainer {
+  max-width: 400px;
+  margin: 0 auto;
+}
 
+/*Media Queries*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+.companyAndProjectRepeat {
+    background-color: white;
+    /* border: 1px solid #e2e2e2; */
+    /* margin-bottom: 26px; */
+    box-shadow: 0px 3px 25px 2px rgba(0, 0, 0, 0.18);
+    border-radius: 5px;
+    margin: 0 30px 26px 30px;
+}
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+
+.companyAndProjectRepeat {
+    background-color: white;
+    /* border: 1px solid #e2e2e2; */
+    /* margin-bottom: 26px; */
+    box-shadow: 0px 3px 25px 2px rgba(0, 0, 0, 0.18);
+    border-radius: 5px;
+    margin: 0 30px 26px 30px;
+    }
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 400px) {
+
+.companyAndProjectRepeat {
+    background-color: white;
+    /* border: 1px solid #e2e2e2; */
+    /* margin-bottom: 26px; */
+    box-shadow: 0px 3px 25px 2px rgba(0, 0, 0, 0.18);
+    border-radius: 5px;
+    margin: 0 30px 26px 30px;
+    }
+
+.tagRow {
+    margin: -3px 0px 16px 15px;
+    padding-right: 3px;
+    padding-left: 71px;
+}
+
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
 
 
 
