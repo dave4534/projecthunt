@@ -31,7 +31,7 @@ $stateProvider
     // })
      .state('login', {
     url: '/login',
-    controller: 'mainController',
+    // controller: 'mainController',
     templateUrl:'./Templates/login.html'
     })
       .state('project', {
@@ -49,12 +49,10 @@ $stateProvider
     .state('user', {
     url: '/user',
     controller: 'detailController',
-    templateUrl:'./Templates/user.html',
+    templateUrl:'./Templates/user.html'
     // resolve: {
-    //     getUserProj: ['mainService', '$stateParams' , function(mainService, $stateParams) {
-    //         console.log($stateParams.id);
-    //         console.log(mainService.companies)
-    //         return mainService.getUserProjects($stateParams.id, mainService.companies);
+    //     getUserProj: ['userService', function(userService) {
+    //         return userService.getAllDash(userService.dummyData);
     //       }]
     // }
     })
