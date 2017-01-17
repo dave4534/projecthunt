@@ -72,14 +72,15 @@ console.log("in gitload post request");
     request(op, function(err, response, body){
           if (!err && response.statusCode == 200) {
             data = JSON.parse(body);
-            // console.log(data);
+            console.log(data);
             // console.log(a);
             var b = {
               'devID':a.devID,
               'devFname': data.login,
               'devBio':  data.bio,
               'devToken':a.devToken,
-              'devPic': data.avatar_url
+              'devPic': data.avatar_url,
+              'gitID':data.id
             }
             // console.log(b);
             var user = new User (b);
@@ -87,7 +88,7 @@ console.log("in gitload post request");
             console.log('user saved!')
             if(err){ return next(err); }
             // debugger;
-            // console.log(user);
+            console.log(user);
             // db.users.findOneAndUpdate({devID:a.devID},{
             //   'devFname': data.login,
             //   'devBio':  data.bio,
@@ -97,7 +98,8 @@ console.log("in gitload post request");
               'devID':a.devID,
               'devFname': data.login,
               'devBio':  data.bio,
-              'devPic': data.avatar_url
+              'devPic': data.avatar_url,
+              'gitID':data.id
             };
             console.log(secretUser);
             res1.send(secretUser);

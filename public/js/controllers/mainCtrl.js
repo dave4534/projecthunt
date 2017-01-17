@@ -1,6 +1,5 @@
 app.controller('mainController', ['$scope', 'mainService','$http','$window', "$httpParamSerializer", function($scope, mainService, $http, $window, $httpParamSerializer){
 
-  console.log("hell yeah biatches");
 
   var gitData;
 
@@ -43,7 +42,6 @@ app.controller('mainController', ['$scope', 'mainService','$http','$window', "$h
   }).then(function successCallback (response){
     console.log("hi");
 
-    console.log(response.data)
 
     
     console.log(response.data);
