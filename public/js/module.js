@@ -35,9 +35,11 @@ $stateProvider
     // templateUrl:'./Templates/proj1.html'
     // })
      .state('login', {
-    url: '/login',
+    url: '/welcome',
     // controller: 'mainController',
-    templateUrl:'./Templates/login.html',
+
+    templateUrl:'./Templates/welcome.html',
+
     // resolve: {
     //   setId: ['userService', '$stateParams', function(userService, stateParams){
     //     return userService.idCheck($stateParams.id);
