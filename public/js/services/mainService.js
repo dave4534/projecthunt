@@ -1,17 +1,7 @@
 app.factory('mainService', ['$http', function($http){
   var serviceData = {
-    companies: [
+    companies: [],
 
-      // {
-      //   projTitle: "daves proj",
-      //   projCompany: "daves comp",
-      //   projDescription: {
-      //     desc: "daves desc",
-      //     langTags: ['angular']
-      //   }
-      // }
-
-    ],
     getAllDash: function(comp){
       console.log(' getAllDash invoked from service');
       return $http.get('/dashboard/' + comp)

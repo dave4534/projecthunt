@@ -49,7 +49,7 @@ html {
 .anyButton {
     background-color: #f16763;
     margin: 0 auto;
-    
+
     padding: 10px;
     font-size: .9em;
     text-align: center;
@@ -252,7 +252,7 @@ hr {
 }
 
 .tag:hover {
-  background-color: #301a3e; 
+  background-color: #301a3e;
   color: white;
 }
 
@@ -313,20 +313,20 @@ a {
 ul {
     list-style: none;
     padding: 0;
-  
+
     .inner {
         padding-left: 1em;
         overflow: hidden;
         display: none;
-      
+
         &.show {
           /*display: block;*/
         }
     }
-  
+
     li {
         margin: .5em 0;
-      
+
         a.toggle {
             width: 100%;
             display: block;
@@ -335,13 +335,14 @@ ul {
             padding: .75em;
             border-radius: 0.15em;
             transition: background .3s ease;
-          
+
             &:hover {
                 background: rgba(0, 0, 0, 0.9);
             }
         }
     }
 }
+
 
 /*Splash*/
 .davesRow {
@@ -420,6 +421,7 @@ ul {
     text-align: center;
     letter-spacing: .05em;
 }
+
 
 
 

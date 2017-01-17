@@ -2,6 +2,8 @@ app.controller('mainController', ['$scope', 'mainService','$http','$window', "$h
 
   console.log("hell yeah biatches");
 
+  var gitData;
+
   $scope.companies = mainService.companies;
 
 
@@ -40,8 +42,13 @@ app.controller('mainController', ['$scope', 'mainService','$http','$window', "$h
     }
   }).then(function succeasCallback (reaponse){
     console.log("hi");
+
+    console.log(reaponse.data)
+
+
     console.log(reaponse.data);
     mainService.addUserToDB(reaponse.data);
+
   });
 }
 
