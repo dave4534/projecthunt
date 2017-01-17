@@ -40,14 +40,14 @@ app.controller('mainController', ['$scope', 'mainService','$http','$window', "$h
     data: {
       code: code
     }
-  }).then(function succeasCallback (reaponse){
+  }).then(function successCallback (response){
     console.log("hi");
 
-    console.log(reaponse.data)
+    console.log(response.data)
 
-
-    console.log(reaponse.data);
-    mainService.addUserToDB(reaponse.data);
+    
+    console.log(response.data);
+    // mainService.addUserToDB(response.data);
 
   });
 }

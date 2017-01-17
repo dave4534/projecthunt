@@ -46,7 +46,7 @@ console.log("in gitload post request");
     //     })
 
 
-    //hashin the token and setting it as the user ID
+    //hashin the token 
     hash.update(res.body.access_token, 'utf8');
     var hexHash = hash.digest("hex");
     console.log(hexHash);
@@ -72,8 +72,8 @@ console.log("in gitload post request");
     request(op, function(err, response, body){
           if (!err && response.statusCode == 200) {
             data = JSON.parse(body);
-            console.log(data);
-            console.log(a);
+            // console.log(data);
+            // console.log(a);
             var b = {
               'devID':a.devID,
               'devFname': data.login,
@@ -81,20 +81,26 @@ console.log("in gitload post request");
               'devToken':a.devToken,
               'devPic': data.avatar_url
             }
-            console.log(b);
+            // console.log(b);
             var user = new User (b);
           user.save(function(err, user){
             console.log('user saved!')
             if(err){ return next(err); }
             // debugger;
-            console.log(user);
+            // console.log(user);
             // db.users.findOneAndUpdate({devID:a.devID},{
             //   'devFname': data.login,
             //   'devBio':  data.bio,
             //   'devPic': data.avatar_url,
             // });
-
-            res1.send(data);
+            var secretUser = {
+              'devID':a.devID,
+              'devFname': data.login,
+              'devBio':  data.bio,
+              'devPic': data.avatar_url
+            };
+            console.log(secretUser);
+            res1.send(secretUser);
             
           })
       };
