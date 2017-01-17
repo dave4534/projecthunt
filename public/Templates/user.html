@@ -1,52 +1,53 @@
-<div>
+<!-- Header -->
+<div class="header">Your Current Projects</div>
 
-  <div class="row">
-    <div>
-      <div class="header">Your current projects</div>
 
-      <div class="companyAndProjectRepeatContainer">
+<!-- Companies and Projects Header-->
 
-      <div class="row companyAndProjectRepeat" ng-repeat="x in proj track by $index">
-         <!-- Logo -->
+<div class="background" >
 
-          <div class="logo col-xs-2 col-sm-2 col-md-2 col-lg-2">
-           <img ng-src="http://placekitten.com/g/60/60"/>
+
+  <!-- Ng-Repeat of Companies & Projects Rows-->
+  <div class="companyAndProjectRepeatContainer">
+
+    <div class="row companyAndProjectRepeat" ng-repeat="x in proj track by $index">
+
+      <!-- Logo and Company Name + Project Name Row -->
+      <div class="projectRow">
+      <!-- Logo -->
+          <div class="leftProjColumn">
+               <img class="logo" ng-src="http://placekitten.com/g/60/60"/>
+           </div>
+          
+          <div class="rightProjColumn">
+             <div class="projCompany">{{x.projCompany}}</div>
+            <div class="projTitle">{{x.projTitle}}</div>
           </div>
-
-
-        <div class="info col-xs-10 col-sm-10 col-md-10 col-lg-10">
-          <div class="projCompany">{{x.projCompany}}</div>
-          <div class="projTitle">{{x.projTitle}}</div>
-          <div >{{x.projDescription}}</div>
-          <!-- <div>{{company._id}}</div> -->
-          <!-- <div class="projDescription">{{company.projDescription}}</div> -->
-          <div class="tagRepeat" ng-repeat="tag in x.langTags">
-          <div class="tag">{{tag}}</div>
-            <!-- <a class="readmore" href="#/home/{{company._id}}">Read More</a> -->
-
-            <!-- comment -->
-          </div>
-        </div>
-
-
-      </div>
-      <!--  End of Row -->
-
-  </div>
-
-        <div class="projectList">
-
-
-          <div class="content-container">
-            <p class="project-name" >
-          </div>
-         <!--  <i ng-click="removeProject($index)" class="fa fa-times remove"></i> -->
-        </div>
-
-<hr>
+       </div>
+      
+      <!-- Project Info Row -->
+      <div class="projectRow">
+     <!-- Company Name & Location -->
+     <div class="info">
+      
+      <div class="projDescription" >{{x.projDescription}}</div>
+      
     </div>
-  </div>
+    </div>
 
+    <div class="projectRow tagRow"> 
+    <div class="tagRepeat tagContainer" ng-repeat="tag in x.langTags" track by $index">
+        <div class="tag">{{tag}}</div> 
+      </div>
+      </div>
+
+    <div class="projectRow"> 
+      <div class="startButton">Submit This Project</div>
+    </div>
+    
+
+  </div>
+</div>
+<!--  End of Row -->
 
 </div>
-<script type="text/javascript" src="https://form.jotform.me/jsform/70162636561454"></script>

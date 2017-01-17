@@ -1,4 +1,31 @@
+<!--  Nav Bar -->
+  <div class="row navBar">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+     <a href="#/home"> 
+     <img src="images/logo.png" class="Elevlogo">
+     <!-- <img src="images/elevlogoMobile.png" class="elevlogoMobile"> -->
+     </a>
+    </div>
 
+    <!-- Search Bar -->
+   <!--   <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+     <input type="text" ng-model="searchBar">
+      <tags-input type="text" ng-model="langTags" class="searchBar"></tags-input>
+    </div> {{searchBar}} -->
+
+     <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="text" placeholder="Discover some great companies..." class="form-control searchBar" ng-model="searchBar">
+    </div>
+
+    <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <!-- <img src="images/jolt.png" class="profilePic"> -->
+
+<!--     <a href="#/register"><div class="anyButton navSignupButton">Sign Up</div></a>
+ -->    <a href="#/login"><div class="anyButton navSignupButton">Login</div></a>
+    </div>
+  </div>
+   <!--  End of Nav Bar -->
+   <hr>
 
 <div class="tagBar">
   <p class="tagBarTag">Javascript</p>
@@ -71,7 +98,7 @@
       </div>
 
     <div class="projectRow"> 
-      <div class="startButton">Start</div>
+     <a href="#/chooseteam"><div class="startButton">Start</div></a> 
     </div>
     
 
