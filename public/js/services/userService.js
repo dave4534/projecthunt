@@ -21,7 +21,7 @@ app.factory('userService', ['$http', function($http){
   projDescription: "make me a proj3",
   langTags: ["react"],
   // projDueDate: Date
-  }]
+  }],
 
     // getAllDash: function(){
     //   console.log(' getAllDash invoked from service');
@@ -38,6 +38,14 @@ app.factory('userService', ['$http', function($http){
     //     console.error(err);
     //   });
     // }
+
+    idCheck: function(id){
+      console.log(id);
+      return $http.get('/login/' + id).then(function(res){
+        console.log(res);
+      })
+    }
+
 
   }
   return userData;
