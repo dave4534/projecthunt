@@ -3,7 +3,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var Project = require('../models/ProjModel');
+var User = require('../models/DevModel');
 
 var dataForServer = [
   {
@@ -29,6 +29,7 @@ var dataForServer = [
   }
 ]
 console.log("in user route");
+
 
 //////////////////////////////    ROUTER GET   /////////////////////////////////
 

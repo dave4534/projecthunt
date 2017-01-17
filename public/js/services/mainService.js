@@ -48,14 +48,21 @@ app.factory('mainService', ['$http', function($http){
           console.log(array[i]);
           return array[i];
         }
-
-
-
       }
 
-      }
+    },
+    addUserToDB: function(user) {
+      console.log(user);
+      return $http.post('/login').then(function(data) {
+        console.log(user.login);
+        // serviceData.companies.push(project);
+        console.log(data);
 
+
+      });
     }
+  }
+
 
   return serviceData;
 

@@ -5,9 +5,18 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var sa = require('superagent');
 var request = require('request');
+var User = require('../models/DevModel');
+mongoose.Promise = require('bluebird');
+var crypto = require('crypto');
+
 
 console.log("in gitlog route");
+
 var cookieToken;
+
+var hash = crypto.createHash('md5');
+var a;
+
 //////////////////////////////    ROUTER POST   /////////////////////////////////
 
 router.post('/', function(req, res1, next){
@@ -20,6 +29,7 @@ console.log("in gitload post request");
   })
   .end(function(err, res) {
     console.log(res.body.access_token);
+
     cookieToken = res.body.access_token;
     // debugger;
     //NOT HERE!!!!!!!
@@ -34,6 +44,61 @@ console.log("in gitload post request");
     //         res1.send(data, cookieToken);
     //       }
     //     })
+
+
+    //hashin the token and setting it as the user ID
+    hash.update(res.body.access_token, 'utf8');
+    var hexHash = hash.digest("hex");
+    console.log(hexHash);
+
+    a = {
+      devID:hexHash,
+      devToken:res.body.access_token
+    };
+    console.log(a);
+    // var user = new User(a);
+    // user.save(function(err, user){
+    //   console.log('user saved!')
+    //   if(err){ return next(err); }
+    //   // debugger;
+    //   console.log(user);
+    // });
+
+    // debugger;
+    op = {
+      url: 'https://api.github.com/user?access_token=' + res.body.access_token,
+      headers: {'User-Agent': 'ProjectHunt'}
+    }
+    request(op, function(err, response, body){
+          if (!err && response.statusCode == 200) {
+            data = JSON.parse(body);
+            console.log(data);
+            console.log(a);
+            var b = {
+              'devID':a.devID,
+              'devFname': data.login,
+              'devBio':  data.bio,
+              'devToken':a.devToken,
+              'devPic': data.avatar_url
+            }
+            console.log(b);
+            var user = new User (b);
+          user.save(function(err, user){
+            console.log('user saved!')
+            if(err){ return next(err); }
+            // debugger;
+            console.log(user);
+            // db.users.findOneAndUpdate({devID:a.devID},{
+            //   'devFname': data.login,
+            //   'devBio':  data.bio,
+            //   'devPic': data.avatar_url,
+            // });
+
+            res1.send(data);
+            
+          })
+      };
+  })
 
       });
   })

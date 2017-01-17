@@ -3,6 +3,11 @@ var app = angular.module('projectHunt', ['ui.router', 'ngTagsInput']);
 app.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
 $stateProvider
+    .state('welcome', {
+    url: '/welcome',
+    controller: 'mainController',
+    templateUrl: './Templates/welcome.html'
+    })
     .state('home', {
     url: '/home',
     controller: 'mainController',
@@ -62,6 +67,6 @@ $stateProvider
       templateUrl: './Templates/callback.html'
         });
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/welcome');
 
 }]);

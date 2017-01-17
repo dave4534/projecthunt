@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One');
 
 html {
   height: 100%;
@@ -69,14 +70,6 @@ html {
   margin: 14px 5px 0px 0px;
 }
 
-.registerSaveButton {
-
-}
-
-.navBarRightColumn {
-  /*border: 1px solid red;*/
-}
-
 hr {
   border-top: 1px solid #e2e2e2;
   padding: 0px;
@@ -108,16 +101,17 @@ hr {
 }
 
 .header {
-  text-align: center;
-  font-family: 'Nunito', sans-serif;
-  color: #f16763;
-  font-size: 3em;
-  margin-top: 20px;
-  font-weight: bold;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: #f16763;
+    font-size: 3em;
+    padding-top: 20px;
+    font-weight: bold;
+    background-color: #edeff0;
 }
 
 .background {
-  /*background-color: #fbfbfb;*/
+  background-color: #edeff0;
   height: 100%;
   width: 100%;
   display: inline-block;
@@ -129,18 +123,21 @@ hr {
 
 /*Contains all of the ng-repeats that display eac company & project*/
 .companyAndProjectRepeatContainer {
-  height: 400px;
-  background-color: #fbfbfb;
-  margin: 18px 30px 50px 30px;
-  /*border-radius: 10px;*/
-  /*overflow: hidden;*/
-  box-shadow: 0px 2px 3px 2px rgba(45, 45, 45, 0.13);
-  height: 100%;
+    height: 400px;
+    background-color: #edeff0;
+    margin: 18px 30px 50px 30px;
+    /* border-radius: 10px; */
+    /* overflow: hidden; */
+    /* box-shadow: 0px 2px 3px 2px rgba(45, 45, 45, 0.13); */
+    height: 100%;
 }
 
 .companyAndProjectRepeat {
-  background-color: white;
-  border: 1px solid #e2e2e2;
+    background-color: white;
+    /* border: 1px solid #e2e2e2; */
+    margin-bottom: 26px;
+    box-shadow: 0px 3px 25px 2px rgba(0, 0, 0, 0.18);
+    border-radius: 5px;
 }
 
 .companyAndProjectRepeat:hover {
@@ -148,9 +145,20 @@ hr {
   background-color: #fbfbfb;
 }
 
-.topProjectRow {
+.projectRow {
   width: 100%;
-  height: 65px;
+  /*height: 65px;*/
+  /*border: 1px solid red;*/
+}
+
+.tagRow {
+  margin: -3px 0px 16px 15px;
+  padding-right: 2px;
+  padding-left: 71px;
+}
+
+.tagContainer {
+  margin: 3px 1px 0px -1px;
 }
 
 .logo {
@@ -158,26 +166,25 @@ hr {
   width: 35px;
   border-radius: 4px;
   /*vertical-align: text-bottom;*/
-  margin: 15px 15px 44px 28px;
+  margin: -64px 15px 7px 28px;
 }
 
 .leftProjColumn {
   /*border: 1px solid red;*/
   display: inline-block;
-
 }
 
 .rightProjColumn {
   /*border: 1px solid red;*/
   display: inline-block;
   margin-left: 4px;
-
+  width: 230px;
 }
 
 .info {
   color: #444444;
   display: inline-block;
-  margin: 11px 0 0 10px;
+  margin: 11px 0 0 87px;
 }
 
 .projCompany {
@@ -186,7 +193,7 @@ hr {
    font-size: 1.6em;
    color: #f16763;
    margin-top: 15px;
-   text-transform: uppercase;
+   text-transform: capitalize;
 }
 
 .projTitle {
@@ -198,8 +205,31 @@ hr {
 
 .projDescription {
   font-family: helvetica;
-  color: #868686;
-  letter-spacing: .05em;
+  color: #4c4c4c;
+  letter-spacing: .06em;
+  margin-right: 30px;
+  margin-top: -5px;
+  font-weight: 100;
+}
+
+.startButton {
+     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: .09em;
+    height: 51px;
+    background-color: #3ca763;
+    color: white;
+    padding: 13px 10px 0px 10px;
+    padding-bottom: 17px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+
+.startButton:hover {
+  cursor: pointer;
+  background-color: rgba(60, 167, 99, 0.73);
 }
 
 .tagRepeat {
@@ -218,7 +248,7 @@ hr {
   padding: 5px 10px 0px 10px;
   padding-bottom: 17px;
   border-radius: 4px;
-  margin: 10px 11px 12px 1px;
+  margin: 10px 11px -3px 1px;
 }
 
 .tag:hover {
@@ -313,9 +343,87 @@ ul {
     }
 }
 
-.userContainer {
-  width: 800px;
-  height: 800px;
-  background-color: yellow;
+
+/*Splash*/
+.davesRow {
+  background-image: url("../images/splash2.jpg");
+  /*max-width: 100%;*/
+  height: 1000px;
+}
+
+.splashHeader {
+    color: #ffffff;
+    font-size: 2.3em;
+    text-align: center;
+    display: inherit;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.2em;
+    padding-top: 50px;
+}
+
+.splashSubheader {
+    color: #ffffff;
+    font-size: 1.15em;
+    text-align: center;
+    display: inherit;
+    font-family: nunito;
+    font-weight: 100;
+    line-height: 1.4em;
+    letter-spacing: .06em;
+    padding: 2px 35px;
+}
+
+.splashHeader2 {
+  font-family: 'Fugaz One', cursive;
+  letter-spacing: .04em;
+}
+
+.splashButton {
+    background-color: #f16763;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: .9em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: white;
+    width: 14em;
+    letter-spacing: .07em;
+    margin-top: 2em;
+    text-decoration: none;
+}
+
+.splashButton:hover {
+  cursor: pointer;
+  background-color: #f77975;
+  text-decoration: none;
+}
+
+.splashButton:link {
+  text-decoration: none;
+}
+
+.iconRow {
   width: 100%;
 }
+
+.iconContainer {
+  display: inline-block;
+  margin: 35px 0 0 0;
+}
+
+.splashIconHeader {
+    color: white;
+    font-family: nunito;
+    font-size: 1.3em;
+    margin: 1em 2em 0 2em;
+    text-align: center;
+    letter-spacing: .05em;
+}
+
+
+
+
+
+
