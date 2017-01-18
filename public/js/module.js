@@ -1,6 +1,17 @@
-var app = angular.module('projectHunt', ['ui.router', 'ngTagsInput']);
+var app = angular.module('projectHunt', ['ui.router', 'ngTagsInput','ui-notification']);
 
-app.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+app.config(['$stateProvider', 'NotificationProvider','$urlRouterProvider', function($stateProvider, NotificationProvider, $urlRouterProvider) {
+
+
+NotificationProvider.setOptions({
+            delay: 10000,
+            startTop: 20,
+            startRight: 10,
+            verticalSpacing: 20,
+            horizontalSpacing: 20,
+            positionX: 'center',
+            positionY: 'bottom'
+        });
 
 $stateProvider
     .state('welcome', {
@@ -63,7 +74,7 @@ $stateProvider
     })
      .state('submitproject', {
     url: '/submitproject',
-    controller: 'projController',
+    controller: 'notifcontroller',
     templateUrl:'./Templates/submitproject.html'
     })
       .state('project', {
@@ -97,3 +108,7 @@ $stateProvider
     $urlRouterProvider.otherwise('/welcome');
 
 }]);
+
+
+  
+
