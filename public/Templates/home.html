@@ -7,18 +7,27 @@
      </a>
     </div>
 
+    <!-- Search Bar -->
+   <!--   <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+     <input type="text" ng-model="searchBar">
+      <tags-input type="text" ng-model="langTags" class="searchBar"></tags-input>
+    </div> {{searchBar}} -->
+
      <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="text" placeholder="Discover some great projects..." class="form-control searchBar" ng-model="searchBar">
+      <input type="text" placeholder="Discover some great companies..." class="form-control searchBar" ng-model="searchBar">
     </div>
 
     <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
-   <a href="#/login"><div class="anyButton navSignupButton">Log Out</div></a>
+    <!-- <img src="images/jolt.png" class="profilePic"> -->
+
+<!--     <a href="#/register"><div class="anyButton navSignupButton">Sign Up</div></a>
+ -->    <a href="#/login"><div class="anyButton navSignupButton">Log Out</div></a>
     </div>
   </div>
    <!--  End of Nav Bar -->
    <hr>
 
-<!-- <div class="tagBar">
+<div class="tagBar">
   <p class="tagBarTag">Javascript</p>
   <p class="tagBarTag">MongoDB</p>
   <p class="tagBarTag">Express</p>
@@ -41,7 +50,7 @@
   <p class="tagBarTag">.net</p>
   <p class="tagBarTag">objective c</p>
   <p class="tagBarTag">data analysis</p>
-</div> -->
+</div>
 
 <hr>
 
@@ -67,8 +76,8 @@
            </div>
           
           <div class="rightProjColumn">
-             <div class="projTitle">{{company.projTitle}}</div>
-            <div class="projCompany">{{company.projCompany}}</div>
+             <div class="projCompany">{{company.projCompany}}</div>
+            <div class="projTitle">{{company.projTitle}}</div>
           </div>
        </div>
       

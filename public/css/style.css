@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Fugaz+One');
 
+/*.github { display: none; }
+*/
 html {
   height: 100%;
 }
@@ -205,11 +207,11 @@ hr {
 }
 
 .logo {
-    display: inline-block;
-    width: 35px;
-    border-radius: 4px;
-    vertical-align: text-bottom;
-    margin: -54px 15px -20px 28px;
+  display: inline-block;
+  width: 35px;
+  border-radius: 4px;
+  vertical-align: text-bottom;
+  margin: -64px 15px 7px 28px;
 }
 
 .leftProjColumn {
@@ -230,24 +232,20 @@ hr {
   margin: 11px 0 0 87px;
 }
 
-.projTitle{
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: .04em;
-    line-height: 1.2em;
-    font-size: 1.6em;
-    color: #f16763;
-    margin-top: 15px;
-   
+.projCompany {
+   font-family: 'Montserrat', sans-serif;
+   letter-spacing: .04em;
+   font-size: 1.6em;
+   color: #f16763;
+   margin-top: 15px;
+   text-transform: capitalize;
 }
 
- .projCompany {
-    font-family: helvetica;
-    font-size: 1.1em;
-    letter-spacing: .08em;
-    margin-top: 8px;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #301a3e;
+.projTitle {
+  font-family: helvetica;
+  font-size: 1.05em;
+  letter-spacing: .04em;
+  /*margin-top: 4px;*/
 }
 
 .projDescription {
