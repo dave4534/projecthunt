@@ -6,7 +6,7 @@ app.factory('projService', ['$http', function($http){
     projTitle: "proj1",
     projCompany: "elevation",
     projDescription: "make me a proj1",
-    langTags: ["angular"],
+    langTags: ["angular", "html", "bootstrap", "express"],
     // projDueDate: Date
     }
   ]
