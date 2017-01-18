@@ -1,1 +1,43 @@
+<div class="row companyAndProjectRepeat" ng-repeat="x in proj track by $index">
+
+  <!-- Logo and Company Name + Project Name Row -->
+  <div class="projectRow">
+  <!-- Logo -->
+      <div class="leftProjColumn">
+           <img class="logo" ng-src="http://placekitten.com/g/60/60"/>
+       </div>
+
+      <div class="rightProjColumn">
+         <div class="projCompany">{{x.projCompany}}</div>
+        <div class="projTitle">{{x.projTitle}}</div>
+      </div>
+   </div>
+
+  <!-- Project Info Row -->
+  <div class="projectRow">
+ <!-- Company Name & Location -->
+ <div class="info">
+
+  <div class="projDescription" >{{x.projDescription}}</div>
+
+</div>
+</div>
+
+
+
+<div class="projectRow tagRow">
+<div class="tagRepeat tagContainer" ng-repeat="tag in x.langTags track by $index">
+    <div class="tag">{{tag}}</div>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
 <script type="text/javascript" src="https://form.jotform.me/jsform/70162636561454"></script>
