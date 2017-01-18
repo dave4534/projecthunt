@@ -72,11 +72,12 @@ body {
     letter-spacing: .06em;
 }
 
-.anyButton:hover {
+.anyButton:hover, .createProjButton:hover {
   background-color: #f77975;
+  cursor: pointer;
 }
 
-.aboutButton {
+.aboutButton, .projectsButton {
     /*background-color: #f16763;*/
     margin: 0 auto;
     padding: 10px;
@@ -92,8 +93,8 @@ body {
     margin: 14px 5px 0px 0px;
 }
 
-.projectsButton {
-    /*background-color: #f16763;*/
+.createProjButton {
+    background-color: #f16763;
     margin: 0 auto;
     padding: 10px;
     font-size: .9em;
@@ -102,14 +103,14 @@ body {
     text-transform: uppercase;
     border-radius: 5px;
     color: white;
-    width: 100px;
+    width: 200px;
     letter-spacing: .06em;
-    float: right;
-    margin: 14px 5px 0px 0px;
+    margin-bottom: 30px;
 }
 
-.aboutButton:hover {
+.aboutButton:hover, .projectsButton:hover {
   color: #f16763;
+  cursor: pointer;
 }
 
 .navSignupButton {
@@ -162,13 +163,14 @@ hr {
     font-family: 'Nunito', sans-serif;
     color: #f16763;
     font-size: 3em;
-    padding: 30px 0 30px 0;
+    padding: 24px 0 30px 0;
     font-weight: bold;
-    /*background-color: #edeff0;*/
+    /* background-color: #edeff0; */
     display: inline-block;
     /* margin: 0 auto; */
-    height: 120px;
-    width: 270px;
+    height: 107px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .columnContainer {
@@ -271,13 +273,16 @@ hr {
 }
 
 .projTitle {
-   font-family: 'Montserrat', sans-serif;
-   letter-spacing: .04em;
-   font-size: 1.6em;
-   color: #f16763;
-   margin-top: 15px;
-   text-transform: capitalize;
-   margin-left: 3px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .04em;
+    font-size: 1.6em;
+    color: #f16763;
+    margin-top: 15px;
+    text-transform: capitalize;
+    margin-left: 3px;
+    margin-right: -14px;
+/*    border: 1px solid red;*/
+    overflow: hidden;
 }
 
 .projCompany {
@@ -288,7 +293,8 @@ hr {
     font-weight: 600;
     color: #797979;
     margin-top: 8px;
-    margin-left: 86px;
+    /*margin-left: 86px;*/
+    margin-left: 3px;
 }
 
 .projDescription {
@@ -472,36 +478,8 @@ ul {
   letter-spacing: .04em;
 }
 
-#newProjectBtn {
-    background-color: #f16763;
-    /* margin: 0 auto; */
-    /* margin-right: 14%; */
-    padding: 15px;
-    font-size: .9em;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    border-radius: 5px;
-    color: white;
-    width: 200px;
-    letter-spacing: .07em;
-    display: inline-block;
-    /* margin-top: 2em; */
-    /* text-decoration: none; */
-    position: absolute;
-    /* right: 14%; */
-    top: 37px;
-    right: 17%;
-}
-
 .buttonContainer {
   /*background-color: yellow;*/
-}
-
-#newProjectBtn:hover {
-  cursor: pointer;
-  background-color: #f77975;
-  text-decoration: none;
 }
 
 .splashButton:hover {
@@ -670,6 +648,34 @@ and (max-device-width : 480px) {
     padding: 100px 0 20px 0;
     font-weight: 100;
     /* width: 100%; */
+}
+
+.projTitle {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .04em;
+    font-size: 1.4em;
+    color: #f16763;
+    margin-top: 17px;
+    text-transform: capitalize;
+    margin-left: 3px;
+    margin-right: -14px;
+    /* border: 1px solid red; */
+    overflow: hidden;
+}
+
+.projHeader {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: #f16763;
+    font-size: 3em;
+    padding: 9px 0 0px 0;
+    font-weight: bold;
+    /* background-color: #edeff0; */
+    display: inline-block;
+    /* margin: 0 auto; */
+    height: 79px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 }

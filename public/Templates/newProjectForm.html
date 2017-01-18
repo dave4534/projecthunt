@@ -23,18 +23,11 @@
   </div>
    <!--  End of Nav Bar -->
    <hr>
-  <div class="row">
-    <div>
-      
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="columnContainer">
-            <div class="projHeader">Projects </div> 
-            <a href="#/createproject"><div id="newProjectBtn">Create New Project</div></a> 
-          </div>
-        </div>
-    </div>
-  </div>
 
+               
+ <div class="projHeader">Projects</div>
+
+ <a href="#/dashboard/createproject/{{empDashPath.name}}"><div class="createProjButton">Create Project</div></a> 
 
 
   <!-- Ng-Repeat of Companies & Projects Rows-->
@@ -50,18 +43,16 @@
            </div>
           
           <div class="rightProjColumn">
-             
-            <div class="projTitle">{{company.projTitle}}</div>
+              <div class="projTitle">{{company.projTitle}}</div>
+             <div class="projCompany">{{company.projCompany}}</div>
+           
           </div>
        </div>
       
       <!-- Project Info Row -->
       <div class="projectRow">
-
      <!-- Company Name & Location -->
-     <div class="projCompany">{{company.projCompany}}</div>
      <div class="info">
-      
       <div class="projDescription" >{{company.projDescription}}</div>
       
     </div>
@@ -74,7 +65,7 @@
       </div>
 
     <div class="projectRow"> 
-    <div class="startButton">Edit Project</div>
+     <a href="#/chooseteam"><div class="startButton">Start</div></a> 
     </div>
     
 

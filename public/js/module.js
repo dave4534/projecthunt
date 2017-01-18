@@ -52,8 +52,8 @@ $stateProvider
     // }
     })
       .state('createproject', {
-    url: '/createproject',
-    // controller: 'projControl',
+    url: '/dashboard/createproject/:comp',
+    controller: 'projControl',
     templateUrl:'./Templates/createproject.html'
     })
      .state('chooseteam', {

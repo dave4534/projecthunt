@@ -1,3 +1,25 @@
+<!--  Nav Bar -->
+  <div class="row navBar">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+     <a href="#/home"> 
+     <img src="images/logo.png" class="Elevlogo">
+     <!-- <img src="images/elevlogoMobile.png" class="elevlogoMobile"> -->
+     </a>
+    </div>
+
+
+     <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      
+    </div>
+
+    <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+    <a href="#/login"><div class="anyButton navSignupButton">Log Out</div></a>
+    </div>
+  </div>
+   <!--  End of Nav Bar -->
+   <hr>
+
 <div class="header" style="background-color: white;">Add a new project</div>
 
 <div class="subheader">
@@ -34,6 +56,6 @@ The project needs to take them about 3 days to complete the mvp, and a few more 
           <img id="image" style="max-width: 200px;" />
         </div>
 
-        <a href="#/dashboard/elevation"><button type="submit" class="btn btn-primary">Add</button></a> 
+        <a href="#/dashboard/{{empDashPath.name}}"><button type="submit" class="btn btn-primary" ng-click="addProject(e)">Add</button></a> 
       </form>
       </div>
