@@ -8,6 +8,11 @@ $stateProvider
     controller: 'mainController',
     templateUrl: './Templates/welcome.html'
     })
+    .state('about', {
+    url: '/about',
+    // controller: 'mainController',
+    templateUrl: './Templates/about.html'
+    })
     .state('home', {
     url: '/home',
     controller: 'mainController',

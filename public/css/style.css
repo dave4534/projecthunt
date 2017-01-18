@@ -61,7 +61,6 @@ body {
 .anyButton {
     background-color: #f16763;
     margin: 0 auto;
-
     padding: 10px;
     font-size: .9em;
     text-align: center;
@@ -75,6 +74,42 @@ body {
 
 .anyButton:hover {
   background-color: #f77975;
+}
+
+.aboutButton {
+    /*background-color: #f16763;*/
+    margin: 0 auto;
+    padding: 10px;
+    font-size: .9em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    letter-spacing: .06em;
+    float: right;
+    margin: 14px 5px 0px 0px;
+}
+
+.projectsButton {
+    /*background-color: #f16763;*/
+    margin: 0 auto;
+    padding: 10px;
+    font-size: .9em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    letter-spacing: .06em;
+    float: right;
+    margin: 14px 5px 0px 0px;
+}
+
+.aboutButton:hover {
+  color: #f16763;
 }
 
 .navSignupButton {
@@ -207,16 +242,19 @@ hr {
 }
 
 .logo {
-  display: inline-block;
-  width: 35px;
-  border-radius: 4px;
-  vertical-align: text-bottom;
-  margin: -64px 15px 7px 28px;
+    /* display: inline-block; */
+    width: 35px;
+    border-radius: 4px;
+    /* vertical-align: text-bottom; */
+    margin: 0px 15px 25px 28px;
+    position: relative;
+    top: 24px;
 }
 
 .leftProjColumn {
   /*border: 1px solid red;*/
   display: inline-block;
+  float: left;
 }
 
 .rightProjColumn {
@@ -232,20 +270,25 @@ hr {
   margin: 11px 0 0 87px;
 }
 
-.projCompany {
+.projTitle {
    font-family: 'Montserrat', sans-serif;
    letter-spacing: .04em;
    font-size: 1.6em;
    color: #f16763;
    margin-top: 15px;
    text-transform: capitalize;
+   margin-left: 3px;
 }
 
-.projTitle {
-  font-family: helvetica;
-  font-size: 1.05em;
-  letter-spacing: .04em;
-  /*margin-top: 4px;*/
+.projCompany {
+    font-family: helvetica;
+    font-size: 1.05em;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #797979;
+    margin-top: 8px;
+    margin-left: 86px;
 }
 
 .projDescription {
@@ -404,7 +447,7 @@ ul {
 
 .splashHeader {
     color: #ffffff;
-    font-size: 2.3em;
+    font-size: 3.9em;
     text-align: center;
     display: inherit;
     font-family: 'Nunito', sans-serif;
@@ -593,6 +636,40 @@ and (max-device-width : 480px) {
     /* margin: .5em; */
     text-decoration: none;
     /* display: inline-block; */
+}
+
+.splashHeader {
+    color: #ffffff;
+    font-size: 3.5em;
+    text-align: center;
+    display: inherit;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.4em;
+    padding-top: 20px;
+    padding-bottom: 6px;
+}
+
+.splashHeader2 {
+  font-family: 'Fugaz One', cursive;
+  letter-spacing: .04em;
+  font-size: 1em;
+      line-height: 1em;
+}
+
+.projectsButton, .aboutButton {
+  display: none;
+}
+
+.poweredByRow {
+    font-size: 1.1em;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    padding: 100px 0 20px 0;
+    font-weight: 100;
+    /* width: 100%; */
 }
 
 }
