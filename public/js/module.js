@@ -8,6 +8,11 @@ $stateProvider
     controller: 'mainController',
     templateUrl: './Templates/welcome.html'
     })
+    .state('about', {
+    url: '/about',
+    // controller: 'mainController',
+    templateUrl: './Templates/about.html'
+    })
     .state('home', {
     url: '/home',
     controller: 'mainController',
@@ -47,8 +52,8 @@ $stateProvider
     // }
     })
       .state('createproject', {
-    url: '/createproject',
-    // controller: 'projControl',
+    url: '/dashboard/createproject/:comp',
+    controller: 'projControl',
     templateUrl:'./Templates/createproject.html'
     })
      .state('chooseteam', {

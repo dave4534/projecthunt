@@ -2,19 +2,32 @@
 
 <div class="background">
 
+<!--  Nav Bar -->
+  <div class="row navBar">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+     <a href="#/home"> 
+     <img src="images/logo.png" class="Elevlogo">
+     <!-- <img src="images/elevlogoMobile.png" class="elevlogoMobile"> -->
+     </a>
+    </div>
 
-  <div class="row">
-    <div>
-      
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="columnContainer">
-            <div class="projHeader">Projects </div> 
-            <a href="#/createproject"><div id="newProjectBtn">Create New Project</div></a> 
-          </div>
-        </div>
+
+     <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="text" placeholder="Discover some great companies..." class="form-control searchBar" ng-model="searchBar">
+    </div>
+
+    <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+    <a href="#/login"><div class="anyButton navSignupButton">Log Out</div></a>
     </div>
   </div>
+   <!--  End of Nav Bar -->
+   <hr>
 
+               
+ <div class="projHeader">Projects</div>
+
+ <a href="#/dashboard/createproject/{{empDashPath.name}}"><div class="createProjButton">Create Project</div></a> 
 
 
   <!-- Ng-Repeat of Companies & Projects Rows-->
@@ -30,8 +43,9 @@
            </div>
           
           <div class="rightProjColumn">
+              <div class="projTitle">{{company.projTitle}}</div>
              <div class="projCompany">{{company.projCompany}}</div>
-            <div class="projTitle">{{company.projTitle}}</div>
+           
           </div>
        </div>
       
@@ -39,7 +53,6 @@
       <div class="projectRow">
      <!-- Company Name & Location -->
      <div class="info">
-      
       <div class="projDescription" >{{company.projDescription}}</div>
       
     </div>
@@ -52,7 +65,7 @@
       </div>
 
     <div class="projectRow"> 
-    <div class="startButton">Edit Project</div>
+     <a href="#/chooseteam"><div class="startButton">Start</div></a> 
     </div>
     
 

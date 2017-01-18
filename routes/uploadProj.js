@@ -8,7 +8,7 @@ var Project = require('../models/ProjModel');
 
 ////////////////////////////////    ROUTER POST   //////////////////////////////
 console.log("in upload route");
-router.post('/:comp',function(req, res, next) {
+router.post('/createproject/:comp',function(req, res, next) {
   console.log(req.body);
   console.log(req.body.projCompany);
   var project = new Project(req.body);

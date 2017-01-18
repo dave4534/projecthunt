@@ -12,10 +12,13 @@ app.controller('projControl', ['$scope', 'mainService', '$state', function($scop
   ];
   $scope.tags = [];
   
+  $scope.empDashPath = {
+    name: $state.params.comp
+  };
 
   $scope.addProject = function (e) {
     // console.log($state.params);
-    // console.log('add proj!');
+    console.log('add proj invoked!');
     if ($scope.name === '') { return; }
 
     var project = { 
