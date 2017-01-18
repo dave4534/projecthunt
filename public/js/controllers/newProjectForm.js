@@ -78,32 +78,6 @@ app.controller('projControl', ['$scope', 'mainService', '$state', function($scop
     $state.go('home');
   };
 
-//getAll invoked upon /dashboard load, that loads all of the user's projects
-// mainService.getAllDash().then(function(){
-//   console.log('dash controller getAll invoked');
-//   // debugger;
-//   $scope.companies = mainService.companies;
-//   console.log('here is $scope.companies');
-  
-//   console.log($scope.companies);
-//   debugger;
-// }).catch(function(err){
-//   console.log(err);
-// });
   
 }]);
 
-
-
-
-// document.getElementById("files").onchange = function () {
-//     var reader = new FileReader();
-
-//     reader.onload = function (e) {
-//         // get loaded data and render thumbnail.
-//         document.getElementById("image").src = e.target.result;
-//     };
-
-//     // read the image file as a data URL.
-//     reader.readAsDataURL(this.files[0]);
-// };
