@@ -3,10 +3,12 @@ app.controller('registerController', ['$scope', '$state', function($scope, $stat
   //  = inputId;
 
 // comp = $scope.compName
-$scope.checkName = function(){
+$scope.checkName = function(next){
   if ($scope.compName === undefined) {
     alert("Company must have a name!");
-    $state.go('http://localhost:4008/#/register');
+    // console.log("company must have a name!");
+
+    // $state.go('http://localhost:4008/#/register');
   }
   else {
     $scope.registerSave($scope.compName);
@@ -15,7 +17,7 @@ $scope.checkName = function(){
 
   $scope.registerSave = function(name){
     console.log("button work");
-    $state.go('http://localhost:4008/#/dashboard/' + name);
+    $state.go('dashboard');
   }
 
 }])

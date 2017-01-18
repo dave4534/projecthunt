@@ -27,6 +27,9 @@ $stateProvider
             console.log($stateParams.comp);
             return mainService.getAllDash($stateParams.comp);
           }]
+          // getNameUrl: ['$scope','$state', function($scope, $state){
+          //
+          // }]
         }
     })
     .state('register', {
