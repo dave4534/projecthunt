@@ -1,24 +1,48 @@
+ <meta name="viewport" content="width=device-width">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="../devux/style.css">
+  <link rel="stylesheet" href="../css/stars.css">
+  <link rel="stylesheet" href="../css/tags.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!--  Nav Bar -->
+  <!-- NG-Tags CDN -->
+ <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.1.1/ng-tags-input.min.css"> -->
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+</head>
+
+
+<!--  Nav Bar -->
   <div class="row navBar">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-     <a href="#/welcome"> 
-     <img src="images/logo.png" class="Elevlogo">
+     <a href="../index.html"> 
+     <img src="../images/logo2.PNG" class="Elevlogo">
      <!-- <img src="images/elevlogoMobile.png" class="elevlogoMobile"> -->
      </a>
     </div>
 
+    <!-- Search Bar -->
+   <!--   <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+     <input type="text" ng-model="searchBar">
+      <tags-input type="text" ng-model="langTags" class="searchBar"></tags-input>
+    </div> {{searchBar}} -->
 
-     <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      
-    </div>
+   
 
     <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
-
-    <a href="#/login"><div class="anyButton navSignupButton">Log Out</div></a>
+    
     </div>
   </div>
    <!--  End of Nav Bar -->
+
+
 
     <div class="companyTitle">
   <div class="header">Register As Employer<div>
@@ -30,7 +54,7 @@
 
    <div class="form-group">
 
-       <input type="text" class="form-control" placeholder="Company Name"  ng-model="compName" />
+       <input type="text" class="form-control" placeholder="Company Name"  ng-model="compName" required>
 
      </div>
 
