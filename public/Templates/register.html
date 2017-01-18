@@ -20,16 +20,18 @@
   </div>
    <!--  End of Nav Bar -->
 
-  <div class="companyTitle">
+    <div class="companyTitle">
   <div class="header">Register As Employer<div>
-    
-  </div>    
 
-  <div >
+  </div>
+
+  <div ng-submit="addProject()">
     <div class="form-group">
 
    <div class="form-group">
+
        <input type="text" class="form-control" placeholder="Company Name" />
+
      </div>
 
      <div class="form-group">
@@ -40,12 +42,14 @@
       <input type="email" class="form-control" placeholder="Your Email" />
     </div>
 
-   
+
  </div>
 
 
-     <a href="#/dashboard/{{empDashPath.comp}}"><div class="registerSaveButton">Save</div></a>
-  
+
+     <a href="#/dashboard/{{compName}}"><div class="registerSaveButton">Save</div></a>
+
+
 
 </div>
 </div>
