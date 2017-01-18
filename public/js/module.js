@@ -20,7 +20,7 @@ $stateProvider
     })
     .state('dashboard', {
     url: '/dashboard/:comp',
-    controller: 'projController',
+    controller: 'projControl',
     templateUrl:'./Templates/newProjectForm.html',
     resolve: {
           getToDash: ['mainService', '$stateParams' , function(mainService, $stateParams) {
