@@ -1,3 +1,32 @@
+
+<!--  Nav Bar -->
+  <div class="row navBar">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+     <a href="#/home"> 
+     <img src="images/logo.png" class="Elevlogo">
+     <!-- <img src="images/elevlogoMobile.png" class="elevlogoMobile"> -->
+     </a>
+    </div>
+
+    <!-- Search Bar -->
+   <!--   <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+     <input type="text" ng-model="searchBar">
+      <tags-input type="text" ng-model="langTags" class="searchBar"></tags-input>
+    </div> {{searchBar}} -->
+
+     <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="text" placeholder="Discover some great companies..." class="form-control searchBar" ng-model="searchBar">
+    </div>
+
+    <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <!-- <img src="images/jolt.png" class="profilePic"> -->
+
+<!--     <a href="#/register"><div class="anyButton navSignupButton">Sign Up</div></a>
+ -->    <a href="#/login"><div class="anyButton navSignupButton">Log Out</div></a>
+    </div>
+  </div>
+   <!--  End of Nav Bar -->
+
 <!-- Header -->
 <div class="header">Your Current Projects</div>
 
@@ -35,6 +64,8 @@
     </div>
     </div>
 
+
+
     <div class="projectRow tagRow"> 
     <div class="tagRepeat tagContainer" ng-repeat="tag in x.langTags" track by $index">
         <div class="tag">{{tag}}</div> 
@@ -42,7 +73,7 @@
       </div>
 
     <div class="projectRow"> 
-      <div class="startButton">Submit This Project</div>
+      <div class="startButton btnShowForm">Submit This Project</div>
     </div>
     
 
@@ -51,4 +82,7 @@
 <!--  End of Row -->
 
 </div>
+
+<h1> Upload Projects<h1>
+  <button class="btnShowForm">Let's Begin</button>
 
