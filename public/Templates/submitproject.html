@@ -2,7 +2,7 @@
 <!--  Nav Bar -->
   <div class="row navBar">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-     <a href="#/home"> 
+     <a href="#/home">
      <img src="images/logo.png" class="Elevlogo">
      <!-- <img src="images/elevlogoMobile.png" class="elevlogoMobile"> -->
      </a>
@@ -10,7 +10,7 @@
 
 
      <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      
+
     </div>
 
     <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -23,6 +23,50 @@
 
 <div class="header" style="background-color: white;">Submit your project</div>
 
+<!-- Ng-Repeat of Companies & Projects Rows-->
+<div class="companyAndProjectRepeatContainer">
+
+  <div class="row companyAndProjectRepeat" ng-repeat="x in proj | filter: {projCompany, projTitle:searchBar} track by $index">
+
+    <!-- Logo and Company Name + Project Name Row -->
+    <div class="projectRow">
+    <!-- Logo -->
+        <div class="leftProjColumn">
+             <img class="logo" ng-src="http://placekitten.com/g/60/60"/>
+         </div>
+
+        <div class="rightProjColumn">
+            <div class="projTitle">{{x.projTitle}}</div>
+           <div class="projCompany">{{x.projCompany}}</div>
+
+        </div>
+     </div>
+
+    <!-- Project Info Row -->
+    <div class="projectRow">
+   <!-- Company Name & Location -->
+   <div class="info">
+
+    <div class="projDescription" >{{x.projDescription}}</div>
+
+  </div>
+  </div>
+
+  <div class="projectRow tagRow">
+  <div class="tagRepeat tagContainer" ng-repeat="tag in x.langTags track by $index">
+      <div class="tag">{{tag}}</div>
+    </div>
+    </div>
+
+  <div class="projectRow">
+   <a href="#/chooseteam"><div class="startButton">Edit</div></a>
+  </div>
+
+
+</div>
+</div>
+<!--  End of Row -->
+
 <div class="subheader">
   Upon submitting your project you will get an email confirmation that the employer has received your finished project.
 </div>
@@ -30,15 +74,14 @@
 <div class="formContainer">
 
 <form ng-submit="addProject(e)" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-        
+
 
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Project Github Link" ng-model="name"/>
         </div>
-        
+
         <br>
 
-        <a href="#/user"><button type="submit" class="btn btn-primary" >Submit</button></a> 
+        <a href="#/user"><button type="submit" class="btn btn-primary" >Submit</button></a>
       </form>
       </div>
-
