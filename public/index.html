@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/stars.css">
@@ -27,7 +31,23 @@
 
     <div ui-view></div>
 
+    <script type="text/javascript">
+              $(document).ready(function () {
+                $(".github").hide();    // just add this
+                $(".btnShowForm").click(function () {
+                    $(".github").slideToggle('slow');
+                    $(this).fadeOut('slow');
+                });
+            });
 
+              $(".btnShowForm").click(function() {
+                  $('html, body').animate({
+                      scrollTop: $(".github").offset().top
+                  }, 2000);
+              });
+
+
+    </script>
 <!-- Scripts -->
 
 <script src="js/module.js"></script>
@@ -45,6 +65,6 @@
 <script src="js/controllers/tagCtrl.js"></script>
 
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- <script type="text/javascript" src="https://form.jotform.me/jsform/70162636561454"></script> -->
+<div class="github"><script type="text/javascript" src="https://form.jotform.me/jsform/70162636561454"></script></div>
 </body>
 </html>
