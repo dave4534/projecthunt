@@ -21,7 +21,17 @@ app.factory('userService', ['$http', function($http){
   projDescription: "make me a proj3",
   langTags: ["react"],
   // projDueDate: Date
-  }],
+  },
+  {
+  projTitle: "proj1",
+  projCompany: "elevation",
+  projDescription: "make me a proj1",
+  langTags: ["angular", "html", "bootstrap", "express"],
+  // projDueDate: Date
+  }
+],
+
+submitData : [],
 
     // getAllDash: function(){
     //   console.log(' getAllDash invoked from service');

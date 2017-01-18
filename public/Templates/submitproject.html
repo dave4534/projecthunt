@@ -26,7 +26,7 @@
 <!-- Ng-Repeat of Companies & Projects Rows-->
 <div class="companyAndProjectRepeatContainer">
 
-  <div class="row companyAndProjectRepeat" ng-repeat="x in proj | filter: {projCompany, projTitle:searchBar} track by $index">
+  <div class="row companyAndProjectRepeat" ng-repeat="x in subProj | filter: {projCompany, projTitle:searchBar} track by $index">
 
     <!-- Logo and Company Name + Project Name Row -->
     <div class="projectRow">

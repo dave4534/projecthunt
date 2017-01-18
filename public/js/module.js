@@ -63,7 +63,7 @@ $stateProvider
     })
      .state('submitproject', {
     url: '/submitproject',
-    controller: 'projController',
+    controller: 'detailController',
     templateUrl:'./Templates/submitproject.html'
     })
       .state('project', {
