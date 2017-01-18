@@ -11,9 +11,9 @@ app.factory('projService', ['$http', function($http){
     }
   ]
 
-  getProj: function(id){
-    return $http.get()
-  }
+  // getProj: function(id){
+  //   return $http.get()
+  // }
 
   }
   return serviceData;

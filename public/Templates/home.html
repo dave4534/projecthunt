@@ -1,27 +1,20 @@
 <!--  Nav Bar -->
   <div class="row navBar">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-     <a href="#/home"> 
+     <a href="#/welcome"> 
      <img src="images/logo.png" class="Elevlogo">
      <!-- <img src="images/elevlogoMobile.png" class="elevlogoMobile"> -->
      </a>
     </div>
 
-    <!-- Search Bar -->
-   <!--   <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
-     <input type="text" ng-model="searchBar">
-      <tags-input type="text" ng-model="langTags" class="searchBar"></tags-input>
-    </div> {{searchBar}} -->
 
      <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="text" placeholder="Discover some great companies..." class="form-control searchBar" ng-model="searchBar">
+      <input type="text" placeholder="Find your next project..." class="form-control searchBar" ng-model="searchBar">
     </div>
 
     <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
-    <!-- <img src="images/jolt.png" class="profilePic"> -->
 
-<!--     <a href="#/register"><div class="anyButton navSignupButton">Sign Up</div></a>
- -->    <a href="#/login"><div class="anyButton navSignupButton">Log Out</div></a>
+    <a href="#/login"><div class="anyButton navSignupButton">Log Out</div></a>
     </div>
   </div>
    <!--  End of Nav Bar -->
@@ -76,8 +69,9 @@
            </div>
           
           <div class="rightProjColumn">
+              <div class="projTitle">{{company.projTitle}}</div>
              <div class="projCompany">{{company.projCompany}}</div>
-            <div class="projTitle">{{company.projTitle}}</div>
+           
           </div>
        </div>
       
