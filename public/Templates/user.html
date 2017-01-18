@@ -65,14 +65,17 @@
       </div>
 
 
-    <div class="projectRow">
-      <a href="#/submitproject"><div class="startButton btnShowForm">Submit This Project</div></a>
+       <div class="projectRow tagRow"> 
+       <div class="tagRepeat tagContainer" ng-repeat="tag in x.langTags" track by $index">
+           <div class="tag">{{tag}}</div> 
+         </div>
+         </div>
 
-    </div>
+       <div class="projectRow"> <a href="../devux/index.html">
+         <div class="startButton btnShowForm">Submit This Project</div></a>
+       </div>
+       
 
-  </div>
-</div>
-<!--  End of Row -->
-
-</div>
-
+     </div>
+   </div>
+   <!--  End of Row -->
