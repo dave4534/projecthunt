@@ -20,7 +20,7 @@ $stateProvider
     })
     .state('dashboard', {
     url: '/dashboard/:comp',
-    controller: 'projControl',
+    controller: 'projController',
     templateUrl:'./Templates/newProjectForm.html',
     resolve: {
           getToDash: ['mainService', '$stateParams' , function(mainService, $stateParams) {
@@ -31,7 +31,7 @@ $stateProvider
     })
     .state('register', {
     url: '/register',
-    // controller: 'registerController',
+    controller: 'registerController',
     templateUrl:'./Templates/register.html'
     })
     //  .state('proj1', {
@@ -63,7 +63,7 @@ $stateProvider
     })
      .state('submitproject', {
     url: '/submitproject',
-    // controller: 'projControl',
+    controller: 'projControl',
     templateUrl:'./Templates/submitproject.html'
     })
       .state('project', {
