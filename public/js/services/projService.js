@@ -1,6 +1,8 @@
 app.factory('projService', ['$http', function($http){
   var serviceData = {
 
+    // TEST COMMENT
+
   dummyData : [
     {
     projTitle: "proj1",
