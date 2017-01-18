@@ -112,22 +112,22 @@ console.log("in gitload post request");
       });
   })
 
-router.param('id', function(req, res, next, id){
-  console.log('2');
-var hello =  User.findOne({gitID: id})
-req.hello = hello
-  console.log(id);
-  return next();
-})
-
-
-  router.get('/:id', function(req, res, next){
-    // debugger;
-    console.log(req.hello)
-    // res.json(res);
-    console.log('3');
-    res.end();
-})
+// router.param('id', function(req, res, next, id){
+//   console.log('2');
+// var hello =  User.findOne({gitID: id})
+// req.hello = hello
+//   console.log(id);
+//   return next();
+// })
+//
+//
+//   router.get('/:id', function(req, res, next){
+//     // debugger;
+//     console.log(req.hello)
+//     // res.json(res);
+//     console.log('3');
+//     res.end();
+// })
 
 
 
