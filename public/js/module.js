@@ -26,7 +26,7 @@ $stateProvider
     })
     .state('register', {
     url: '/register',
-    controller: 'registerController',
+    // controller: 'registerController',
     templateUrl:'./Templates/register.html'
     })
     //  .state('proj1', {
