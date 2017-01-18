@@ -4,6 +4,11 @@
 
 /*.github { display: none; }
 */
+a {
+
+
+}
+
 html {
   height: 100%;
 }
@@ -323,7 +328,6 @@ width:250px;
 }
 
 .submit-button{
-background-color: #AFCB2D ;
 color: white;
 }
 
