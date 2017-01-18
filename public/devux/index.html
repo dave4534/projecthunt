@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <meta name="viewport" content="width=device-width">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/stars.css">
+  <link rel="stylesheet" href="../css/tags.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- NG-Tags CDN -->
+ <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.1.1/ng-tags-input.min.css"> -->
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+</head>
+
+
+<!--  Nav Bar -->
+  <div class="row navBar">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+     <a href="../index.html"> 
+     <img src="../images/logo.png" class="Elevlogo">
+     <!-- <img src="images/elevlogoMobile.png" class="elevlogoMobile"> -->
+     </a>
+    </div>
+
+    <!-- Search Bar -->
+   <!--   <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+     <input type="text" ng-model="searchBar">
+      <tags-input type="text" ng-model="langTags" class="searchBar"></tags-input>
+    </div> {{searchBar}} -->
+
+   
+
+    <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <!-- <img src="images/jolt.png" class="profilePic"> -->
+
+<!--     <a href="#/register"><div class="anyButton navSignupButton">Sign Up</div></a>
+ -->    <a href="#/login"><div class="anyButton navSignupButton">Log Out</div></a>
+    </div>
+  </div>
+   <!--  End of Nav Bar -->
+
+<!-- Header -->
+
+
+<body ng-app="projectHunt" ng-controller="mainController as main">
+
+  <hr>
+
+  
+
+<script src="../js/module.js"></script>
+<script src="../js/services/mainService.js"></script>
+<script src="../js/services/userService.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.1.1/ng-tags-input.min.js"></script> -->
+<script src="../js/tagModule.js"></script>
+<!-- Controllers -->
+<script src="../js/controllers/mainCtrl.js"></script>
+<script src="../js/controllers/newProjectForm.js"></script>
+
+<script src="../js/controllers/detailCtrl.js"></script>
+
+<script src="../js/controllers/loginCtrl.js"></script>
+<script src="../js/controllers/tagCtrl.js"></script>
+
+<!-- <script type="text/javascript" src="https://form.jotform.me/jsform/70162636561454"></script>
+ -->
+<!-- <script type="text/javascript" src="https://form.jotform.me/jsform/70162636561454"></script> -->
+
+<div class="github"><script type="text/javascript" src="https://form.jotform.me/jsform/70162636561454"></script></div>
+
+</body>
+</html>
