@@ -1,5 +1,10 @@
-app.controller('notifcontroller', ['$scope', 'mainService', '$state', 'Notification', function($scope, mainService, $state, Notification){
+app.controller('notifcontroller', ['$scope', 'mainService', '$state', 'Notification', 'userService', function($scope, mainService, $state, Notification, userService){
 
+
+
+                $scope.success = function() {
+                    Notification.success('Project submitted successfully');
+                };
                 
                 $scope.primary = function() {
                     Notification('Primary notification');
@@ -9,9 +14,6 @@ app.controller('notifcontroller', ['$scope', 'mainService', '$state', 'Notificat
                     Notification.error('Error notification');
                 };
 
-                $scope.success = function() {
-                    Notification.success('Project submitted successfully');
-                };
 
                 $scope.info = function() {
                     Notification.info('Information notification');
@@ -75,6 +77,24 @@ app.controller('notifcontroller', ['$scope', 'mainService', '$state', 'Notificat
                 $scope.customTemplateScope = function() {
                     Notification.primary({message: "Just message", templateUrl: "custom_template.html", scope: $scope});
                 };
+
+// detailCtrl
+  $scope.proj = userService.dummyData; // IN USER.HTML
+
+  $scope.subProj = userService.submitData; //IN SUBMITPROJECT.HTML
+
+console.log(userService.dummyData);
+// userService.getAllDash().then(function(){
+//  console.log("get all dash from detailController");
+//  console.log($scope.x);
+// }).catch(function(err){
+//  console.log(err);
+// });
+
+$scope.passProj = function(proj){
+  console.log("button works");
+  userService.submitData.push(proj);
+};
 
   
 }]);

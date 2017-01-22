@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 
 
 
-mongoose.connect('mongodb://localhost/projects');
+mongoose.connect(process.env.MONGOLAB_MAROON_URI ||'mongodb://localhost/getprojecthunt');
 // mongoose.connect('mongodb://localhost/users');
 
 var uploadProj = require('./routes/uploadProj');
@@ -50,6 +50,6 @@ app.get('/', function(req, res, next){
 
 
 
-var port = process.env.PORT || '4008';
+app.listen(process.env.PORT || '4000');
 
-app.listen(port);
+// app.listen(port);

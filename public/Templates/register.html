@@ -1,33 +1,36 @@
-
-
 <!--  Nav Bar -->
+
+  
+
   <div class="row navBar">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-     <a href="../index.html"> 
-     <img src="../images/logo2.PNG" class="Elevlogo">
+     <a href="#/home">
+     <img src="images/logo.png" class="Elevlogo">
      <!-- <img src="images/elevlogoMobile.png" class="elevlogoMobile"> -->
      </a>
     </div>
 
-    <!-- Search Bar -->
-   <!--   <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
-     <input type="text" ng-model="searchBar">
-      <tags-input type="text" ng-model="langTags" class="searchBar"></tags-input>
-    </div> {{searchBar}} -->
 
-   
+     <div class="navBarMiddleColumn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+    </div>
 
     <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
-    
+
+    <a href="#/welcome"><div class="anyButton navSignupButton">Log in</div></a>
     </div>
   </div>
    <!--  End of Nav Bar -->
 
 
-<div class="background">
+
+<div class="background" style="height: 1000px">
+
   <div class="header">Register As Employer</div>
 
-
+<div class="subheader">
+Once you are registered, you can add projects for developers to tackle in groups of three. Every time a project is submitted by a group you will get an email with their github link.
+</div>
 
 <div class="formContainer">
   <div ng-submit="addProject()">
@@ -35,7 +38,7 @@
 
    <div class="form-group">
 
-       <input required type="text" class="form-control" placeholder="Company Name"  ng-model="compName" >
+       <input type="text" class="form-control" placeholder="Company Name"  ng-init="compName='Bizzabo'" ng-model="compName" required>
 
      </div>
 
@@ -58,5 +61,5 @@
 
 </div>
 </div>
-</div>
+
 

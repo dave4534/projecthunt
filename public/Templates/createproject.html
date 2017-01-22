@@ -14,7 +14,8 @@
 
     <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
-    <a href="#/login"><div class="anyButton navSignupButton">Log Out</div></a>
+    <a href="#/dashboard/{{empDashPath.name}}"><img src="images/biz.png" class="profilePic"></a> 
+    <a href="#/welcome"><div class="logoutButton">Log out</div></a>
     </div>
   </div>
    <!--  End of Nav Bar -->
@@ -23,9 +24,7 @@
 <div class="header" style="background-color: white;">Add a new project</div>
 
 <div class="subheader">
-  We have had wonderful experience working with companies on the matter (IBM, 6over6 to name a few who have also hired students from the bootcamp) who have given our students a short project to complete. 
-
-The project needs to take them about 3 days to complete the mvp, and a few more days to complete other features. It should be challenging but a chance to demonstrate quality code. 
+ Please describe the project as best you can below and click 'Add' to add your project
 </div>
 
 <div class="formContainer">
@@ -56,6 +55,6 @@ The project needs to take them about 3 days to complete the mvp, and a few more 
           <img id="image" style="max-width: 200px;" />
         </div>
 
-        <a href="#/dashboard/{{empDashPath.name}}"><button type="submit" class="btn btn-primary" ng-click="addProject(e)">Add</button></a> 
+        <a href="#/dashboard/{{empDashPath.name}}"><div type="submit" class="anyButton" ng-controller="notifcontroller" ng-click="addProject(e); success() ">Add</div></a> 
       </form>
       </div>

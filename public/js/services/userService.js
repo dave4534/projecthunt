@@ -2,26 +2,29 @@ app.factory('userService', ['$http', function($http){
   var userData = {
 
   dummyData : [{
-  projTitle: "proj1",
-  projCompany: "elevation",
-  projDescription: "make me a proj1",
-  langTags: ["angular"],
+  projTitle: "Responsive Budget Monitor",
+  projCompany: "Bizzabo",
+  projDescription: "Build a web app works well on mobile for monitoring budgets. The app should track how muchcash you (and your partner/family) are spending. For example, how much was spent on fuel,food, rent etc...",
+  langTags: ["angular", "javascript", "mongo", "express"],
   // projDueDate: Date
   },
   {
-  projTitle: "proj2",
+  projTitle: "Company Podcast",
   projCompany: "jolt",
-  projDescription: "make me a proj2",
-  langTags: ["jQuery"],
+  projDescription: "As a means to keep everybody in your company up to date, create a system where employeescan leave voice messages that will get aggregated on a daily basis and aggregate them createa company podcast.",
+  langTags: ["react", "javascript", "html", "css"],
   // projDueDate: Date
   },
   {
-  projTitle: "proj3",
-  projCompany: "bizzabo",
-  projDescription: "make me a proj3",
-  langTags: ["react"],
+  projTitle: "FanCo",
+  projCompany: "IBM",
+  projDescription: "FanCo. is a new player in the handheld misting fan market. The startup is based in Boston, which is also its primary market. FanCo. has been highly successful in this market, and is launching in New York City on this summer.",
+  langTags: ["react", "angular", "NodeJS"],
   // projDueDate: Date
-  }],
+  }
+],
+
+submitData : [],
 
     // getAllDash: function(){
     //   console.log(' getAllDash invoked from service');
@@ -50,3 +53,4 @@ app.factory('userService', ['$http', function($http){
   }
   return userData;
 }]);
+

@@ -14,7 +14,8 @@
 
     <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
-    <a href="#/login"><div class="anyButton navSignupButton">Log Out</div></a>
+   
+    <a href="#/welcome"><div class="logoutButton">Log out</div></a>
     </div>
   </div>
    <!--  End of Nav Bar -->
@@ -22,12 +23,14 @@
 
 
 <!-- Header -->
-<div class="header">Join A Project</div>
-
+<div class="homeHeader">Join A Project</div>
+<div class="homeSubheader">
+  Choose a project by clicking Start
+</div>
 
 <!-- Companies and Projects Header-->
 
-<div class="background" >
+<div class="background" style="padding-bottom: 600px;">
 
 
   <!-- Ng-Repeat of Companies & Projects Rows-->
@@ -58,9 +61,11 @@
       
     </div>
     </div>
-
+  <div class="tagHeader">Project Technologies:</div>
     <div class="projectRow tagRow"> 
+
     <div class="tagRepeat tagContainer" ng-repeat="tag in company.langTags track by $index">
+        
         <div class="tag">{{tag}}</div> 
       </div>
       </div>

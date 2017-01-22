@@ -21,6 +21,7 @@ var a;
 
 router.post('/', function(req, res1, next){
 console.log("in gitload post request");
+debugger;
   sa.post('https://github.com/login/oauth/access_token')
   .send({
     client_id: 'eea27bdfce0e49527b31',
@@ -70,9 +71,11 @@ console.log("in gitload post request");
       headers: {'User-Agent': 'ProjectHunt'}
     }
     request(op, function(err, response, body){
+      debugger;
           if (!err && response.statusCode == 200) {
             data = JSON.parse(body);
             console.log(data);
+            debugger;
             // console.log(a);
             var b = {
               'devID':a.devID,
@@ -101,9 +104,9 @@ console.log("in gitload post request");
               'devPic': data.avatar_url,
               'gitID':data.id
             };
+            res1.send(secretUser);
             console.log(secretUser);
             a = secretUser;
-            res1.send(secretUser);
 
           })
       };

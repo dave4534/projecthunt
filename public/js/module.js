@@ -16,7 +16,7 @@ NotificationProvider.setOptions({
 $stateProvider
     .state('welcome', {
     url: '/welcome',
-    controller: 'mainController',
+    // controller: 'mainController',
     templateUrl: './Templates/welcome.html'
     })
     .state('about', {
@@ -26,7 +26,7 @@ $stateProvider
     })
     .state('home', {
     url: '/home',
-    controller: 'mainController',
+    // controller: 'mainController',
     templateUrl: './Templates/home.html'
     })
     .state('dashboard', {
@@ -53,9 +53,7 @@ $stateProvider
      .state('login', {
     url: '/welcome',
     // controller: 'mainController',
-
     templateUrl:'./Templates/welcome.html',
-
     // resolve: {
     //   setId: ['userService', '$stateParams', function(userService, stateParams){
     //     return userService.idCheck($stateParams.id);
@@ -108,7 +106,3 @@ $stateProvider
     $urlRouterProvider.otherwise('/welcome');
 
 }]);
-
-
-  
-

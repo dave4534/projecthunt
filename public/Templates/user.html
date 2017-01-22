@@ -1,4 +1,3 @@
-
 <!--  Nav Bar -->
   <div class="row navBar">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
@@ -14,7 +13,8 @@
     </div>
 
     <div class="navBarRightColumn col-xs-4 col-sm-4 col-md-4 col-lg-4">
-    <a href="#/login"><div class="anyButton navSignupButton">Log Out</div></a>
+    <a href="#/user"><img src="images/profilePic.png" class="profilePic"></a> 
+    <a href="#/welcome"><div class="logoutButton">Log out</div></a>
     </div>
   </div>
    <!--  End of Nav Bar -->
@@ -25,7 +25,7 @@
 
 <!-- Companies and Projects Header-->
 
-<div class="background" >
+<div class="background" style="padding-bottom: 400px; " >
 
 
   <!-- Ng-Repeat of Companies & Projects Rows-->
@@ -57,7 +57,7 @@
     </div>
 
 
-
+  <div class="tagHeader">Project Technologies:</div>
     <div class="projectRow tagRow">
     <div class="tagRepeat tagContainer" ng-repeat="tag in x.langTags track by $index">
         <div class="tag">{{tag}}</div>
@@ -65,17 +65,14 @@
       </div>
 
 
-       <div class="projectRow tagRow"> 
-       <div class="tagRepeat tagContainer" ng-repeat="tag in x.langTags" track by $index">
-           <div class="tag">{{tag}}</div> 
-         </div>
-         </div>
+    <div class="projectRow">
+      <div ng-click="passProj(x)" class="projectRow">
+      <a href="#/submitproject"><div class="startButton btnShowForm">Submit This Project</div></a>
 
-       <div class="projectRow"> <a href="../devux/index.html">
-         <div class="startButton btnShowForm">Submit This Project</div></a>
-       </div>
-       
+    </div>
 
-     </div>
-   </div>
-   <!--  End of Row -->
+  </div>
+</div>
+<!--  End of Row -->
+
+</div>

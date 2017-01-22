@@ -1,4 +1,4 @@
-app.controller('projControl', ['$scope', 'mainService', '$state', function($scope, mainService, $state){
+app.controller('projControl', ['$scope', 'mainService', '$state',  function($scope, mainService, $state){
 // app.controller('projControl', function ($scope) {
 
   $scope.projects = [
@@ -62,8 +62,8 @@ app.controller('projControl', ['$scope', 'mainService', '$state', function($scop
         // }).catch(function(err){
         //   console.log(err);
         // });
-
-
+  
+             
   };
 
   $scope.removeProject = function (index) {

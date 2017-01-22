@@ -1,7 +1,3 @@
-
-
-
-
 <!--  Nav Bar -->
   <div class="row navBar">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
@@ -23,13 +19,13 @@
   </div>
    <!--  End of Nav Bar -->
    <hr>
-<div class="background"> 
-<div class="header">Submit your project</div>
+<div class="submitBackground" style="padding-bottom: 600px;">
+<div class="header" >Submit your project</div>
 
 <!-- Ng-Repeat of Companies & Projects Rows-->
 <div class="companyAndProjectRepeatContainer">
 
-  <div class="row companyAndProjectRepeat" ng-repeat="x in proj | filter: {projCompany, projTitle:searchBar} track by $index">
+  <div class="row companyAndProjectRepeat" ng-repeat="x in subProj | filter: {projCompany, projTitle:searchBar} track by $index">
 
     <!-- Logo and Company Name + Project Name Row -->
     <div class="projectRow">
@@ -54,12 +50,16 @@
 
   </div>
   </div>
-
+    <div class="tagHeader">Project Technologies:</div>
   <div class="projectRow tagRow">
   <div class="tagRepeat tagContainer" ng-repeat="tag in x.langTags track by $index">
       <div class="tag">{{tag}}</div>
     </div>
     </div>
+
+<!--   <div class="projectRow">
+   <a href="#/chooseteam"><div class="startButton">Edit</div></a>
+  </div> -->
 
 
 </div>
@@ -76,12 +76,12 @@
 
 
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Project Github Link" ng-model="name"/>
+          <input type="text" class="form-control" placeholder="Project Github Link" ng-model="name" ng-init="guest"/>
         </div>
 
         <br>
 
-        <a href="#/user"><button type="submit" class="btn btn-primary" ng-click="success()" >Submit</button></a>
+        <a href="#/user"><div type="submit" ng-model="success" class="anyButton" ng-click="success()" style="margin-bottom: 300px">Submit</div></a>
       </form>
       </div>
-</div>
+      </div>

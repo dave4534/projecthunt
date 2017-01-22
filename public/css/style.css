@@ -7,12 +7,16 @@ a:hover {
 }
 
 html {
-  height: 100%;
+  height: 100% !important;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
-  width: 100%;
-  height: 100%;
+/*  width: 100%;
+  height: 100%;*/
+  margin: 0;
+  padding: 0;
 }
 
 .container-fluid {
@@ -35,6 +39,12 @@ body {
   width: 150px;
   margin: 16px 0 0 10px;
   display: block;
+}
+
+.userPic {
+  width: 50px;
+  margin: 16px 0 0 10px;
+  display: inline-block;
 }
 
 .elevLogoMobile {
@@ -89,6 +99,22 @@ body {
     text-transform: uppercase;
     border-radius: 5px;
     color: white;
+    width: 100px;
+    letter-spacing: .06em;
+    float: right;
+    margin: 14px 5px 0px 0px;
+}
+
+.logoutButton {
+    /* background-color: #f16763; */
+    margin: 0 auto;
+    padding: 10px;
+    font-size: .9em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: #f16763;
     width: 100px;
     letter-spacing: .06em;
     float: right;
@@ -160,6 +186,16 @@ hr {
     background-color: #edeff0;
 }
 
+.homeHeader {
+      text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: #f16763;
+    font-size: 3em;
+    padding: 22px 0 9px 0;
+    font-weight: bold;
+    background-color: #edeff0;
+}
+
 .projHeader {
     text-align: center;
     font-family: 'Nunito', sans-serif;
@@ -192,11 +228,32 @@ hr {
     padding-bottom: 40px;
 }
 
+.homeSubheader {
+      color: #333;
+background-color: #edeff0;
+    text-align: center;
+    margin: 0 auto;
+    font-family: nunito;
+    font-size: 1.35em;
+    letter-spacing: .03em;
+    padding-bottom: 25px;
+}
+
 .background {
   background-color: #edeff0;
   height: 100%;
   width: 100%;
   display: inline-block;
+  z-index: 0;
+  /*background-repeat: repeat;*/
+}
+
+.submitBackground {
+  background-color: #edeff0;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  z-index: 0;
 }
 
 .companyAndProjectContainer {
@@ -205,13 +262,13 @@ hr {
 
 /*Contains all of the ng-repeats that display eac company & project*/
 .companyAndProjectRepeatContainer {
-    height: 400px;
+    /*height: 400px;*/
     background-color: #edeff0;
     /* margin: 18px 30px 50px 30px; */
     /* border-radius: 10px; */
     /* overflow: hidden; */
     /* box-shadow: 0px 2px 3px 2px rgba(45, 45, 45, 0.13); */
-    height: 100%;
+    /*height: 100%;*/
     max-width: 800px;
     margin: 0 auto;
 }
@@ -233,6 +290,15 @@ hr {
   width: 100%;
   /*height: 65px;*/
   /*border: 1px solid red;*/
+}
+
+.tagHeader {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9em;
+    letter-spacing: .07em;
+    margin: 6px 0 0 85px;
+    color: #301a3e;
 }
 
 .tagRow {
@@ -347,10 +413,10 @@ hr {
   margin: 10px 11px -3px 1px;
 }
 
-.tag:hover {
+/*.tag:hover {
   background-color: #301a3e;
   color: white;
-}
+}*/
 
 .readmore {
   text-transform: uppercase;
@@ -443,14 +509,19 @@ ul {
 /*Splash*/
 .splashContainer {
   /*background-image: url("images/splash2.jpg") no-repeat center center fixed;*/
-/*background: url(images/bg.jpg) ; */
+background: url(../images/splash2.jpg) ; 
  /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;*/
- background-color: black;
- height: 100%;
- min-height: 100%;
+ /*background-color: black;*/
+/* height: 100%;
+ min-height: 100%;*/
+ background-position: center center;
+      background-repeat:  no-repeat;
+      background-attachment: fixed;
+      background-size:  cover;
+      /*background-color: #999;*/
 }
 
 .splashHeader {
@@ -463,16 +534,76 @@ ul {
     padding-top: 50px;
 }
 
+.aboutHeader {
+      color: #ffffff;
+    font-size: 3.9em;
+    text-align: center;
+    display: inherit;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.2em;
+    padding-top: 50px;
+        margin: 0 0 20px;
+}
+
+.allonImage{
+    width: 180px;
+    height: 180px;
+    border-radius: 500px;
+    /* border: 10px solid #333; */
+    background-image: url(../images/allon.png);
+    margin: 0 auto;
+}
+
+.daveImage{
+    width: 180px;
+    height: 180px;
+    border-radius: 500px;
+    /* border: 10px solid #333; */
+    background-image: url(../images/elisha.png);
+    margin: 0 auto;
+}
+
+.odedImage{
+    width: 180px;
+    height: 180px;
+    border-radius: 500px;
+    /* border: 10px solid #333; */
+    background-image: url(../images/dave.png);
+    margin: 0 auto;
+}
+
+.elishaImage{
+    width: 180px;
+    height: 180px;
+    border-radius: 500px;
+    /* border: 10px solid #333; */
+    background-image: url(../images/oded.png);
+    margin: 0 auto;
+}
+
 .splashSubheader {
     color: #ffffff;
-    font-size: 1.15em;
+    font-size: 1.55em;
     text-align: center;
     display: inherit;
     font-family: nunito;
     font-weight: 100;
     line-height: 1.4em;
-    letter-spacing: .06em;
+    letter-spacing: .08em;
     padding: 2px 35px;
+}
+
+.aboutSubheader {
+    color: #ffffff;
+    font-size: 1.25em;
+    text-align: center;
+    display: inherit;
+    font-family: nunito;
+    font-weight: 100;
+    line-height: 1.4em;
+    letter-spacing: .08em;
+    padding: 2px 35px;
+    margin: 0 76px;
 }
 
 .splashHeader2 {
@@ -550,8 +681,10 @@ ul {
     height: 2.8em;
 }
 
-.poweredByHeader {
-
+.poweredByLogo>img {
+    vertical-align: middle;
+    width: 50px;
+    margin-bottom: 20px;
 }
 
 .iconContainer {
@@ -577,8 +710,8 @@ ul {
 /*Media Queries*/
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
+@media only screen
+and (min-device-width : 320px)
 and (max-device-width : 480px) {
 
 .companyAndProjectRepeat {
@@ -683,13 +816,13 @@ and (max-device-width : 480px) {
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen 
+@media only screen
 and (min-width : 321px) {
 /* Styles */
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen 
+@media only screen
 and (max-width : 320px) {
 
 .ElevLogo {
@@ -703,30 +836,30 @@ and (max-width : 320px) {
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
+@media only screen
+and (min-device-width : 768px)
 and (max-device-width : 1024px) {
 /* Styles */
 }
 
 /* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
 and (orientation : landscape) {
 /* Styles */
 }
 
 /* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
 and (orientation : portrait) {
 /* Styles */
 }
 
 /* Desktops and laptops ----------- */
-@media only screen 
+@media only screen
 and (min-width : 1224px) {
 
 .companyAndProjectRepeat {
@@ -741,7 +874,7 @@ and (min-width : 1224px) {
 }
 
 /* Desktops and laptops ----------- */
-@media only screen 
+@media only screen
 and (min-width : 400px) {
 
 .companyAndProjectRepeat {
@@ -762,7 +895,7 @@ and (min-width : 400px) {
 }
 
 /* Large screens ----------- */
-@media only screen 
+@media only screen
 and (min-width : 1824px) {
 /* Styles */
 }
@@ -773,6 +906,3 @@ only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 }
-
-
-

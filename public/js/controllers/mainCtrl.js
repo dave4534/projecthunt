@@ -1,10 +1,9 @@
 app.controller('mainController', ['$scope', 'mainService', 'userService', '$http', '$window', "$httpParamSerializer", function($scope, mainService,userService, $http, $window, $httpParamSerializer){
 
   var gitData;
+  $scope.devPicSrc = localStorage.devPic;
 
   $scope.companies = mainService.companies;
-
-
   $scope.githubLogin = function(){
     var baseUrl = "https://github.com/login/oauth/authorize";
     var params = {
@@ -39,8 +38,10 @@ app.controller('mainController', ['$scope', 'mainService', 'userService', '$http
       code: code
     }
   }).then(function successCallback (response){
+    debugger;
     console.log("hi");
     console.log(response.data);
+    localStorage.setItem('devPic', response.data.devPic);
     // mainService.addUserToDB(response.data);
     findUser(response.data.gitID);
   });
