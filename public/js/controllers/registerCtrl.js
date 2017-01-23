@@ -4,7 +4,7 @@ app.controller('registerController', ['$scope', '$state', function($scope, $stat
 
   $scope.registerSave = function(name){
     console.log("button work");
-    $state.go('http://localhost:4008/#/dashboard/' + name);
+    $state.go('http://localhost:4000/#/dashboard/' + name);
   }
 
 }])

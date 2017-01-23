@@ -8,7 +8,7 @@ app.controller('mainController', ['$scope', 'mainService', 'userService', '$http
     var baseUrl = "https://github.com/login/oauth/authorize";
     var params = {
       client_id: "eea27bdfce0e49527b31",
-      redirect_url: "http://localhost:4008/?#/home",
+      redirect_url: "http://localhost:4000/?#/home",
       scope: "user repo"
     };
     var qs = $httpParamSerializer(params);
