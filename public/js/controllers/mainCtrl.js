@@ -42,7 +42,9 @@ app.controller('mainController', ['$scope', 'mainService', 'userService', '$http
     console.log("hi");
     console.log(response.data);
     // mainService.addUserToDB(response.data);
+    localStorage.setItem('devPic', "'s" + response.data.avatar_url + "'");
     findUser(response.data.gitID);
+
   });
 }
 

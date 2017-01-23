@@ -56,6 +56,7 @@ console.log("in gitload post request");
       devToken:res.body.access_token
     };
     console.log(a);
+    debugger;
     // var user = new User(a);
     // user.save(function(err, user){
     //   console.log('user saved!')
@@ -103,13 +104,13 @@ console.log("in gitload post request");
             };
             console.log(secretUser);
             a = secretUser;
-            res1.send(secretUser);
 
           })
       };
   })
 
       });
+      res1.send(a);
   })
 
 // router.param('id', function(req, res, next, id){
