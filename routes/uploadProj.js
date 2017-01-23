@@ -63,8 +63,9 @@ router.get('/:comp', function(req, res, next){
 
 router.delete('/:comp',function(req, res, next) {
   console.log('in delete router!');
-  console.log(comp);
-  console.log(req.body.projCompany);
+  console.log(req.param("comp"));
+  var result = [];
+  console.log(req);
   // var project = new Project(req.body);
 
   // console.log("hello handsome ;) ");
@@ -72,7 +73,7 @@ router.delete('/:comp',function(req, res, next) {
   // project.save(function(err, project){
   //   if(err){ return next(err); }
 
-    res.json(req.body);
+    res.json(result);
   // });
 });
 

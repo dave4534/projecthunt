@@ -62,10 +62,11 @@ app.factory('mainService', ['$http', function($http){
     //   });
     // }
     removeProj: function(comp) {
-      console.log(comp._id);
+      console.log(comp);
       return $http.delete('/dashboard/' + comp.projCompany, comp)
       .then(function(data) {
         console.log('remove from dash:' + comp);
+        
       })
     }
   }
