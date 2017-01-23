@@ -5,9 +5,12 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 
+//heroku version--------------------------------------
+// mongoose.connect(process.env.MONGOLAB_MAROON_URI ||'mongodb://localhost/getprojecthunt');
 
-mongoose.connect(process.env.MONGOLAB_MAROON_URI ||'mongodb://localhost/getprojecthunt');
-// mongoose.connect('mongodb://localhost/users');
+//localhost version------------------------------------------------
+mongoose.connect('mongodb://localhost/projects');
+
 
 var uploadProj = require('./routes/uploadProj');
 var homeProj = require('./routes/home');
