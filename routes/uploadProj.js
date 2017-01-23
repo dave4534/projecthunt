@@ -57,6 +57,28 @@ router.get('/:comp', function(req, res, next){
   );
 
 });
+
+////////////////////////////////    ROUTER DELETE   ///////////////////////////////
+
+
+router.delete('/:comp',function(req, res, next) {
+  console.log('in delete router!');
+  console.log(comp);
+  console.log(req.body.projCompany);
+  // var project = new Project(req.body);
+
+  // console.log("hello handsome ;) ");
+
+  // project.save(function(err, project){
+  //   if(err){ return next(err); }
+
+    res.json(req.body);
+  // });
+});
+
+
+
+
 module.exports = router;
 
 
