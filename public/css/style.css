@@ -45,6 +45,7 @@ body {
   width: 50px;
   margin: 16px 0 0 10px;
   display: inline-block;
+  border-radius: 25px;
 }
 
 .elevLogoMobile {
@@ -509,7 +510,7 @@ ul {
 /*Splash*/
 .splashContainer {
   /*background-image: url("images/splash2.jpg") no-repeat center center fixed;*/
-background: url(../images/splash2.jpg) ; 
+background: url(../images/splash2.jpg) ;
  /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

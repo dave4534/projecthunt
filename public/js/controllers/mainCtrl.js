@@ -17,6 +17,10 @@ app.controller('mainController', ['$scope', 'mainService', 'userService', '$http
     $window.open(url);
   }
 
+  $scope.removePic = function(){
+    localStorage.removeItem('devPic');
+  }
+
 
 
   $window.addEventListener('message', function (event) {
@@ -37,8 +41,7 @@ app.controller('mainController', ['$scope', 'mainService', 'userService', '$http
     data: {
       code: code
     }
-  }).then(function successCallback (response){
-    debugger;
+  }).then(function successCallback(response){
     console.log("hi");
     console.log(response.data);
     localStorage.setItem('devPic', response.data.devPic);
