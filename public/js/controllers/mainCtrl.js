@@ -38,7 +38,7 @@ app.controller('mainController', ['$scope', 'mainService', 'userService', '$http
       code: code
     }
   }).then(function successCallback (response){
-    debugger;
+    // debugger;
     console.log("hi");
     console.log(response.data);
     localStorage.setItem('devPic', response.data.devPic);

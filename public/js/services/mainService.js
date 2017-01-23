@@ -50,7 +50,7 @@ app.factory('mainService', ['$http', function($http){
         }
       }
 
-    }
+    },
     // addUserToDB: function(user) {
     //   console.log(user);
     //   return $http.post('/login').then(function(data) {
@@ -61,6 +61,13 @@ app.factory('mainService', ['$http', function($http){
 
     //   });
     // }
+    removeProj: function(comp) {
+      console.log(comp._id);
+      return $http.delete('/dashboard/' + comp.projCompany, comp)
+      .then(function(data) {
+        console.log('remove from dash:' + comp);
+      })
+    }
   }
 
 
