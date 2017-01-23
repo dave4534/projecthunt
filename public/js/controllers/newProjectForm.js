@@ -66,8 +66,10 @@ app.controller('projControl', ['$scope', 'mainService', '$state',  function($sco
              
   };
 
-  $scope.removeProject = function (index) {
-    $scope.projects.splice(index, 1);
+  $scope.removeProject = function (comp) {
+    // $scope.projects.splice(index, 1);
+    console.log(comp);
+    mainService.removeProj(comp);
   };
 
   // $scope.readmore = function(){
@@ -77,6 +79,8 @@ app.controller('projControl', ['$scope', 'mainService', '$state',  function($sco
    $scope.gohome = function(){
     $state.go('home');
   };
+
+
 
   
 }]);

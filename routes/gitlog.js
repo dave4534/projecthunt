@@ -98,8 +98,8 @@ console.log("in gitload post request");
               'devID':a.devID,
               'devFname': data.login,
               'devBio':  data.bio,
-              'devPic': data.avatar_url,
-              'gitID':data.id
+              'devPic': data.avatar_url
+              
             };
             console.log(secretUser);
             a = secretUser;
