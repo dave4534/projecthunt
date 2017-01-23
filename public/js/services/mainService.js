@@ -66,6 +66,7 @@ app.factory('mainService', ['$http', function($http){
       return $http.delete('/dashboard/' + comp.projCompany, comp)
       .then(function(data) {
         console.log('remove from dash:' + comp);
+        
       })
     }
   }
