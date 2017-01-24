@@ -67,6 +67,13 @@ router.delete('/:comp/:id',function(req, res, next) {
   // console.log(id);
   var result = [];
   console.log(req.params);
+
+  Project.remove({_id: req.params.id}, function(err) {
+    if(err) {
+      message.type = 'error';
+    }
+    console.log('removed ' + id);
+  }) 
   // debugger;
   // var project = new Project(req.body);
 
@@ -75,7 +82,7 @@ router.delete('/:comp/:id',function(req, res, next) {
   // project.save(function(err, project){
   //   if(err){ return next(err); }
 
-    res.json(req.params);
+    res.json(req.params.comp);
   // });
 });
 
