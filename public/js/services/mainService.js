@@ -3,12 +3,13 @@ app.factory('mainService', ['$http', function($http){
     companies: [],
 
     getAllDash: function(comp){
+      console.log(comp);
       console.log(' getAllDash invoked from service');
       return $http.get('/dashboard/' + comp)
       .then(function(res){
         console.log("getalldash!!!");
         console.log(res.data);
-        // debugger;
+        debugger;
         angular.copy(res.data, serviceData.companies);
         console.log('show me array!!!!!');
         // debugger;
@@ -63,10 +64,11 @@ app.factory('mainService', ['$http', function($http){
     // }
     removeProj: function(comp) {
       console.log(comp);
-      return $http.delete('/dashboard/' + comp.projCompany, comp)
+      return $http.delete('/dashboard/' + comp.projCompany +'/' + comp._id)
       .then(function(data) {
         console.log('remove from dash:' + comp);
-        
+        console.log(data);
+        serviceData.getAllDash(data.config.projCompany);
       })
     }
   }
