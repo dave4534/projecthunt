@@ -59,9 +59,9 @@ var findUser = function(userId){
 
 
 mainService.getAll().then(function(){
-  console.log('controller getAll invoked');
+  // console.log('controller getAll invoked');
   // $scope.companies = mainService.companies;
-  console.log($scope.companies);
+  // console.log($scope.companies);
 }).catch(function(err){
   console.log(err);
 });

@@ -3,15 +3,16 @@ app.factory('mainService', ['$http', function($http){
     companies: [],
 
     getAllDash: function(comp){
-      console.log(comp);
-      console.log(' getAllDash invoked from service');
+      // console.log(comp);
+      // console.log(' getAllDash invoked from service');
       return $http.get('/dashboard/' + comp)
       .then(function(res){
-        console.log("getalldash!!!");
+        // console.log("getalldash!!!");
         console.log(res.data);
-        debugger;
+        console.log(comp);
+        // debugger;
         angular.copy(res.data, serviceData.companies);
-        console.log('show me array!!!!!');
+        // console.log('show me array!!!!!');
         // debugger;
       }).catch(function(err){
         console.error(err);
@@ -19,7 +20,7 @@ app.factory('mainService', ['$http', function($http){
     },
 
      getAll: function(){
-      console.log('service getAll invoked');
+      // console.log('service getAll invoked');
       return $http.get('/home').then(function(res){
         angular.copy(res.data, serviceData.companies);
       })
@@ -68,7 +69,7 @@ app.factory('mainService', ['$http', function($http){
       .then(function(data) {
         console.log('remove from dash:' + comp);
         console.log(data);
-        serviceData.getAllDash(data.config.projCompany);
+        serviceData.getAllDash(data.data);
       })
     }
   }
