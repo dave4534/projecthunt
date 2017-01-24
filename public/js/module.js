@@ -35,7 +35,7 @@ $stateProvider
     templateUrl:'./Templates/newProjectForm.html',
     resolve: {
           getToDash: ['mainService', '$stateParams' , function(mainService, $stateParams) {
-            console.log($stateParams.comp);
+            // console.log($stateParams.comp);
             return mainService.getAllDash($stateParams.comp);
           }]
         }

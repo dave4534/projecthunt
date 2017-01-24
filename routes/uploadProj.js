@@ -61,11 +61,13 @@ router.get('/:comp', function(req, res, next){
 ////////////////////////////////    ROUTER DELETE   ///////////////////////////////
 
 
-router.delete('/:comp',function(req, res, next) {
+router.delete('/:comp/:id',function(req, res, next) {
   console.log('in delete router!');
   console.log(req.param("comp"));
+  // console.log(id);
   var result = [];
-  console.log(req);
+  console.log(req.params);
+  // debugger;
   // var project = new Project(req.body);
 
   // console.log("hello handsome ;) ");
@@ -73,7 +75,7 @@ router.delete('/:comp',function(req, res, next) {
   // project.save(function(err, project){
   //   if(err){ return next(err); }
 
-    res.json(result);
+    res.json(req.params);
   // });
 });
 
