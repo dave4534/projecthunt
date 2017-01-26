@@ -42,12 +42,12 @@ submitData : [],
     //   });
     // }
 
-    idCheck: function(id){
-      console.log(id);
-      return $http.get('/login/' + id).then(function(res){
-        console.log(res);
-      })
-    }
+    // idCheck: function(id){
+    //   console.log(id);
+    //   return $http.get('/login/' + id).then(function(res){
+    //     console.log(res);
+    //   })
+    // }
 
 
   }

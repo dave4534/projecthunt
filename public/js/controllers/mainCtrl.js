@@ -48,14 +48,14 @@ app.controller('mainController', ['$scope', 'mainService', 'userService', '$http
     console.log(response.data);
     localStorage.setItem('devPic', response.data.devPic);
     // mainService.addUserToDB(response.data);
-    findUser(response.data.gitID);
+    // findUser(response.data.gitID);
   });
 }
 
-var findUser = function(userId){
-  console.log(userId);
-  userService.idCheck(userId);
-}
+// var findUser = function(userId){
+//   console.log(userId);
+//   userService.idCheck(userId);
+// }
 
 
 mainService.getAll().then(function(){
