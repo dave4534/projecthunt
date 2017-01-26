@@ -72,7 +72,7 @@ router.delete('/:comp/:id',function(req, res, next) {
     if(err) {
       message.type = 'error';
     }
-    console.log('removed ' + id);
+    // console.log('removed ' + _id);
   }) 
   // debugger;
   // var project = new Project(req.body);
