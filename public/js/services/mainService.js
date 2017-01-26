@@ -20,9 +20,9 @@ app.factory('mainService', ['$http', function($http){
     },
 
      getAll: function(){
-      // console.log('service getAll invoked');
       return $http.get('/home').then(function(res){
         angular.copy(res.data, serviceData.companies);
+        console.log(res.data);
       })
       .catch(function(err){
         console.error(err);

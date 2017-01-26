@@ -83,30 +83,37 @@ console.log("in gitload post request");
               'gitID':data.id
             }
             // console.log(b);
-            var user = new User (b);
-          user.save(function(err, user){
-            console.log('user saved!')
-            if(err){ return next(err); }
-            // debugger;
-            console.log(user);
-            // db.users.findOneAndUpdate({devID:a.devID},{
-            //   'devFname': data.login,
-            //   'devBio':  data.bio,
-            //   'devPic': data.avatar_url,
-            // });
-            var secretUser = {
-              'devID':a.devID,
-              'devFname': data.login,
-              'devBio':  data.bio,
-              'devPic': data.avatar_url
-              
-            };
-            console.log(secretUser);
-            a = secretUser;
+            User.find({gitID : b.gitID}, function(err, existingUser) {
+              console.log(existingUser);
+              if(existingUser.length) console.log('Hi, ' + existingUser);
+            
+              else {
+                var user = new User (b);
+                user.save(function(err, user){
+                  console.log('user saved!')
+                  if(err){ return next(err); }
+                    // debugger;
+                    console.log(user);
+                    // db.users.findOneAndUpdate({devID:a.devID},{
+                    //   'devFname': data.login,
+                    //   'devBio':  data.bio,
+                    //   'devPic': data.avatar_url,
+                    // });
+                    var secretUser = {
+                      'devID':a.devID,
+                      'devFname': data.login,
+                      'devBio':  data.bio,
+                      'devPic': data.avatar_url
+                      
+                    };
+                    console.log(secretUser);
+                    a = secretUser;
 
-          })
-      };
-  })
+                })
+              }
+            })
+          };
+    })
 
       });
       res1.send(a);
