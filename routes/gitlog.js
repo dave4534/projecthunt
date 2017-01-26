@@ -20,7 +20,7 @@ var a;
 //////////////////////////////    ROUTER POST   /////////////////////////////////
 
 router.post('/', function(req, res1, next){
-console.log("in gitload post request");
+  console.log("in gitload post request");
   sa.post('https://github.com/login/oauth/access_token')
   .send({
     client_id: 'eea27bdfce0e49527b31',
@@ -70,9 +70,9 @@ console.log("in gitload post request");
       headers: {'User-Agent': 'ProjectHunt'}
     }
     request(op, function(err, response, body){
-          if (!err && response.statusCode == 200) {
-            data = JSON.parse(body);
-            console.log(data);
+      if (!err && response.statusCode == 200) {
+        data = JSON.parse(body);
+        console.log(data);
             // console.log(a);
             var b = {
               'devID':a.devID,
@@ -86,7 +86,7 @@ console.log("in gitload post request");
             User.find({gitID : b.gitID}, function(err, existingUser) {
               console.log(existingUser);
               if(existingUser.length) console.log('Hi, ' + existingUser);
-            
+
               else {
                 var user = new User (b);
                 user.save(function(err, user){
@@ -99,25 +99,27 @@ console.log("in gitload post request");
                     //   'devBio':  data.bio,
                     //   'devPic': data.avatar_url,
                     // });
-                    var secretUser = {
-                      'devID':a.devID,
-                      'devFname': data.login,
-                      'devBio':  data.bio,
-                      'devPic': data.avatar_url
-                      
-                    };
-                    console.log(secretUser);
-                    a = secretUser;
-
-                })
+                  })
               }
+              var secretUser = {
+                'devID':a.devID,
+                'devFname': data.login,
+                'devBio':  data.bio,
+                'devPic': data.avatar_url
+
+              };
+              console.log(secretUser);
+              a = secretUser;
+              console.log(a);
+
+              
             })
           };
-    })
+        })
 
-      });
-      res1.send(a);
-  })
+  });
+  res1.send(a);
+})
 
 // router.param('id', function(req, res, next, id){
 //   console.log('2');
